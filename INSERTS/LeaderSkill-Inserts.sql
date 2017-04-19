@@ -51,7 +51,6 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDescription) va
 ('Song of Valhalla','2.5x ATK & 1.5x HP for Fire Att. and God Type'),
 ('Dawn of Valhalla','2x HP & 2.5x ATK for Fire Att. & God Type; 1.5x ATK erasing 4+ linked Fire Orbs'),
 ('Axiom of Sustainment','ATK increases with 5+ combos, up to 6x ATK; bonus attack of 30x ATK when matching Orbs'),
-('Magic Dragon Tribe''s Determination','Dragon & Attacker type cards ATK x2.5, RCV x2.5. All attribute cards ATK x1.5 on the turn a skill is used'),
 ('The Armiger','1.5x to all stats, but unable to erase 3 Orbs or less; ATK increases with 3+ combos, up to 7x'),
 ('Sight of Valhalla','2.5x ATK & RCV for Fire Att. & God Type; 2.5x ATK when erasing 6+ linked Fire Orbs'),
 ('Soul of the Darkdragon','	2x ATK & HP for Dragon & Devil Types; 3.5x ATK when Light & Dark attack at once');
