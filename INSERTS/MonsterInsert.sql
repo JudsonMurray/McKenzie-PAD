@@ -105,3 +105,21 @@ insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (989, 'War Deity of the Night, Tsukuyomi', 7, 'Dark', 'Light', 'God', 'Attacker', null, 989, 1080, 725, 173, 2472, 2036, 295, 4000000, 99, 30, 1.5, 1.5, 1.5, 'Change the World', 'Moonlit Divine Strike'),
 (990, 'Nocturne Chanter, Tsukuyomi', 7, 'Dark', 'Dark', 'God', 'Balanced', null, 990, 1080, 725, 173, 2972, 1436, 545, 4000000, 99, 30, 1.5, 1.5, 1.5, 'Change the World', 'Chanter''s Pitch'),
 (3389, 'Reincarnated Yomi', 8, 'Dark', 'Water', 'Physical', 'Devil', 'God', 3389, 2186, 768, 103, 5415, 1841, 272, 16000000, 99, 45, 1.5, 1.5, 1.5, 'World of the Gleaming Moon', 'Spirit of the Moonlight Princess');
+
+
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Cost, MinHP, MinATK, MinRCV, MaxHP, MaxATK, MaxRCV, MonsterPointValue,MinCoinValue, MaxCoinValue,	MaxLevel, MaxEXP, LatentAwokenSkillslot, PriAttribute, SecAttribute,PriType, Sectype, tertype, ActiveSkill,LeaderSkill, AwokenSkill, Latentawokenskill, MonsterGrowth) VALUES
+(135,'Demon Viper Orochi',6,20,1320,793,150,3090,1150,222,5000,420,41580,99,4000000,5,'Water','Water','God',NULL,NULL,'Force','Perserverance',135,NULL,4000000),
+(746,'Heavenly Guide Suzaku, Leilan',6,25,1294,918,201,3235,1377,302,5000,495,49005,99,4000000,5,'Fire','Fire','God',NULL,NULL,'Southern Seven-Star Formation','Dance of the Crimson Heaven',746,NULL,4000000),
+(1131,'Guardian Dragon, Avalon Drake',6,30,1630,783,50,4075,1409,190,5000,570,56430,99,4000000,5,'Wood','Light','God','Dragon',NULL,'Aubade Gaia','Nirvana Soul',1131,NULL,4000000),
+(17,'Spinon',2,2,42,62,7,129,78,12,1,70,350,5,505,5,'Dark',NULL,'Dragon',NULL,NULL,'Dark Breath','Dark Power',NULL,NULL,1500000),
+(18,'Spinas',3,4,103,70,11,447,236,45,1,100,1500,15,11570,5,'Dark',NULL,'Dragon',NULL,NULL,'Dark Breath','Dark Power',NULL, NULL,1500000),
+(19,'D''spinas',4,6,358,212,41,954,499,105,1,180,6300,35,106347,5,'Dark',NULL,'Dragon',NULL,NULL,'Inferno Breath','Dark Power',NULL,NULL,1500000),
+(20,'Moondragon D''sinas',5,10,763,449,95,2112,1097,220,1,255,25245,99,1500000,5,'Dark',NULL,'Dragon',NULL,NULL,'Inferno Breath','Power of Darkness',20,NULL,1500000),
+(484,'Moondragon Lunar D''spinas',6,15,763,449,95,2112,1097,220,1,345,34155,99,1500000,5,'Dark','Dark','Dragon',NULL,NULL,'Inferno Breath','Power of Moondragon',484,NULL,1500000),
+(1919, 'Rumbling Firedragon, Armored Tyrannos', 6, 15, 777, 457, 100, 2445, 1514, 231, 1, 345, 34155, 99, 1500000, 5,'Fire', 'Water', 'Dragon', 'Attacker', NULL, 'Magma Breath', 'Rumbling Firedragon''s Bravery', 1919, NULL, 1500000),
+(1758, 'Black Flying Sorceress, Goetia', 6, 17, 1403, 701, 28, 3508, 1312, 120, 5000, 375, 37125, 99, 4000000, 5,'Dark', 'Wood', 'Physical', 'Devil', NULL, 'Summon Darkness', 'Twin Sorcerous Curse - Dk/Wd', 1758, NULL, 4000000),
+(920, 'Elemental of Kind Waters, Undine', 6, 26, 437, 497, 259, 2405, 1343, 469, 3000, 510, 50490, 99, 3000000, 5,'Water', 'Water', 'Balanced', NULL, NULL, 'Water Rapids Field', 'Grace of Water', 920, NULL, 3000000),
+(1557, 'Dancing Flame, Amaterasu Ohkami', 7, 30, 1170, 709, 255, 2721, 1511, 502, 5000, 585, 57915, 99, 4000000, 5,'Light', 'Fire', 'God', 'Attacker', NULL, 'Shower of Healing', 'Dispelling Circle', 1557, NULL, 4000000),
+(2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, NULL, 4000000),
+(1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553, NULL, 4000000);
