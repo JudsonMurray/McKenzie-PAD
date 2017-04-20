@@ -156,16 +156,16 @@ MaxExperienceValue) VALUES
  
 
  --Zach Inserts
- insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,Cost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxEXP,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkill,LeaderSkill,AwokenSkill,LatentAwokenSkill,MonsterGrowth) values
+ insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,Cost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkill,LeaderSkill,ASListID,LatentSkillSlots,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
-(2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2149,5,'God Fest. Exclusive Series',883883),
-(2150,'Ominous Moon Dragon Caller, Satsuki',6,'Dark','Light','Dragon','Attacker',NULL,50,1602,661,29,4005,1703,46,99,870,86130,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2150,5,'God Fest. Exclusive Series',5000000),
-(3580,'Demonic Moon Dragon Caller, Satsuki',7,'Dark',Null,'Dragon','Attacker','Devil',60,1602,661,29,4305,1903,266,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3580,5,'God Fest. Exclusive Series',5000000),
-(3581,'Morning Moon Dragon Caller, Satsuki',7,'Dark','Light','Dragon','Physical',NULL,60,1602,661,29,4805,1603,6,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3581,5,'God Fest. Exclusive Series',5000000),
-(2592,'Judging Scale Steel Star Goddess, Eschamali',7,'Dark','Light','Machine','God',NULL,60,1522,622,117,3805,1555,293,99,1035,102465,50000,'Aero Wake - Dark','Dark Steel Star of Libra',2592,5,'God Fest. Exclusive Series',5000000),
-(2388,'Soaring Night Goddess of the Dead, Nephthys',7,'Dark','Fire','God','Devil',NULL,35,981,725,299,2653,1405,538,99,660,65340,5000,'Dark Terror Mist','Game of the Dead',2388,5,'Egyptian God 2 Series',4000000),
-(3378,'Holy Night Siblings, Castor & Pollux',5,'Light','Dark','Machine','God',NULL,35,1129,674,97,3023,1785,263,99,630,62370,5000,'Gemini Star Road','Enjoy your holidays...',3378,5,'Christmas Series',4000000),
-(3284,'Dragon Caller''s Disciple, Sheena',5,'Dark','Light','Dragon','Attacker',NULL,50,1872,823,19,3931,1728,40,99,855,84645,15000,'Draco Summon - Light & Dark','Magic Dragon Tribe''s Determination',3284,5,'Heroine Series',5000000),
-(2255,'Sea Deity, Neptune Dragon',9,'Water','Dark','God','Dragon',NULL,99,1811,581,110,4528,1453,231,99,1650,163350,1,'Hydra Horn','Death Sea Holy Water',2255,5,'Monster Points Series',9999999),
-(2786,'Trance Kuja',5,'Fire','Dark','Attacker',NULL,NULL,12,988,801,99,2371,1922,238,99,285,28215,1,'Flare Star','I''ll bring this to an end!',2786,5,'Final Fantasy Collab Series',3000000),
-(137,'Susano no Mikoto',6,'Wood','Wood','God',NULL,NULL,20,1200,760,128,2970,1186,298,99,420,41580,5000,'Iron Wall Stance','Iron Wall Lore',137,5,'Japanese God 1 Series',4000000);
+(2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,883883,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2149,5,1.5,1.5,1.5,1313,65625),
+(2150,'Ominous Moon Dragon Caller, Satsuki',6,'Dark','Light','Dragon','Attacker',NULL,50,1602,661,29,4005,1703,46,5000000,99,870,86130,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2150,5,1.5,1.5,1.5,2100,207900),
+(3580,'Demonic Moon Dragon Caller, Satsuki',7,'Dark',Null,'Dragon','Attacker','Devil',60,1602,661,29,4305,1903,266,5000000,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3580,5,1.5,1.5,1.5,2513,248738),
+(3581,'Morning Moon Dragon Caller, Satsuki',7,'Dark','Light','Dragon','Physical',NULL,60,1602,661,29,4805,1603,6,5000000,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3581,5,1.5,1.5,1.5,2513,248738),
+(2592,'Judging Scale Steel Star Goddess, Eschamali',7,'Dark','Light','Machine','God',NULL,60,1522,622,117,3805,1555,293,5000000,99,1035,102465,50000,'Aero Wake - Dark','Dark Steel Star of Libra',2592,5,1.0,1.0,1.0,2513,248738),
+(2388,'Soaring Night Goddess of the Dead, Nephthys',7,'Dark','Fire','God','Devil',NULL,35,981,725,299,2653,1405,538,4000000,99,660,65340,5000,'Dark Terror Mist','Game of the Dead',2388,5,1.0,1.0,1.0,1575,155925),
+(3378,'Holy Night Siblings, Castor & Pollux',5,'Light','Dark','Machine','God',NULL,35,1129,674,97,3023,1785,263,4000000,99,630,62370,5000,'Gemini Star Road','Enjoy your holidays...',3378,5,1.0,1.0,1.0,1500,148500),
+(3284,'Dragon Caller''s Disciple, Sheena',5,'Dark','Light','Dragon','Attacker',NULL,50,1872,823,19,3931,1728,40,5000000,99,855,84645,15000,'Draco Summon - Light & Dark','Magic Dragon Tribe''s Determination',3284,5,1.0,1.0,1.0,2063,204188),
+(2255,'Sea Deity, Neptune Dragon',9,'Water','Dark','God','Dragon',NULL,99,1811,581,110,4528,1453,231,9999999,99,1650,163350,1,'Hydra Horn','Death Sea Holy Water',2255,5,1.5,1.5,1.5,4050,400950),
+(2786,'Trance Kuja',5,'Fire','Dark','Attacker',NULL,NULL,12,988,801,99,2371,1922,238,3000000,99,285,28215,1,'Flare Star','I''ll bring this to an end!',2786,5,1.0,1.0,1.0,638,63113),
+(137,'Susano no Mikoto',6,'Wood','Wood','God',NULL,NULL,20,1200,760,128,2970,1186,298,4000000,99,420,41580,5000,'Iron Wall Stance','Iron Wall Lore',137,5,1.5,1.5,1.5,975,96525);
