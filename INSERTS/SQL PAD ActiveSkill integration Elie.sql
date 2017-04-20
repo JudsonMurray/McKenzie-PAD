@@ -7,20 +7,21 @@
 --V1.1 - APRIL 19 2017 - Added everyone's active skills to the database
 --V1.2 - APRIL 20 2017 - Changed Description field to; ActiveSkillDesc and Table name ActiveSkillIntegration to; ActiveSkill
 --V1.3 - APRIL 20 2017 - Fixed Zach's ActiveSkills so max level and cool down are accurate
+--V1.4 - APRIL 20 2017 - Changed field name ActiveSkillCoolDown to; ActiveSkillMaxCoolDown
 
 --TRUNCATE TABLE ActiveSkill
 
---CREATE TABLE SWTS1103.dbo.ActiveSkill
---(
---ActiveSkillName					varchar(100) NOT NULL,
---ActiveSkillDesc					varchar(max) NOT NULL,
---ActiveSkillMaxLevel				int NOT NULL,
---ActiveSkillCoolDown				int NOT NULL
---PRIMARY KEY (ActiveSkillName)
---);
+CREATE TABLE SWTS1103.dbo.ActiveSkill
+(
+ActiveSkillName					varchar(100) NOT NULL,
+ActiveSkillDesc					varchar(max) NOT NULL,
+ActiveSkillMaxLevel				int NOT NULL,
+ActiveSkillMaxCoolDown			int NOT NULL
+PRIMARY KEY (ActiveSkillName)
+);
 
 --Kyle's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
 ('Astrocharge - Dark', 'Changes Jammers, Poison & Heal Orbs to Dark Orbs; other allies'' skill charged by 1 turn', 6, 12),
 ('Wild Wind', 'Voids damage absorption for 1 turn; other allies'' skills charged by 1 turn', 6,24),
 ('Summon Light', '5 Light Orbs are created at random; Light Orbs enhanced', 6, 11),
@@ -32,7 +33,7 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 ('Abyssal Strike', 'The less HP you have, the more Dark dmg caused to all enemies; 2x ATK for Dark Att. for 1 turn', 5,12);
 
 --Elie's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
 ('Southern Seven-Star Formation', 'Changes Orbs to Fire, wood & Light Orb', 7, 14),
 ('Force', 'Delays enemies next move for 5 turns', 6, 25),
 ('Aubade Gaia', 'Changes to wood & light orbs', 8, 19),
@@ -53,7 +54,7 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 16, 19);
 
 --Zach's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
 ('Defensive Stance','Halves damage for 3 turns',6,20),
 ('Petit Heat Breath','Inflicts a 2x ATK Fire Att. attack on all enemies',2,2),
 ('Guard Stance - Fire','Changes Wood Orbs to Heal Orbs',7,11),
@@ -71,12 +72,12 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 --DUPLICATE('Draco Summon - Light & Dark', 'Changes all Orbs to Light & Dark Orbs', 6,17),
 
 --Billy's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
 ('The Sacred Blue Chains', 'Changes Fire Orbs to Water Orbs & Light Orbs to Heal Orbs; Heal Orbs enhanced',6, 13),
 ('Shine Flare Ring', 'Changes Orbs to Fire, Light & Heal Orbs; other allies'' skills charged by 1 turn',6, 15);
 
 --Ryan's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
 ('Hurricane Shout', '2 non-Wood Orbs change to Heal Orbs; changes Jammers & Poison Orbs to Wood Orbs', 6, 8),
 ('Attack Stance - Wood', 'Changes Heal Orbs to Wood Orbs', 7, 11),
 ('Astray Mist', 'Voids enemies'' DEF for 1 turn; halves damage for 1 turn', 6, 16),
