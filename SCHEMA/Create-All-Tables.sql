@@ -2,6 +2,23 @@
 -- Created By Elie and billy.--
 
 --MonsterType Table
+
+if OBJECT_ID('SWTS1103.dbo.MonsterClass', 'U') is not null
+ drop table MonsterClass;
+if OBJECT_ID('SWTS1103.dbo.MonsterType', 'U') is not null
+ drop table MonsterType;
+if OBJECT_ID('SWTS1103.dbo.Attribute', 'U') is not null
+ drop table Attribute;
+if OBJECT_ID('SWTS1103.dbo.ActiveSkill', 'U') is not null
+ drop table ActiveSkill;
+if OBJECT_ID('SWTS1103.dbo.LeaderSkill', 'U') is not null
+ drop table LeaderSkill;
+if OBJECT_ID('SWTS1103.dbo.AwokenSkillList', 'U') is not null
+ drop table AwokenSkillList;
+if OBJECT_ID('SWTS1103.dbo.AwokenSkill', 'U') is not null
+ drop table AwokenSkill;
+
+
 CREATE TABLE SWTS1103.dbo.MonsterType ( 
 	MonsterTypeName      varchar(50) NOT NULL   ,
 	CONSTRAINT Pk_MonsterType PRIMARY KEY ( MonsterTypeName )
