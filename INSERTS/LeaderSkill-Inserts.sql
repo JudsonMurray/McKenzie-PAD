@@ -10,8 +10,7 @@
 TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
-('Power of Darkness','2x ATK for Dark Att.'),
-('Perseverance','May survive when HP is reduced to 0');
+
 
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Quick Boost','Increases time limit of orb movement by 3 seconds'),
@@ -45,6 +44,8 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 
 --Elie
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Power of Darkness','2x ATK for Dark Att.'),
+('Perseverance','May survive when HP is reduced to 0'),
 ('Dark Power','1.5x ATK for Dark Att.'),
 ('Power of Moondragon','2x ATK & RCV for Dark Att.'),
 ('Dance of the Crimson Heaven','4x ATK when Fire, Wood, & Light attack at once'),
@@ -52,7 +53,7 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Nirvana Soul','2x ATK & HP for Wood Att. and God Type'),
 ('Dawn of a Dark Age','3x ATK for Attacker Type and their HP increases a little'),
 ('Dispelling Circle','3x ATK for Attacker Type; heals HP equal to 5x RCV when matching Orbs'),
-('Twin Sorcerous Curse - DK / Wd','2.5x ATK for Dark, Wood Att. ATK increases a little; 3.5x ATK for allies with both Attributes'),
+('Twin Sorcerous Curse - Dk / Wd','2.5x ATK for Dark, Wood Att. ATK increases a little; 3.5x ATK for allies with both Attributes'),
 ('Rumbling Firedragon''s Bravery','1.5x RCV for Dragon Type; 3x ATK for Fire Att.'),
 ('Nirvana Blade','2x HP & ATK for Wood Att. & God Type; 2x ATK when Wood & Light attack at once');
 
