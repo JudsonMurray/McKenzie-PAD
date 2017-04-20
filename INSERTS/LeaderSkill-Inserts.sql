@@ -10,6 +10,10 @@
 TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Power of Darkness','2x ATK for Dark Att.'),
+('Perseverance','May survive when HP is reduced to 0');
+
+insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Quick Boost','Increases time limit of orb movement by 3 seconds'),
 ('Moonlit Divine Strike','3x ATK for Light Att.'),
 ('Spirit of the Moonlight Princess','3x ATK for Att. erasing 5 Orbs including enhanced; ATK increases with 6+ combos, up to 6x'),
