@@ -5,20 +5,21 @@
 --VERSION HISTORY
 --V1.0 - APRIL 19 2017
 --V1.1 - APRIL 19 2017 - Added everyone's active skills to the database
+--V1.2 - APRIL 20 2017 - Changed Description field to; ActiveSkillDesc and Table name ActiveSkillIntegration to; ActiveSkill
 
---DROP TABLE ActiveSkillIntegration
+--TRUNCATE TABLE ActiveSkill
 
-CREATE TABLE SWTS1103.dbo.ActiveSkillIntegration
+CREATE TABLE SWTS1103.dbo.ActiveSkill
 (
 ActiveSkillName					varchar(100) NOT NULL,
-Description						varchar(max) NOT NULL,
+ActiveSkillDesc					varchar(max) NOT NULL,
 ActiveSkillMaxLevel				int NOT NULL,
 ActiveSkillCoolDown				int NOT NULL
 PRIMARY KEY (ActiveSkillName)
 );
 
 --Kyle's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
 ('Astrocharge - Dark', 'Changes Jammers, Poison & Heal Orbs to Dark Orbs; other allies'' skill charged by 1 turn', 6, 12),
 ('Wild Wind', 'Voids damage absorption for 1 turn; other allies'' skills charged by 1 turn', 6,24),
 ('Summon Light', '5 Light Orbs are created at random; Light Orbs enhanced', 6, 11),
@@ -30,7 +31,7 @@ insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, A
 ('Abyssal Strike', 'The less HP you have, the more Dark dmg caused to all enemies; 2x ATK for Dark Att. for 1 turn', 5,12);
 
 --Elie's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
 ('Southern Seven-Star Formation', 'Changes Orbs to Fire, wood & Light Orb', 7, 14),
 ('Force', 'Delays enemies next move for 5 turns', 6, 25),
 ('Aubade Gaia', 'Changes to wood & light orbs', 8, 19),
@@ -51,7 +52,7 @@ insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, A
 16, 19);
 
 --Zach's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
 ('Defensive Stance','Halves damage for 3 turns',20,6),
 ('Petit Heat Breath','Inflicts a 2x ATK Fire Att. attack on all enemies',2,2),
 ('Guard Stance - Fire','Changes Wood Orbs to Heal Orbs',11,7),
@@ -69,12 +70,12 @@ insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, A
 --DUPLICATE('Draco Summon - Light & Dark', 'Changes all Orbs to Light & Dark Orbs', 6,17),
 
 --Billy's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
 ('The Sacred Blue Chains', 'Changes Fire Orbs to Water Orbs & Light Orbs to Heal Orbs; Heal Orbs enhanced',6, 13),
 ('Shine Flare Ring', 'Changes Orbs to Fire, Light & Heal Orbs; other allies'' skills charged by 1 turn',6, 15);
 
 --Ryan's ActiveSkills
-insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
+insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
 ('Hurricane Shout', '2 non-Wood Orbs change to Heal Orbs; changes Jammers & Poison Orbs to Wood Orbs', 6, 8),
 ('Attack Stance - Wood', 'Changes Heal Orbs to Wood Orbs', 7, 11),
 ('Astray Mist', 'Voids enemies'' DEF for 1 turn; halves damage for 1 turn', 6, 16),
@@ -83,4 +84,4 @@ insert into SWTS1103.dbo.ActiveSkillIntegration (ActiveSkillName, Description, A
 ('World of the Gleaming Moon','Enhances all Orbs; extends Orb move time by 5 seconds for 3 turns', 5, 12),
 ('Change the World','2.5x ATK for God Type for 1 turn; move Orbs freely for 10 seconds', 8, 20);
 
-SELECT * FROM ActiveSkillIntegration
+SELECT * FROM ActiveSkill
