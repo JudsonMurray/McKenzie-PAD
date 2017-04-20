@@ -90,7 +90,6 @@ Values
 
 
 
-<<<<<<< HEAD
 insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, "AwokenSkillList", MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkill, LeaderSkill, "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") values
 (2995,'Bursting Great Earl of Hell, Ronove',6,'Wood',NULL,'Devil','Machine',NULL,2995,1811,1202,296,3211,1702,696,5000000,99,40,1,1,1,'Hurricane Shout','Evil Sound''s Reverberation'),
 (693,'Noble Wolf King Hero, Cu Chulainn',7,'Wood','Dark','Balanced',null,NULL,693,1613,1204,255,2987,1386,378,4000000,99,35,1,1,1,'Attack Stance - Wood','Light of Scathach'),
@@ -107,6 +106,9 @@ insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (990, 'Nocturne Chanter, Tsukuyomi', 7, 'Dark', 'Dark', 'God', 'Balanced', null, 990, 1080, 725, 173, 2972, 1436, 545, 4000000, 99, 30, 1.5, 1.5, 1.5, 'Change the World', 'Chanter''s Pitch'),
 (3389, 'Reincarnated Yomi', 8, 'Dark', 'Water', 'Physical', 'Devil', 'God', 3389, 2186, 768, 103, 5415, 1841, 272, 16000000, 99, 45, 1.5, 1.5, 1.5, 'World of the Gleaming Moon', 'Spirit of the Moonlight Princess');
 
+
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Cost, MinHP, MinATK, MinRCV, MaxHP, MaxATK, MaxRCV, MonsterPointValue,MinCoinValue, MaxCoinValue,	MaxLevel, MaxEXP, LatentAwokenSkillslot, PriAttribute, SecAttribute,PriType, Sectype, tertype, ActiveSkill,LeaderSkill, AwokenSkill, Latentawokenskill, MonsterGrowth) VALUES
 (135,'Demon Viper Orochi',6,20,1320,793,150,3090,1150,222,5000,420,41580,99,4000000,5,'Water','Water','God',NULL,NULL,'Force','Perserverance',135,NULL,4000000),
 (746,'Heavenly Guide Suzaku, Leilan',6,25,1294,918,201,3235,1377,302,5000,495,49005,99,4000000,5,'Fire','Fire','God',NULL,NULL,'Southern Seven-Star Formation','Dance of the Crimson Heaven',746,NULL,4000000),
 (1131,'Guardian Dragon, Avalon Drake',6,30,1630,783,50,4075,1409,190,5000,570,56430,99,4000000,5,'Wood','Light','God','Dragon',NULL,'Aubade Gaia','Nirvana Soul',1131,NULL,4000000),
@@ -121,20 +123,3 @@ insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (1557, 'Dancing Flame, Amaterasu Ohkami', 7, 30, 1170, 709, 255, 2721, 1511, 502, 5000, 585, 57915, 99, 4000000, 5,'Light', 'Fire', 'God', 'Attacker', NULL, 'Shower of Healing', 'Dispelling Circle', 1557, NULL, 4000000),
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, NULL, 4000000),
 (1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553, NULL, 4000000);
-=======
-insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, "AwokenSkillList", MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkill, LeaderSkill, "MinCoinValue", "MaxCoinValue", "MinExperienceValue", "MaxExperienceValue", "MonsterPointValue") values
-(2995,'Bursting Great Earl of Hell, Ronove',6,'Wood',NULL,'Devil','Machine',NULL,2995,1811,1202,296,3211,1702,696,5000000,99,40,1,1,1,'Hurricane Shout','Evil Sound''s Reverberation', 720, 71280, 1725, 170775, 15000),
-(693,'Noble Wolf King Hero, Cu Chulainn',7,'Wood','Dark','Balanced',null,NULL,693,1613,1204,255,2987,1386,378,4000000,99,35,1,1,1,'Attack Stance - Wood','Light of Scathach', 660, 65340, 1575, 155925, 15),
-(2944,'Balboa',5,'Wood',NULL,'Dragon','Machine',NULL,2944,395,219,8,1012,795,135,883883,50,30,1,1,1,'Astray Mist','Hermit Soul', 555, 27750, 1313, 65625, 15000),
-(2945,'Steel Wand MechDragon God, Balboa',6,'Wood','Water','Dragon','Machine',NULL,2945,914,623,119,3624,1524,252,5000000,99,50,1,1,1,'Astray Mist','Hermit Soul', 870, 86130, 2100, 207900, 15000),
-(3372,'Radiant Staff Mechdragon God, Balboa',7,'Wood','Water','Dragon','Machine','God',3372,914,623,119,3824,1574,282,5000000,99,60,1,1,1,'Astray Mist','Hermit Soul', 1035, 102465, 2513, 248738, 15000),
-(3373,'Steel Chronicle Mechdragon God, Balboa',7,'Wood',NULL,'Dragon','Machine',NULL,3373,914,623,119,4524,1824,252,5000000,99,60,1,1,1,'Astray Mist','Hermit Eyes', 1035, 103465, 2513, 248738, 15000),
-(2567,'Past Life Jade Dragon Caller, Sonia',8,'Wood','Dark','Dragon','Balanced',NULL,2567,1974,600,122,3938,1820,425,5000000,99,70,1,1,1,'Draco Summoning Circle-Wd & Dk','Ancient Dragon Tribe''s Quintessence', 1200, 118800, 2925, 289575, 50000),
-(2325,'Awoken Tsukuyomi',7,'Dark','Wood','Physical','Devil',NULL,2325,1080,725,173,4372,1536,205,4000000,99,35,1.5,1.5,1.5,'World of the Gleaming Moon','Demonic Strike', 660, 65340, 1575, 155925, 5000),
-(3070,'Divine Creator of Equilibrium, Vishnu',8,'Wood','Wood','God','Attacker','Devil',3070,1066,850,170,3565,1930,306,4000000,99,45,1,1,1,'Wood Awakening','Prosperity God''s Cadence', 825, 82675, 1988, 196763, 5000),
-(140, 'Yomi', 5, 'Dark', Null, 'God', null, null, null, 308, 229, 53, 1350, 806, 192, 707107, 50, 15, 1.5, 1.5, 1.5, 'Change the World', 'Quick Boost', 230, 11500, 500, 25000, 5000),
-(141, 'Tsuku Yomi', 6, 'Dark', 'Dark', 'God', null, null, 141, 1080, 725, 173, 2772, 1336, 495, 4000000, 99, 20, 1.5, 1.5, 1.5, 'Change the World', 'God''s Hand', 420, 41580, 975, 96525, 5000),
-(989, 'War Deity of the Night, Tsukuyomi', 7, 'Dark', 'Light', 'God', 'Attacker', null, 989, 1080, 725, 173, 2472, 2036, 295, 4000000, 99, 30, 1.5, 1.5, 1.5, 'Change the World', 'Moonlit Divine Strike', 585, 57915, 1388, 137363, 5000),
-(990, 'Nocturne Chanter, Tsukuyomi', 7, 'Dark', 'Dark', 'God', 'Balanced', null, 990, 1080, 725, 173, 2972, 1436, 545, 4000000, 99, 30, 1.5, 1.5, 1.5, 'Change the World', 'Chanter''s Pitch', 585, 57915, 1388, 137363, 5000),
-(3389, 'Reincarnated Yomi', 8, 'Dark', 'Water', 'Physical', 'Devil', 'God', 3389, 2186, 768, 103, 5415, 1841, 272, 16000000, 99, 45, 1.5, 1.5, 1.5, 'World of the Gleaming Moon', 'Spirit of the Moonlight Princess', 825, 81675, 1988, 196763, 5000);
->>>>>>> d539de5bc6f6f0eae7df6417edddc07c58492307
