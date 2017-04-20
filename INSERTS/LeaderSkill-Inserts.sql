@@ -9,7 +9,12 @@
 
 TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
---Common
+insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Quick Boost','Increases time limit of orb movement by 3 seconds'),
+('Moonlit Divine Strike','3x ATK for Light Att.'),
+('Spirit of the Moonlight Princess','3x ATK for Att. erasing 5 Orbs including enhanced; ATK increases with 6+ combos, up to 6x'),
+('Chanter''s Pitch','Increases time limit of orb movement by 10 seconds'),
+('God''s Hand','Extends time to move orbs by 5 seconds');
 
 
 --Ryan
