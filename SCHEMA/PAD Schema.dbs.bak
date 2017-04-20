@@ -28,7 +28,7 @@
 			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="AwokenSkillList" >
-			<column name="ASListID" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="ASListID" type="int" jt="4" mandatory="y" />
 			<column name="AwokenSkillOne" type="varchar" length="100" jt="12" mandatory="y" />
 			<column name="AwokenSkillTwo" type="varchar" length="100" jt="12" />
 			<column name="AwokenSkillThree" type="varchar" length="100" jt="12" />
@@ -199,13 +199,13 @@
 		</table>
 		<table name="table_" />
 	</schema>
-	<layout name="Default Layout" id="Layout_238c23f1" show_relation="columns" >
-		<entity schema="monsterclass" name="LeaderSkill" color="c1d8ee" x="345" y="360" />
-		<entity schema="monsterclass" name="AwokenSkill" color="c1d8ee" x="660" y="510" />
-		<entity schema="monsterclass" name="ActiveSkill" color="c1d8ee" x="315" y="225" />
-		<entity schema="monsterclass" name="AwokenSkillList" color="c1d8ee" x="345" y="450" />
+	<layout name="Default Layout" id="Layout_238c23f1" show_column_type="y" show_relation="columns" >
 		<entity schema="monsterclass" name="Attribute" color="c1d8ee" x="345" y="45" />
 		<entity schema="monsterclass" name="MonsterType" color="c1d8ee" x="330" y="135" />
+		<entity schema="monsterclass" name="ActiveSkill" color="c1d8ee" x="315" y="225" />
+		<entity schema="monsterclass" name="LeaderSkill" color="c1d8ee" x="345" y="360" />
+		<entity schema="monsterclass" name="AwokenSkill" color="c1d8ee" x="660" y="510" />
 		<entity schema="monsterclass" name="MonsterClass" color="c1d8ee" x="45" y="45" />
+		<entity schema="monsterclass" name="AwokenSkillList" color="c1d8ee" x="345" y="450" />
 	</layout>
 </project>
