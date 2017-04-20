@@ -1,4 +1,7 @@
-CREATE TABLE monsterclass.MonsterClass ( 
+
+--Drop Table SWTS1103.dbo.MonsterClass
+
+CREATE TABLE SWTS1103.dbo.MonsterClass ( 
 	MonsterID            int NOT NULL   ,
 	MonsterName          varchar(100) NOT NULL   ,
 	Rarity               int NOT NULL   ,
@@ -29,37 +32,37 @@ CREATE TABLE monsterclass.MonsterClass (
 	MonsterPointValue    int NOT NULL   ,
 	LSSlots              int NOT NULL CONSTRAINT defo_MonsterClass_LSSlots DEFAULT 5  ,
 	CONSTRAINT Pk_MonsterClass PRIMARY KEY ( MonsterID )
- ) engine=InnoDB;
+ )
 
-CREATE  INDEX idx_MonsterClass ON monsterclass.MonsterClass ( AttributeOne );
+CREATE  INDEX idx_MonsterClass ON SWTS1103.dbo.MonsterClass ( AttributeOne );
 
-CREATE  INDEX idx_MonsterClass_0 ON monsterclass.MonsterClass ( AttributeTwo );
+CREATE  INDEX idx_MonsterClass_0 ON SWTS1103.dbo.MonsterClass ( AttributeTwo );
 
-CREATE  INDEX idx_MonsterClass_1 ON monsterclass.MonsterClass ( MonsterTypeOne );
+CREATE  INDEX idx_MonsterClass_1 ON SWTS1103.dbo.MonsterClass ( MonsterTypeOne );
 
-CREATE  INDEX idx_MonsterClass_2 ON monsterclass.MonsterClass ( MonsterTypeTwo );
+CREATE  INDEX idx_MonsterClass_2 ON SWTS1103.dbo.MonsterClass ( MonsterTypeTwo );
 
-CREATE  INDEX idx_MonsterClass_3 ON monsterclass.MonsterClass ( MonsterTypeThree );
+CREATE  INDEX idx_MonsterClass_3 ON SWTS1103.dbo.MonsterClass ( MonsterTypeThree );
 
-CREATE  INDEX idx_MonsterClass_4 ON monsterclass.MonsterClass ( ActiveSkillName );
+CREATE  INDEX idx_MonsterClass_4 ON SWTS1103.dbo.MonsterClass ( ActiveSkillName );
 
-CREATE  INDEX idx_MonsterClass_5 ON monsterclass.MonsterClass ( LeaderSkillName );
+CREATE  INDEX idx_MonsterClass_5 ON SWTS1103.dbo.MonsterClass ( LeaderSkillName );
 
-CREATE  INDEX idx_MonsterClass_6 ON monsterclass.MonsterClass ( ASListID );
+CREATE  INDEX idx_MonsterClass_6 ON SWTS1103.dbo.MonsterClass ( ASListID );
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_attribute1 FOREIGN KEY ( AttributeOne ) REFERENCES monsterclass.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_attribute1 FOREIGN KEY ( AttributeOne ) REFERENCES SWTS1103.dbo.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_attribute2 FOREIGN KEY ( AttributeTwo ) REFERENCES monsterclass.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_attribute2 FOREIGN KEY ( AttributeTwo ) REFERENCES SWTS1103.dbo.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype1 FOREIGN KEY ( MonsterTypeOne ) REFERENCES monsterclass.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype1 FOREIGN KEY ( MonsterTypeOne ) REFERENCES SWTS1103.dbo.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype2 FOREIGN KEY ( MonsterTypeTwo ) REFERENCES monsterclass.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype2 FOREIGN KEY ( MonsterTypeTwo ) REFERENCES SWTS1103.dbo.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype3 FOREIGN KEY ( MonsterTypeThree ) REFERENCES monsterclass.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype3 FOREIGN KEY ( MonsterTypeThree ) REFERENCES SWTS1103.dbo.MonsterType( MonsterTypeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_activeskill FOREIGN KEY ( ActiveSkillName ) REFERENCES monsterclass.ActiveSkill( ActiveSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_activeskill FOREIGN KEY ( ActiveSkillName ) REFERENCES SWTS1103.dbo.ActiveSkill( ActiveSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass_leaderskill FOREIGN KEY ( LeaderSkillName ) REFERENCES monsterclass.LeaderSkill( LeaderSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_leaderskill FOREIGN KEY ( LeaderSkillName ) REFERENCES SWTS1103.dbo.LeaderSkill( LeaderSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE monsterclass.MonsterClass ADD CONSTRAINT fk_monsterclass FOREIGN KEY ( ASListID ) REFERENCES monsterclass.AwokenSkillList( ASListID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass FOREIGN KEY ( ASListID ) REFERENCES SWTS1103.dbo.AwokenSkillList( ASListID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
