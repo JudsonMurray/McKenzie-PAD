@@ -6,8 +6,9 @@
 --V1.0 - APRIL 19 2017
 --V1.1 - APRIL 19 2017 - Added everyone's active skills to the database
 --V1.2 - APRIL 20 2017 - Changed Description field to; ActiveSkillDesc and Table name ActiveSkillIntegration to; ActiveSkill
+--V1.3 - APRIL 20 2017 - Fixed Zach's ActiveSkills so max level and cool down are accurate
 
---TRUNCATE TABLE ActiveSkill
+--DROP TABLE ActiveSkill
 
 CREATE TABLE SWTS1103.dbo.ActiveSkill
 (
@@ -53,20 +54,20 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 
 --Zach's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
-('Defensive Stance','Halves damage for 3 turns',20,6),
+('Defensive Stance','Halves damage for 3 turns',6,20),
 ('Petit Heat Breath','Inflicts a 2x ATK Fire Att. attack on all enemies',2,2),
-('Guard Stance - Fire','Changes Wood Orbs to Heal Orbs',11,7),
-('Ice Gift','Inflicts 30x ATK Water Att. attack on 1 enemy',13,1),
-('Grimoire Sphere','Changes Orbs to Fire and Light Orbs',19,8),
-('Hydra Horn', 'Mortally poisons all enemies; other allies'' skills charged by 2 turns',6, 21),
-('Flare Star', '	Dark attack of 10x team''s Fire ATK on 1 enemy; creates 8 Fire Orbs at random',11, 22),
-('Iron Wall Stance', 'Halves damage for 5 turns',6 ,20),
+('Guard Stance - Fire','Changes Wood Orbs to Heal Orbs',7,11),
+('Ice Gift','Inflicts 30x ATK Water Att. attack on 1 enemy',1,13),
+('Grimoire Sphere','Changes Orbs to Fire and Light Orbs',8,19),
+('Hydra Horn', 'Mortally poisons all enemies; other allies'' skills charged by 2 turns',21, 6),
+('Flare Star', '	Dark attack of 10x team''s Fire ATK on 1 enemy; creates 8 Fire Orbs at random',22, 11),
+('Iron Wall Stance', 'Halves damage for 5 turns',20 ,6),
 ('Dimension Dance - Purple Sky', 'Changes Jammers, Poison & Water Orbs to Dark Orbs; other allies'' skills charged by 1 turn',
-6, 12),
-('Aero Wake - Dark', 'Changes Wood, Heal, Poison & Jammers to Dark; Dark Orbs more likely to appear for 4 turns',6, 15),
-('Dark Terror Mist', '1.5x ATK for Dark Att. for 2 turns; Dark Orbs enhanced',10, 17),
+12, 6),
+('Aero Wake - Dark', 'Changes Wood, Heal, Poison & Jammers to Dark; Dark Orbs more likely to appear for 4 turns',15, 6),
+('Dark Terror Mist', '1.5x ATK for Dark Att. for 2 turns; Dark Orbs enhanced',17, 10),
 ('Gemini Star Road', 'Changes the leftmost column to Light Orbs & rightmost to Dark Orbs; other allies'' skills charged by 1 turn',
-6, 13);
+13, 6);
 --DUPLICATE('Draco Summon - Light & Dark', 'Changes all Orbs to Light & Dark Orbs', 6,17),
 
 --Billy's ActiveSkills
