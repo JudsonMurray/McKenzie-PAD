@@ -9,16 +9,6 @@
 
 TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
-insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
-
-
-insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
-('Quick Boost','Increases time limit of orb movement by 3 seconds'),
-('Moonlit Divine Strike','3x ATK for Light Att.'),
-('Spirit of the Moonlight Princess','3x ATK for Att. erasing 5 Orbs including enhanced; ATK increases with 6+ combos, up to 6x'),
-('Chanter''s Pitch','Increases time limit of orb movement by 10 seconds'),
-('God''s Hand','Extends time to move orbs by 5 seconds');
-
 
 --Ryan
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
@@ -28,7 +18,12 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Hermit Eyes', '2x ATK & RCV for Wood Att.; 3.5x ATK when Wood & Water attack at once'),
 ('Ancient Dragon Tribe''s Quintessence','2.5x ATK & RCV for Dragon & Balanced Types; 1.5x ATK when erasing 4+ linked Wood Orbs'),
 ('Prosperity God''s Cadence','2.5x ATK & 1.5x RCV for Wood Att.; 2x ATK with 2 Wood combos, 3x ATK with 3+ combos'),
-('Demonic Strike', '3x ATK when erasing 5 Orbs with 1+ enhanced; ATK increases with 6+ combos up to 2.5x');
+('Demonic Strike', '3x ATK when erasing 5 Orbs with 1+ enhanced; ATK increases with 6+ combos up to 2.5x'),
+('Quick Boost','Increases time limit of orb movement by 3 seconds'),
+('Moonlit Divine Strike','3x ATK for Light Att.'),
+('Spirit of the Moonlight Princess','3x ATK for Att. erasing 5 Orbs including enhanced; ATK increases with 6+ combos, up to 6x'),
+('Chanter''s Pitch','Increases time limit of orb movement by 10 seconds'),
+('God''s Hand','Extends time to move orbs by 5 seconds');
 
 --Zach
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
@@ -44,8 +39,6 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 
 --Elie
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
-('Power of Darkness','2x ATK for Dark Att.'),
-('Perseverance','May survive when HP is reduced to 0'),
 ('Dark Power','1.5x ATK for Dark Att.'),
 ('Power of Moondragon','2x ATK & RCV for Dark Att.'),
 ('Dance of the Crimson Heaven','4x ATK when Fire, Wood, & Light attack at once'),
@@ -55,7 +48,9 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Dispelling Circle','3x ATK for Attacker Type; heals HP equal to 5x RCV when matching Orbs'),
 ('Twin Sorcerous Curse - Dk / Wd','2.5x ATK for Dark, Wood Att. ATK increases a little; 3.5x ATK for allies with both Attributes'),
 ('Rumbling Firedragon''s Bravery','1.5x RCV for Dragon Type; 3x ATK for Fire Att.'),
-('Nirvana Blade','2x HP & ATK for Wood Att. & God Type; 2x ATK when Wood & Light attack at once');
+('Nirvana Blade','2x HP & ATK for Wood Att. & God Type; 2x ATK when Wood & Light attack at once'),
+('Power of Darkness','2x ATK for Dark Att.'),
+('Perseverance','May survive when HP is reduced to 0');
 
 --Kyle
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values

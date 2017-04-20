@@ -2,11 +2,14 @@
 -- Developes: WILLIAM GALE, ZACHARY BLUE --
 -- Date of Creation April, 19 2017 --
 
---truncate table SWTS1103.dbo.MonsterClass
+truncate table SWTS1103.dbo.MonsterClass
 
 INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
- "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", ASListID, LeaderSkillName, ActiveSkillName, "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
+ "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", "AwokenSkillList", "LeaderSkill", "ActiveSkill", "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
     "GrowthRateRCV", "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") VALUES 
+(1, 'Tyrra', 2, 'Fire', NULL, 'Dragon', NULL, NULL, 505, 5, 2, NULL, 'Fire Power', 'Heat Breath', 71, 57, 1, 144, 52, 1, 13, 8, 1, 350, 70, 500, 100, 1),
+(5, 'Plessie', 2, 'Water', NULL, 'Dragon', NULL, NULL, 505, 5, 2, NULL, 'Water Power', 'Cold Breath', 62, 42, 1, 155, 62, 1, 18, 11, 1, 350, 70, 500, 100, 1),
+(9, 'Brachy', 2, 'Wood', NULL, 'Dragon', NULL, NULL, 505, 5, 2, NULL, 'Wood Power', 'Wind Breath', 59, 32, 1, 168, 67, 1, 22, 13, 1, 350, 70, 500, 100, 1),
 (40, 'Woodsie', 1, 'Wood', NULL, 'Balanced', NULL, NULL, 2556, 10, 1, NULL,NULL, NULL, 90, 36, 0.7, 205, 41, 0.7, 37, 11, 0.7, 500, 50, 500, 50, 1),
 (36, 'Flamie', 1, 'Fire', NULL, 'Balanced', NULL, NULL, 2556, 10, 1, NULL, NULL, NULL, 105, 42, 0.7, 195, 39, 0.7, 30, 9, 0.7, 500, 50, 500, 50, 1),
 (38, 'Bubblie', 1, 'Water', NULL, 'Balanced', NULL, NULL, 2556, 10, 1, NULL, NULL, NULL, 93, 37, 0.7, 215, 43, 0.7, 30, 9, 0.7, 500, 50, 500, 50, 1),
@@ -63,16 +66,16 @@ AttributeTwo,
 "MonsterTypeOne",
 "MonsterTypeTwo",
 "MonsterTypeThree",
-LeaderSkillName,
-ActiveSkillName, 
-ASListID, 
+LeaderSkill,
+ActiveSkill, 
+"AwokenSkillList", 
 GrowthRateATK,
 GrowthRateRCV,
 GrowthRateHP,
 "MaxExperienceValue", 
 "MinExperienceValue")
 Values
-(1107, 'Phantom God, Odin', 6, 30, 4000000, 50, 2306, 1513, 58, 1098, 1164, 29, 570, 28500, 50000, 'Fire', NULL, 'God', NULL, NULL, 'Rune of Fate', 'Destroying Lance, Gungnir', NULL, 0, 0, 0, 67500, 1350),
+(1107, 'Phantom God, Odin', 6, 30, 4000000, 50, 2306, 1513, 58, 1098, 1164, 29, 570, 28500, 50000, 'Fire', NULL, 'God', NULL, NULL, 'Rune of Fate', 'Destroying Lance, Gungnir', 1107, 0, 0, 0, 67500, 1350),
 (1108, 'Awoken Phantom God, Odin', 7, 50, 4000000, 99, 4059, 2043, 154, 1845, 1362, 52, 885, 87615, 50000, 'Fire', 'Dark', 'God', NULL, NULL, 'Song of Valhalla', 'Destroying Lance, Gungnir', 1108, 0, 0, 0, 211613, 2138),
 (2179, 'God of the Destroying Lance, Odin', 8, 60, 4000000, 99, 4189, 2143, 154, 1845, 1362, 52, 1050, 103950, 50000, 'Fire', 'Dark', 'God', 'Attacker', NULL, 'Dawn of Valhalla', 'Destroying Lance, Gungnir', 2179, 0, 0, 0, 252450, 2550),
 (2423, 'Castor', 5, 15, 707107, 50, 1291, 924, 35, 538, 385, 14, 330, 16500, 5000, 'Dark', NULL, 'Machine', 'God', NULL, 'Mechanical Dark Star of Gemini', 'Astrocharge - Dark', NULL, 0, 0, 0, 37500, 750),
@@ -87,10 +90,10 @@ Values
 
 
 --Ryan Inserts
-insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, ASListID, MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkillName, LeaderSkillName, "MinCoinValue", "MaxCoinValue", "MinExperienceValue", "MaxExperienceValue", "MonsterPointValue") values
+insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, "AwokenSkillList", MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkill, LeaderSkill, "MinCoinValue", "MaxCoinValue", "MinExperienceValue", "MaxExperienceValue", "MonsterPointValue") values
 (2995,'Bursting Great Earl of Hell, Ronove',6,'Wood',NULL,'Devil','Machine',NULL,2995,1811,1202,296,3211,1702,696,5000000,99,40,1,1,1,'Hurricane Shout','Evil Sound''s Reverberation', 720, 71280, 1725, 170775, 15000),
 (693,'Noble Wolf King Hero, Cu Chulainn',7,'Wood','Dark','Balanced',null,NULL,693,1613,1204,255,2987,1386,378,4000000,99,35,1,1,1,'Attack Stance - Wood','Light of Scathach', 660, 65340, 1575, 155925, 15),
-(2944,'Balboa',5,'Wood',NULL,'Dragon','Machine',NULL,NULL,395,219,8,1012,795,135,883883,50,30,1,1,1,'Astray Mist','Hermit Soul', 555, 27750, 1313, 65625, 15000),
+(2944,'Balboa',5,'Wood',NULL,'Dragon','Machine',NULL,2944,395,219,8,1012,795,135,883883,50,30,1,1,1,'Astray Mist','Hermit Soul', 555, 27750, 1313, 65625, 15000),
 (2945,'Steel Wand MechDragon God, Balboa',6,'Wood','Water','Dragon','Machine',NULL,2945,914,623,119,3624,1524,252,5000000,99,50,1,1,1,'Astray Mist','Hermit Soul', 870, 86130, 2100, 207900, 15000),
 (3372,'Radiant Staff Mechdragon God, Balboa',7,'Wood','Water','Dragon','Machine','God',3372,914,623,119,3824,1574,282,5000000,99,60,1,1,1,'Astray Mist','Hermit Soul', 1035, 102465, 2513, 248738, 15000),
 (3373,'Steel Chronicle Mechdragon God, Balboa',7,'Wood',NULL,'Dragon','Machine',NULL,3373,914,623,119,4524,1824,252,5000000,99,60,1,1,1,'Astray Mist','Hermit Eyes', 1035, 103465, 2513, 248738, 15000),
@@ -122,21 +125,21 @@ MinCoinValue,
 MaxCoinValue, 
 MaxLevel, 
 MaxExperience, 
-LSSlots, 
+LantentSkillSlots, 
 AttributeOne, 
 AttributeTwo,
 MonsterTypeOne, 
 MonsterTypeTwo, 
 MonsterTypeThree, 
-ActiveSkillName, 
-LeaderSkillName, 
-ASListID, 
+ActiveSkill, 
+LeaderSkill, 
+AwokenSkillList, 
 GrowthRateHP, 
 GrowthRateATK, 
 GrowthRateRCV,
 MinExperienceValue,
 MaxExperienceValue) VALUES
-(135,'Demon Viper Orochi',6,20,1320,793,150,3090,1150,222,5000,420,41580,99,4000000,5,'Water','Water','God',NULL,NULL,'Force','Perseverance',135,1.5, 1.5, 1.5,975,96525),
+(135,'Demon Viper Orochi',6,20,1320,793,150,3090,1150,222,5000,420,41580,99,4000000,5,'Water','Water','God',NULL,NULL,'Force','Perserverance',135,1.5, 1.5, 1.5,975,96525),
 (746,'Heavenly Guide Suzaku, Leilan',6,25,1294,918,201,3235,1377,302,5000,495,49005,99,4000000,5,'Fire','Fire','God',NULL,NULL,'Southern Seven-Star Formation','Dance of the Crimson Heaven',746,1,1,1,1163,115088),
 (1131,'Guardian Dragon, Avalon Drake',6,30,1630,783,50,4075,1409,190,5000,570,56430,99,4000000,5,'Wood','Light','God','Dragon',NULL,'Aubade Gaia','Nirvana Soul',1131,1,1,1,1350,133650),
 (17,'Spinon',2,2,42,62,7,129,78,12,1,70,350,5,505,5,'Dark',NULL,'Dragon',NULL,NULL,'Dark Breath','Dark Power',NULL,1,1,1,100,500),
@@ -145,7 +148,7 @@ MaxExperienceValue) VALUES
 (20,'Moondragon D''sinas',5,10,763,449,95,2112,1097,220,1,255,25245,99,1500000,5,'Dark',NULL,'Dragon',NULL,NULL,'Inferno Breath','Power of Darkness',20,1,1,1,563,55688),
 (484,'Moondragon Lunar D''spinas',6,15,763,449,95,2112,1097,220,1,345,34155,99,1500000,5,'Dark','Dark','Dragon',NULL,NULL,'Inferno Breath','Power of Moondragon',484,1,1,1,788,77963),
 (1919, 'Rumbling Firedragon, Armored Tyrannos', 6, 15, 777, 457, 100, 2445, 1514, 231, 1, 345, 34155, 99, 1500000, 5,'Fire', 'Water', 'Dragon', 'Attacker', NULL, 'Magma Breath', 'Rumbling Firedragon''s Bravery', 1919,1,1,1,788,77963),
-(1758, 'Black Flying Sorceress, Goetia', 6, 17, 1403, 701, 28, 3508, 1312, 120, 5000, 375, 37125, 99, 4000000, 5,'Dark', 'Wood', 'Physical', 'Devil', NULL, 'Summon Darkness', 'Twin Sorcerous Curse - Dk / Wd', 1758,0.7,0.7,0.7,863,85388),
+(1758, 'Black Flying Sorceress, Goetia', 6, 17, 1403, 701, 28, 3508, 1312, 120, 5000, 375, 37125, 99, 4000000, 5,'Dark', 'Wood', 'Physical', 'Devil', NULL, 'Summon Darkness', 'Twin Sorcerous Curse - Dk/Wd', 1758,0.7,0.7,0.7,863,85388),
 (920, 'Elemental of Kind Waters, Undine', 6, 26, 437, 497, 259, 2405, 1343, 469, 3000, 510, 50490, 99, 3000000, 5,'Water', 'Water', 'Balanced', NULL, NULL, 'Water Rapids Field', 'Grace of Water', 920, 1,1,1,1200,118800),
 (1557, 'Dancing Flame, Amaterasu Ohkami', 7, 30, 1170, 709, 255, 2721, 1511, 502, 5000, 585, 57915, 99, 4000000, 5,'Light', 'Fire', 'God', 'Attacker', NULL, 'Shower of Healing', 'Dispelling Circle', 1557,1.5,1.5,1.5,1388,137363),
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, 1,1,1,1763,174488),
@@ -153,9 +156,9 @@ MaxExperienceValue) VALUES
  
 
  --Zach Inserts
- insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
+ insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkill,LeaderSkill,AwokenSkillList,LantentSkillSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
-(2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,883883,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',NULL,5,1.5,1.5,1.5,1313,65625),
+(2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,883883,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2149,5,1.5,1.5,1.5,1313,65625),
 (2150,'Ominous Moon Dragon Caller, Satsuki',6,'Dark','Light','Dragon','Attacker',NULL,50,1602,661,29,4005,1703,46,5000000,99,870,86130,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2150,5,1.5,1.5,1.5,2100,207900),
 (3580,'Demonic Moon Dragon Caller, Satsuki',7,'Dark',Null,'Dragon','Attacker','Devil',60,1602,661,29,4305,1903,266,5000000,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3580,5,1.5,1.5,1.5,2513,248738),
 (3581,'Morning Moon Dragon Caller, Satsuki',7,'Dark','Light','Dragon','Physical',NULL,60,1602,661,29,4805,1603,6,5000000,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3581,5,1.5,1.5,1.5,2513,248738),
