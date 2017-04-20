@@ -89,7 +89,7 @@ Values
 (3450, 'Reincarnated Vritra', 8, 50, 16000000, 99, 4647, 2345, 201, 2034, 923, 56, 900, 89100, 5000, 'Dark', 'Light', 'Dragon', 'Devil', 'God', 'Soul of the Darkdragon', 'Abyssal Strike', 3450, 0, 0, 0, 215325, 2175)
 
 
-
+--Ryan Inserts
 insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, "AwokenSkillList", MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkill, LeaderSkill, "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") values
 (2995,'Bursting Great Earl of Hell, Ronove',6,'Wood',NULL,'Devil','Machine',NULL,2995,1811,1202,296,3211,1702,696,5000000,99,40,1,1,1,'Hurricane Shout','Evil Sound''s Reverberation'),
 (693,'Noble Wolf King Hero, Cu Chulainn',7,'Wood','Dark','Balanced',null,NULL,693,1613,1204,255,2987,1386,378,4000000,99,35,1,1,1,'Attack Stance - Wood','Light of Scathach'),
@@ -107,7 +107,7 @@ insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (3389, 'Reincarnated Yomi', 8, 'Dark', 'Water', 'Physical', 'Devil', 'God', 3389, 2186, 768, 103, 5415, 1841, 272, 16000000, 99, 45, 1.5, 1.5, 1.5, 'World of the Gleaming Moon', 'Spirit of the Moonlight Princess');
 
 
-
+--Elie Inserts
 INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Cost, MinHP, MinATK, MinRCV, MaxHP, MaxATK, MaxRCV, MonsterPointValue,MinCoinValue, MaxCoinValue,	MaxLevel, MaxEXP, LatentAwokenSkillslot, PriAttribute, SecAttribute,PriType, Sectype, tertype, ActiveSkill,LeaderSkill, AwokenSkill, Latentawokenskill, MonsterGrowth) VALUES
 (135,'Demon Viper Orochi',6,20,1320,793,150,3090,1150,222,5000,420,41580,99,4000000,5,'Water','Water','God',NULL,NULL,'Force','Perserverance',135,NULL,4000000),
 (746,'Heavenly Guide Suzaku, Leilan',6,25,1294,918,201,3235,1377,302,5000,495,49005,99,4000000,5,'Fire','Fire','God',NULL,NULL,'Southern Seven-Star Formation','Dance of the Crimson Heaven',746,NULL,4000000),
@@ -123,3 +123,19 @@ INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Cost, Min
 (1557, 'Dancing Flame, Amaterasu Ohkami', 7, 30, 1170, 709, 255, 2721, 1511, 502, 5000, 585, 57915, 99, 4000000, 5,'Light', 'Fire', 'God', 'Attacker', NULL, 'Shower of Healing', 'Dispelling Circle', 1557, NULL, 4000000),
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, NULL, 4000000),
 (1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553, NULL, 4000000);
+ 
+
+ --Zach Inserts
+ insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,Cost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxEXP,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkill,LeaderSkill,AwokenSkill,LatentAwokenSkill,MonsterGrowth) values
+
+(2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2149,5,'God Fest. Exclusive Series',883883),
+(2150,'Ominous Moon Dragon Caller, Satsuki',6,'Dark','Light','Dragon','Attacker',NULL,50,1602,661,29,4005,1703,46,99,870,86130,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2150,5,'God Fest. Exclusive Series',5000000),
+(3580,'Demonic Moon Dragon Caller, Satsuki',7,'Dark',Null,'Dragon','Attacker','Devil',60,1602,661,29,4305,1903,266,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3580,5,'God Fest. Exclusive Series',5000000),
+(3581,'Morning Moon Dragon Caller, Satsuki',7,'Dark','Light','Dragon','Physical',NULL,60,1602,661,29,4805,1603,6,99,1035,102465,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',3581,5,'God Fest. Exclusive Series',5000000),
+(2592,'Judging Scale Steel Star Goddess, Eschamali',7,'Dark','Light','Machine','God',NULL,60,1522,622,117,3805,1555,293,99,1035,102465,50000,'Aero Wake - Dark','Dark Steel Star of Libra',2592,5,'God Fest. Exclusive Series',5000000),
+(2388,'Soaring Night Goddess of the Dead, Nephthys',7,'Dark','Fire','God','Devil',NULL,35,981,725,299,2653,1405,538,99,660,65340,5000,'Dark Terror Mist','Game of the Dead',2388,5,'Egyptian God 2 Series',4000000),
+(3378,'Holy Night Siblings, Castor & Pollux',5,'Light','Dark','Machine','God',NULL,35,1129,674,97,3023,1785,263,99,630,62370,5000,'Gemini Star Road','Enjoy your holidays...',3378,5,'Christmas Series',4000000),
+(3284,'Dragon Caller''s Disciple, Sheena',5,'Dark','Light','Dragon','Attacker',NULL,50,1872,823,19,3931,1728,40,99,855,84645,15000,'Draco Summon - Light & Dark','Magic Dragon Tribe''s Determination',3284,5,'Heroine Series',5000000),
+(2255,'Sea Deity, Neptune Dragon',9,'Water','Dark','God','Dragon',NULL,99,1811,581,110,4528,1453,231,99,1650,163350,1,'Hydra Horn','Death Sea Holy Water',2255,5,'Monster Points Series',9999999),
+(2786,'Trance Kuja',5,'Fire','Dark','Attacker',NULL,NULL,12,988,801,99,2371,1922,238,99,285,28215,1,'Flare Star','I''ll bring this to an end!',2786,5,'Final Fantasy Collab Series',3000000),
+(137,'Susano no Mikoto',6,'Wood','Wood','God',NULL,NULL,20,1200,760,128,2970,1186,298,99,420,41580,5000,'Iron Wall Stance','Iron Wall Lore',137,5,'Japanese God 1 Series',4000000);
