@@ -8,16 +8,16 @@
 --V1.2 - APRIL 20 2017 - Changed Description field to; ActiveSkillDesc and Table name ActiveSkillIntegration to; ActiveSkill
 --V1.3 - APRIL 20 2017 - Fixed Zach's ActiveSkills so max level and cool down are accurate
 
---DROP TABLE ActiveSkill
+--TRUNCATE TABLE ActiveSkill
 
-CREATE TABLE SWTS1103.dbo.ActiveSkill
-(
-ActiveSkillName					varchar(100) NOT NULL,
-ActiveSkillDesc					varchar(max) NOT NULL,
-ActiveSkillMaxLevel				int NOT NULL,
-ActiveSkillCoolDown				int NOT NULL
-PRIMARY KEY (ActiveSkillName)
-);
+--CREATE TABLE SWTS1103.dbo.ActiveSkill
+--(
+--ActiveSkillName					varchar(100) NOT NULL,
+--ActiveSkillDesc					varchar(max) NOT NULL,
+--ActiveSkillMaxLevel				int NOT NULL,
+--ActiveSkillCoolDown				int NOT NULL
+--PRIMARY KEY (ActiveSkillName)
+--);
 
 --Kyle's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillCoolDown) Values
