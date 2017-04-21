@@ -204,3 +204,7 @@ INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "At
 (1329, 'Jewel of Dark', 7, 'Dark', null, 'Evo Material', null, null, 0, 1, 1, null, null, 'Star Wake - Land', 100, 100, 0, 100, 100, 0, 300, 300, 0, 150, 150, 15000, 15000, 1),
 (814, 'Yomi Mistress, Izanami', 7, 'Dark', 'Fire', 'God', 'Physical', null, 5000000, 99, 60, 814, 'Yomi''s Commandment', 'The Feathered Garment of Yomi', 1501, 767, 1, 4511, 1730, 1, 57, 24, 1, 102465, 1035, 248738, 2513, 20),
 (2129, 'Relentless Destroyer, Grand Tengu', 7, 'Wood', 'Dark', 'Physical', 'Devil', null, 4000000, 99, 35, 2129, 'Perseverance', 'Dance of the Great Tengu', 1317, 565, 1, 4026, 976, 1, 0, 0, 1, 65340, 660, 155925, 1575, 15);
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+ VALUES
+(1324, 'Extreme King Metal Dragon', 7, 'Dark', NULL, 'Enhance Material', 'God', NULL, 0, 1, 1, NULL, NULL, 'Orb Transformation', 2000, 600, 100, 0.7, 0.7, 0.7, 2000, 600, 100, 100, 100, 250000, 250000, 1)
