@@ -219,15 +219,12 @@ INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (1324, 'Extreme King Metal Dragon', 7, 'Dark', NULL, 'Enhance Material', 'God', NULL, 0, 1, 1, NULL, NULL, 'Orb Transformation', 2000, 600, 100, 0.7, 0.7, 0.7, 2000, 600, 100, 100, 100, 250000, 250000, 1)
 
 
-INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
- "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", ASListID, LeaderSkillName,
-  ActiveSkillName, "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
-    "GrowthRateRCV", "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") VALUES
+insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
-(2263,'	Cruel Frozen Hell Demon, Indigo',6,'Water','Dark','Devil',NULL,NULL,5000000,99,40,2263,'Hailstone of Refusal','Freeze Lock',1454,808,1.0,3140,1256,1.0,315,175,1.0,71280,720,170775,1725,25),
-(2639,'Gods'' Threat Venomous Snake, Jörmungandr',7,'Wood','Water','Dragon','Devil',NULL,5000000,99,50,2639,'End of the World''s Calling','Poisonous Fang of Transformation',1508,603,1.0,4195,1678,1.0,103,41,1.0,87615,885,211613,2138,20)
 (632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',632,5,1.0,1.0,1.0,1125,56250),
 (633,'Blizzard Archdemon Amon',6,'Water','Dark','Devil',NULL,NULL,30,1038,842,282,2595,1363,423,4000000,99,570,56430,5000,'Curse of the Ice','Demon''s Soul',633,5,1.0,1.0,1.0,1350,56430),
 (1258,'Chivalrous Demon Lord, Amon',7,'Water','Light','Devil','Physical',NULL,40,1038,842,282,3295,1363,423,4000000,99,735,72765,5000,'Curse of the Ice','Demonic Ally',1258,5,1.0,1.0,1.0,1763,174488),
 (2504,'Resolved Demon Lord, Amon',8,'Water','Light','Devil','Physical','Healer',50,1038,842,282,3895,1363,513,4000000,99,900,89100,5000,'Curse of the Ice','Devil''s Constable',2504,5,1.0,1.0,1.0,2175,215325),
-(3532,'Awoken Amon',7,'Water','Wood','Devil','Dragon',NULL,40,1038,842,282,3595,1563,423,4000000,99,735,72765,5000,'Amon Cross','Path of Solitude',3532,5,1.0,1.0,1.0,1763,174488);
+(3532,'Awoken Amon',7,'Water','Wood','Devil','Dragon',NULL,40,1038,842,282,3595,1563,423,4000000,99,735,72765,5000,'Amon Cross','Path of Solitude',3532,5,1.0,1.0,1.0,1763,174488),
+(2639,'Gods'' Threat Venomous Snake, Jörmungandr',7,'Wood','Water','Dragon','Devil',NULL,50,1678,603,41,4195,1508,103,5000000,99,885,87615,20,'Poisonous Fang of Transformation','End of the World''s Calling',2239,5,1.0,1.0,1.0,2138,211613),
+(2263,'Cruel Frozen Hell Demon, Indigo',6,'Water','Dark','Devil',NULL,NULL,40,1256,808,175,3140,1454,315,5000000,99,720,71280,25,'Freeze Lock','Hailstone of Refusal',2263,5,1.0,1.0,1.0,1725,170775);
