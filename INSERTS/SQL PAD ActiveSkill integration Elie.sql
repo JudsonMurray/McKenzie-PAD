@@ -88,4 +88,18 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 ('World of the Gleaming Moon','Enhances all Orbs; extends Orb move time by 5 seconds for 3 turns', 5, 12),
 ('Change the World','2.5x ATK for God Type for 1 turn; move Orbs freely for 10 seconds', 8, 20);
 
+--Evo Material ActiveSkills as of 04/21/17
+Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc,ActiveSkillMaxLevel,ActiveSkillMaxCoolDown) Values
+('Dragon Enhancement','2.5x ATK for Dragon Type for 1 turn; delays enemies'' next move for 1 turn', 11, 21),
+('Space-Time Tuning Circle - Fr / Wt','Changes Orbs to Fire, Water, and Heal Orbs', 6, 14),
+('Space-Time Tuning Circle - Wt / Wd','Changes Orbs to Water, Wood, and Heal Orbs', 6, 14),
+('Space-Time Tuning Circle - Wd / Fr','Changes Orbs to Fire, Wood, and Heal Orbs', 6, 14),
+('Melting Masks','Creates 3 Fire & Heal Orbs each at random; other allies'' skills charged by 1 turn', 6, 12),
+('Water Ring Jail','Changes Fire & Wood Orbs to Water Orbs', 6, 13),
+('Star Wake - Aqua','Changes Light, Heal, Poison & Jammers to Water; Water Orbs more likely to appear for 4 turns', 6, 15),
+('Star Wake - Land','Changes Light, Heal, Poison & Jammers to Wood; Wood Orbs more likely to appear for 4 turns', 6, 15),
+('Five Colored Alchemy','Changes Orbs to Fire, Water, Wood, Light, and Dark Orbs', 6, 12),
+('The Feathered Garment of Yomi','Reduces damage for 3 turns', 8, 13),
+('Dance of the Great Tengu','Switches places with Leader Monster; use again to switch back', 13, 16);
+
 SELECT * FROM ActiveSkill

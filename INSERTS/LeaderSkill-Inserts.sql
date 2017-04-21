@@ -9,6 +9,10 @@
 
 --TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
+--Evo Material
+insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Protector''s Lore', 'Slightly reduces damage'),
+('Yomi''s Commandment', '4x ATK for Physical Type, but halves overall HP');
 
 --Ryan
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
