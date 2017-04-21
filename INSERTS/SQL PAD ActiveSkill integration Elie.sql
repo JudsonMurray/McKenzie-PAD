@@ -102,4 +102,7 @@ Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc,ActiveSki
 ('The Feathered Garment of Yomi','Reduces damage for 3 turns', 8, 13),
 ('Dance of the Great Tengu','Switches places with Leader Monster; use again to switch back', 13, 16);
 
+
+Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) Values
+('Orb Transformation', 'Change all orbs to Fire, Water & Wood & Light & Dark & Heart orbs.', 12, 6)
 SELECT * FROM ActiveSkill
