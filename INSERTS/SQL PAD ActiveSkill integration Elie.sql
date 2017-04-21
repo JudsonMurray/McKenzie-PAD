@@ -53,7 +53,7 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 11, 20),
 ('Evil Nova', 'Inflicts 150000 Dark Att. damage on Light Att. enemies; Dark Orbs enhanced.',
 16, 19),
-('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12),
+('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12)
 
 --Zach's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values

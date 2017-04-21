@@ -222,7 +222,7 @@ INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 
 insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
-(632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',632,5,1.0,1.0,1.0,1125,56250),
+(632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',NULL,5,1.0,1.0,1.0,1125,56250),
 (633,'Blizzard Archdemon Amon',6,'Water','Dark','Devil',NULL,NULL,30,1038,842,282,2595,1363,423,4000000,99,570,56430,5000,'Curse of the Ice','Demon''s Soul',633,5,1.0,1.0,1.0,1350,56430),
 (1258,'Chivalrous Demon Lord, Amon',7,'Water','Light','Devil','Physical',NULL,40,1038,842,282,3295,1363,423,4000000,99,735,72765,5000,'Curse of the Ice','Demonic Ally',1258,5,1.0,1.0,1.0,1763,174488),
 (2504,'Resolved Demon Lord, Amon',8,'Water','Light','Devil','Physical','Healer',50,1038,842,282,3895,1363,513,4000000,99,900,89100,5000,'Curse of the Ice','Devil''s Constable',2504,5,1.0,1.0,1.0,2175,215325),
