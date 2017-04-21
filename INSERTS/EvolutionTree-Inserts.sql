@@ -39,4 +39,18 @@ insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterial
 (2944,2945,149,234,227,227,247,50,0,1),		--Steel Wand Mechdragon God, Balboa
 (2945,3372,149,321,173,247,251,1,1,0),		--Radiant Staff Mechdragon God, Balboa
 (2945,3373,149,321,1295,1295,1087,1,1,0);	--Steel Chronicle Mechdragon God, Balboa
+
+--Zach
+INSERT INTO SWTS1103.dbo.EvolutionTree
+(BaseMonsterID, NextMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset)
+VALUES
+--Evolution Tree for Amon
+(632,633,148,151,172,247,250,0,1), 
+(633,1258,148,321,1176,247,247,1,0), 
+(1258,2504,1324,148,916,1326,1328,1,0), 
+(633,3532,2263,2639,1326,1326,1327,1,0), 
+--Evolution Tree for Satsuki
+(2149,2150,151,321,234,227,250,0,1), 
+(2150,3580,151,321,916,916,916,1,0), 
+(2150,3581,151,321,175,249,251,1,0);
 select * from EvolutionTree
