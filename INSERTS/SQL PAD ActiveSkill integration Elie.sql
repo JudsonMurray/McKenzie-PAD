@@ -53,7 +53,7 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 11, 20),
 ('Evil Nova', 'Inflicts 150000 Dark Att. damage on Light Att. enemies; Dark Orbs enhanced.',
 16, 19),
-('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12)
+('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12);
 
 --Zach's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
@@ -110,7 +110,7 @@ Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 
 Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) Values
 
-('Poisonous Fang of Transforamtion','Changes Orbs to all Orb types & Jammers, plus all enemies poisoned',21,11),
+('Poisonous Fang of Transformation','Changes Orbs to all Orb types & Jammers, plus all enemies poisoned',21,11),
 ('Freeze Lock','Creates 3 Water and Dark Orbs each at random; Water & Dark Orbs locked',15,11),
 ('Curse of the Ice','Water counterattack for 4 turns, plus Fire Orbs are changed to Water',17,11),
 ('Amon Cross','Strong Water counterattack for 4 turns; changes Fire Orbs, Poison Orbs & Jammers to Water Orbs',11,5);
