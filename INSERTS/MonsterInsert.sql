@@ -158,7 +158,7 @@ MaxExperienceValue) VALUES
 (639,'Dark Archdemon Lucifer',6,'Dark','Dark','Devil',NULL,NULL,4000000,99,30,639,'Archdemon''s Soul','Evil Nova',1206,754,1,2428,971,1,554,369,1,56430,570,133650,1350,5000,5),
 (1552,'Heaven-Shaking Archdemon, Lucifer',7,'Dark','Fire','Devil','Balanced',NULL,4000000,99,40,1552,'Decleration of Deicide','Evil Nova',1406,754,1,2678,971,1,554,369,1,72765,735,174488,1763,5000,5),
 (2507,'Awoken Archdemon Lucifer',7,'Dark','Light','Devil','God',NULL,4000000,99,40,2507,'Morning Star Apocalypse','Oblivion Nova',1606,754,1,3028,971,1,584,369,1,72765,735,174488,1763,5000,5),
-(1646,'King of Hell, Satan',8,'Dark','Fire','Devil',NULL,NULL,5000000,99,70,1646,'Dark Lord's Evil Eye','World's End',1222,710,1,6666,1336,1,-9999,-9999,1,118800,1200,289575,2925,20,5),
+(1646,'King of Hell, Satan',8,'Dark','Fire','Devil',NULL,NULL,5000000,99,70,1646,'Dark Lord''s Evil Eye','World''s End',1222,710,1,6666,1336,1,-9999,-9999,1,118800,1200,289575,2925,20,5),
 (917,'Awoken Zeus Olympios',8,'Light','Light','God',NULL,NULL,4000000,99,60,917,'The Soul of Zeus','Wrath of God',1472,805,0.7,3687,1580,1.5,360,195,0.7,103950,1050,252450,2550,15,5);
 
 
