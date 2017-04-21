@@ -7,7 +7,7 @@
 
 --Billy's
 INSERT INTO SWTS1103.dbo.EvolutionTree
-(NextMonsterID, BaseMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset)
+(NextMonsterID, BaseMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)
 VALUES
 -- Evolution Tree for Orange DragonBound, Saria
 (2441, 2440, 150, 321, 174, 246, 251, 50, 0, 1),
@@ -18,7 +18,7 @@ VALUES
 
 --Kyle's
 INSERT INTO SWTS1103.dbo.EvolutionTree
-(NextMonsterID, BaseMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset)
+(NextMonsterID, BaseMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)
 Values
 --Phantom God, Odin Tree
 (1108, 1107, 321, 171, 234, 246, 251, 50, 0,1), 
@@ -30,7 +30,7 @@ Values
 (3062, 2424,151, 1176, 234, 250, 249, 1, 1, 0)
 
 --Ryan
-insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset) values
+insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset) values
 (140,141,175,160,160,151,151,50,0,1),		--Tsuku Yomi
 (141,989,321,234,250,251,915,1,1,0),		--War Deity of the Night, Tsukuyomi
 (141,990,151,321,175,250,251,1,1,0),		--Nocturne Chanter, Tsukuyomi
@@ -42,7 +42,7 @@ insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterial
 
 --Zach
 INSERT INTO SWTS1103.dbo.EvolutionTree
-(BaseMonsterID, NextMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset)
+(BaseMonsterID, NextMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)
 VALUES
 --Evolution Tree for Amon
 (632,633,148,151,172,247,250,0,1), 
