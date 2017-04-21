@@ -72,3 +72,12 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('The Queen''s Lucky Star','ATK increases when erasing 4+ linked Water Orbs, up to a maximum of 4x'),
 ('Spirit of the Princess','ATK increases when erasing 4+ linked Water Orbs, up to 5x'),
 ('Eternal Dragon Pact - Fragrem','2x HP & 2.5x ATK for Light Att.; 1.5x ATK for Light Att. when skills used');
+
+insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Devil''s Soul','1.5x ATK & RCV for Devil Type'),
+('Demon''s Soul','1.5x to all stats for Devil Type'),
+('Demonic Ally','2x ATK, 1.5x HP & RCV for Physical and Devil Types'),
+('Devil''s Constable','2.5x ATK, 1.5x HP & RCV for Physical & Devil Types'),
+('Path of Solitude','1.5x to all stats for Devil & Dragon Types; 4x ATK when Water & Wood attack at once'),
+('Hailstone of Refusal','3x ATK for Devil Type; reduces non-Fire Att. damage'),
+('End of World''s Calling','Wood Att. stats increase slightly; ATK increases up to 3.5x erasing 4+ linked Jammers')

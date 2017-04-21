@@ -107,4 +107,11 @@ Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc,ActiveSki
 
 Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) Values
 ('Orb Transformation', 'Change all orbs to Fire, Water & Wood & Light & Dark & Heart orbs.', 12, 6)
+
+Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) Values
+
+('Poisonous Fang of Transforamtion','Changes Orbs to all Orb types & Jammers, plus all enemies poisoned',21,11),
+('Freeze Lock','Creates 3 Water and Dark Orbs each at random; Water & Dark Orbs locked',15,11),
+('Curse of the Ice','Water counterattack for 4 turns, plus Fire Orbs are changed to Water',17,11),
+('Amon Cross','Strong Water counterattack for 4 turns; changes Fire Orbs, Poison Orbs & Jammers to Water Orbs',11,5);
 SELECT * FROM ActiveSkill
