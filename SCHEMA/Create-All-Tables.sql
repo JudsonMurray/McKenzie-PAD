@@ -2,7 +2,8 @@
 -- Created By Elie and billy.--
 
 --MonsterType Table
-
+if OBJECT_ID('SWTS1103.dbo.EvolutionTree', 'U') is not null
+ drop table EvolutionTree;
 if OBJECT_ID('SWTS1103.dbo.MonsterClass', 'U') is not null
  drop table MonsterClass;
 if OBJECT_ID('SWTS1103.dbo.MonsterType', 'U') is not null
@@ -137,4 +138,32 @@ ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_monstertype
 ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_activeskill FOREIGN KEY ( ActiveSkillName ) REFERENCES SWTS1103.dbo.ActiveSkill( ActiveSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass_leaderskill FOREIGN KEY ( LeaderSkillName ) REFERENCES SWTS1103.dbo.LeaderSkill( LeaderSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterClass ADD CONSTRAINT fk_monsterclass FOREIGN KEY ( ASListID ) REFERENCES SWTS1103.dbo.AwokenSkillList( ASListID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+--EvolutionTree Table
+CREATE TABLE SWTS1103.dbo.EvolutionTree ( 
+	NextMonsterID        int NOT NULL   ,
+	BaseMonsterID        int NOT NULL   ,
+	EvoMaterialIDOne     int NOT NULL   ,
+	EvoMaterialIDTwo     int    ,
+	EvoMaterialIDThree   int    ,
+	EvoMaterialIDFour    int    ,
+	EvoMaterialIDFive    int    ,
+	MinLevel             int NOT NULL   ,
+	Devolveable          bit NOT NULL   ,
+	LevelReset           bit NOT NULL   ,
+	CONSTRAINT Pk_EvolutionTree PRIMARY KEY ( NextMonsterID )
+ );
+
+CREATE  INDEX idx_EvolutionTree_1 ON SWTS1103.dbo.EvolutionTree ( EvoMaterialIDOne );
+CREATE  INDEX idx_EvolutionTree_2 ON SWTS1103.dbo.EvolutionTree ( EvoMaterialIDTwo );
+CREATE  INDEX idx_EvolutionTree_3 ON SWTS1103.dbo.EvolutionTree ( EvoMaterialIDThree );
+CREATE  INDEX idx_EvolutionTree_4 ON SWTS1103.dbo.EvolutionTree ( EvoMaterialIDFour );
+CREATE  INDEX idx_EvolutionTree_5 ON SWTS1103.dbo.EvolutionTree ( EvoMaterialIDFive );
+CREATE  INDEX idx_EvolutionTree_0 ON SWTS1103.dbo.EvolutionTree ( BaseMonsterID );
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid1 FOREIGN KEY ( EvoMaterialIDOne ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid2 FOREIGN KEY ( EvoMaterialIDTwo ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid3 FOREIGN KEY ( EvoMaterialIDThree ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid4 FOREIGN KEY ( EvoMaterialIDFour ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid5 FOREIGN KEY ( EvoMaterialIDFive ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_monsterclass FOREIGN KEY ( BaseMonsterID ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
