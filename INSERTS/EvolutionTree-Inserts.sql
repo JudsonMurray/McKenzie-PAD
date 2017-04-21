@@ -29,4 +29,14 @@ Values
 (3061,2424, 151, 1176, 234, 250, 247, 1, 1, 0),
 (3062, 2424,151, 1176, 234, 250, 249, 1, 1, 0)
 
+--Ryan
+insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset) values
+(140,141,175,160,160,151,151,50,0,1),		--Tsuku Yomi
+(141,989,321,234,250,251,915,1,1,0),		--War Deity of the Night, Tsukuyomi
+(141,990,151,321,175,250,251,1,1,0),		--Nocturne Chanter, Tsukuyomi
+(141,2325,814,2129,1329,1329,1327,1,1,0),	--Awoken Tsukuyomi
+(2325,3389,165,165,165,165,165,99,0,1),		--Reincarnated Tsukuyomi
+(2944,2945,149,234,227,227,247,50,0,1),		--Steel Wand Mechdragon God, Balboa
+(2945,3372,149,321,173,247,251,1,1,0),		--Radiant Staff Mechdragon God, Balboa
+(2945,3373,149,321,1295,1295,1087,1,1,0);	--Steel Chronicle Mechdragon God, Balboa
 select * from EvolutionTree
