@@ -98,8 +98,8 @@
 			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="EvolutionTree" >
-			<column name="BaseMonsterID" type="int" jt="4" mandatory="y" />
 			<column name="NextMonsterID" type="int" jt="4" mandatory="y" />
+			<column name="BaseMonsterID" type="int" jt="4" mandatory="y" />
 			<column name="EvoMaterialIDOne" type="int" jt="4" mandatory="y" />
 			<column name="EvoMaterialIDTwo" type="int" jt="4" />
 			<column name="EvoMaterialIDThree" type="int" jt="4" />
@@ -108,12 +108,6 @@
 			<column name="MinLevel" type="int" jt="4" mandatory="y" />
 			<column name="Devolveable" type="bit" jt="-7" mandatory="y" />
 			<column name="LevelReset" type="bit" jt="-7" mandatory="y" />
-			<index name="Pk_EvolutionTree" unique="PRIMARY_KEY" >
-				<column name="NextMonsterID" />
-			</index>
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="BaseMonsterID" />
-			</index>
 			<index name="idx_EvolutionTree" unique="NORMAL" >
 				<column name="EvoMaterialIDOne" />
 			</index>
@@ -129,9 +123,12 @@
 			<index name="idx_EvolutionTree" unique="NORMAL" >
 				<column name="EvoMaterialIDFive" />
 			</index>
-			<fk name="fk_evolutiontree_baseid" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="BaseMonsterID" pk="MonsterID" />
-			</fk>
+			<index name="Pk_EvolutionTree" unique="PRIMARY_KEY" >
+				<column name="NextMonsterID" />
+			</index>
+			<index name="idx_EvolutionTree_0" unique="NORMAL" >
+				<column name="BaseMonsterID" />
+			</index>
 			<fk name="fk_evolutiontree_evomaterialid1" to_schema="monsterclass" to_table="MonsterClass" >
 				<fk_column name="EvoMaterialIDOne" pk="MonsterID" />
 			</fk>
@@ -146,6 +143,9 @@
 			</fk>
 			<fk name="fk_evolutiontree_evomaterialid5" to_schema="monsterclass" to_table="MonsterClass" >
 				<fk_column name="EvoMaterialIDFive" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_monsterclass" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="BaseMonsterID" pk="MonsterID" />
 			</fk>
 		</table>
 		<table name="LeaderSkill" >
@@ -250,7 +250,7 @@
 		</table>
 		<table name="table_" />
 	</schema>
-	<layout name="Default Layout" id="Layout_238c23f1" show_relation="columns" >
+	<layout name="Default Layout" id="Layout_238c23f1" show_column_type="y" show_relation="columns" >
 		<entity schema="monsterclass" name="Attribute" color="c1d8ee" x="345" y="45" />
 		<entity schema="monsterclass" name="MonsterType" color="c1d8ee" x="330" y="135" />
 		<entity schema="monsterclass" name="MonsterClass" color="c1d8ee" x="45" y="45" />

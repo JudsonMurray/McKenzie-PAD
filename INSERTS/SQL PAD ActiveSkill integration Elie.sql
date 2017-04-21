@@ -8,17 +8,18 @@
 --V1.2 - APRIL 20 2017 - Changed Description field to; ActiveSkillDesc and Table name ActiveSkillIntegration to; ActiveSkill
 --V1.3 - APRIL 20 2017 - Fixed Zach's ActiveSkills so max level and cool down are accurate
 --V1.4 - APRIL 20 2017 - Changed field name ActiveSkillCoolDown to; ActiveSkillMaxCoolDown
+--V1.5 - APRIL 21 2017 - Added Active Skill "Oblivion Nova to Elie's ActiveSkills"
 
---TRUNCATE TABLE ActiveSkill
+--DROP TABLE ActiveSkill
 
-CREATE TABLE SWTS1103.dbo.ActiveSkill
-(
-ActiveSkillName					varchar(100) NOT NULL,
-ActiveSkillDesc					varchar(max) NOT NULL,
-ActiveSkillMaxLevel				int NOT NULL,
-ActiveSkillMaxCoolDown			int NOT NULL
-PRIMARY KEY (ActiveSkillName)
-);
+--CREATE TABLE SWTS1103.dbo.ActiveSkill
+--(
+--ActiveSkillName					varchar(100) NOT NULL,
+--ActiveSkillDesc					varchar(max) NOT NULL,
+--ActiveSkillMaxLevel				int NOT NULL,
+--ActiveSkillMaxCoolDown			int NOT NULL
+--PRIMARY KEY (ActiveSkillName)
+--);
 
 --Kyle's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
@@ -51,7 +52,8 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 ('Water Rapids Field', 'Avoid all Fire damage for 3 turns. Enhance Water orbs. +6% per orb, up to +180% for full board.',
 11, 20),
 ('Evil Nova', 'Inflicts 150000 Dark Att. damage on Light Att. enemies; Dark Orbs enhanced.',
-16, 19);
+16, 19),
+('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12);
 
 --Zach's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values

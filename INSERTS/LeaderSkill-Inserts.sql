@@ -7,7 +7,7 @@
 */
 
 
-TRUNCaTE table SWTS1103.dbo.LeaderSkill
+--TRUNCaTE table SWTS1103.dbo.LeaderSkill
 
 
 --Ryan

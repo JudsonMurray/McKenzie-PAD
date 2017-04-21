@@ -28,7 +28,7 @@
 			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="AwokenSkillList" >
-			<column name="ASListID" type="int" jt="4" mandatory="y" />
+			<column name="ASListID" type="varchar" length="100" jt="12" mandatory="y" />
 			<column name="AwokenSkillOne" type="varchar" length="100" jt="12" mandatory="y" />
 			<column name="AwokenSkillTwo" type="varchar" length="100" jt="12" />
 			<column name="AwokenSkillThree" type="varchar" length="100" jt="12" />
@@ -96,6 +96,57 @@
 				<fk_column name="AwokenSkillNine" pk="AwokenSkillName" />
 			</fk>
 			<storage><![CDATA[engine=InnoDB]]></storage>
+		</table>
+		<table name="EvolutionTree" >
+			<column name="NextMonsterID" type="int" jt="4" mandatory="y" />
+			<column name="BaseMonsterID" type="int" jt="4" mandatory="y" />
+			<column name="EvoMaterialIDOne" type="int" jt="4" mandatory="y" />
+			<column name="EvoMaterialIDTwo" type="int" jt="4" />
+			<column name="EvoMaterialIDThree" type="int" jt="4" />
+			<column name="EvoMaterialIDFour" type="int" jt="4" />
+			<column name="EvoMaterialIDFive" type="int" jt="4" />
+			<column name="MinLevel" type="int" jt="4" mandatory="y" />
+			<column name="Devolveable" type="bit" jt="-7" mandatory="y" />
+			<column name="LevelReset" type="bit" jt="-7" mandatory="y" />
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDOne" />
+			</index>
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDTwo" />
+			</index>
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDThree" />
+			</index>
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDFour" />
+			</index>
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDFive" />
+			</index>
+			<index name="Pk_EvolutionTree" unique="PRIMARY_KEY" >
+				<column name="NextMonsterID" />
+			</index>
+			<index name="idx_EvolutionTree_0" unique="NORMAL" >
+				<column name="BaseMonsterID" />
+			</index>
+			<fk name="fk_evolutiontree_evomaterialid1" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDOne" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_evomaterialid2" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDTwo" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_evomaterialid3" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDThree" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_evomaterialid4" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDFour" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_evomaterialid5" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDFive" pk="MonsterID" />
+			</fk>
+			<fk name="fk_evolutiontree_monsterclass" to_schema="monsterclass" to_table="MonsterClass" >
+				<fk_column name="BaseMonsterID" pk="MonsterID" />
+			</fk>
 		</table>
 		<table name="LeaderSkill" >
 			<column name="LeaderSkillName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
@@ -202,10 +253,11 @@
 	<layout name="Default Layout" id="Layout_238c23f1" show_column_type="y" show_relation="columns" >
 		<entity schema="monsterclass" name="Attribute" color="c1d8ee" x="345" y="45" />
 		<entity schema="monsterclass" name="MonsterType" color="c1d8ee" x="330" y="135" />
+		<entity schema="monsterclass" name="MonsterClass" color="c1d8ee" x="45" y="45" />
 		<entity schema="monsterclass" name="ActiveSkill" color="c1d8ee" x="315" y="225" />
 		<entity schema="monsterclass" name="LeaderSkill" color="c1d8ee" x="345" y="360" />
-		<entity schema="monsterclass" name="AwokenSkill" color="c1d8ee" x="660" y="510" />
-		<entity schema="monsterclass" name="MonsterClass" color="c1d8ee" x="45" y="45" />
 		<entity schema="monsterclass" name="AwokenSkillList" color="c1d8ee" x="345" y="450" />
+		<entity schema="monsterclass" name="AwokenSkill" color="c1d8ee" x="660" y="510" />
+		<entity schema="monsterclass" name="EvolutionTree" color="1f5182" x="345" y="675" />
 	</layout>
 </project>
