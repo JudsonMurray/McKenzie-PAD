@@ -37,7 +37,8 @@ INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "At
 (1068, 'Starsea Goddess, Andromeda', 6, 'Water', 'Water', 'God', NULL, NULL, 4000000, 99, 25, NULL, 'The Queen''s Lucky Star', 'The Sacred Blue Chains', 1138, 632, 1, 2985, 1194, 1, 518, 288, 1, 49005, 495, 115088, 1163, 5000),
 (1733, 'Blue Chain Starsea Goddess, Andromeda', 7, 'Water', 'Water', 'God', NULL, NULL, 4000000, 99, 35, NULL, 'The Queen''s Lucky Star', 'The Sacred Blue Chains', 1238, 632, 1, 2985, 1194, 1, 578, 288, 1, 65340, 660, 155925, 1575, 5000),
 (2658, 'Adored Starsea Goddess, Andromeda', 8, 'Water', 'Water', 'God', 'Healer', 'Physical', 4000000, 99, 45, NULL, 'Spirit of the Princess', 'The Sacred Blue Chains', 1238, 632, 1, 3985, 1194, 1, 578, 288, 1, 81675, 825, 196763, 825, 5000),
-(2441, 'Judging-Claw Orange Dragonbound, Saria', 6, 'Light', 'Fire', 'Dragon', 'Physical', NULL, 5000000, 99, 50, 2441,  'Eternal Dragon Pact - Fragrem',  'Shine Flare Ring', 1518, 607, 1, 4118, 1647, 1, 120, 48, 1, 86130, 870, 207900, 2100, 15000)
+(2441, 'Judging-Claw Orange Dragonbound, Saria', 6, 'Light', 'Fire', 'Dragon', 'Physical', NULL, 5000000, 99, 50, 2441,  'Eternal Dragon Pact - Fragrem',  'Shine Flare Ring', 1518, 607, 1, 4118, 1647, 1, 120, 48, 1, 86130, 870, 207900, 2100, 15000),
+(2440, 'Orange Dragonbound,  Saria', 5, 'Light', NULL, 'Dragon', NULL, NULL, 883883, 50, 30, NULL, 'Eternal Dragon Pact - Fragrem', 'Shine Flare Ring', 2059, 674, 53, 1, 1, 1, 858, 281, 22, 27750, 555, 65625, 1313, 15000)
 
 
 
