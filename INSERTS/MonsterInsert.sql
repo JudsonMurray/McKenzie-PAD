@@ -154,12 +154,13 @@ MaxExperienceValue) VALUES
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, 1,1,1,1763,174488),
 (1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553,1,1,1,1763,174488),
 --Added from April 21 2017
-(638,'Fallen Angel Lucifer',5,'Dark','Dark','Devil',NULL,NULL,707107,50,25,638,'Devil''s Soul','Evil Nova',838,419,1,1214,506,1,410,195,1,24000,480,56250,1125,5000,5),
-(639,'Dark Archdemon Lucifer',6,'Dark','Dark','Devil',NULL,NULL,4000000,99,30,639,'Archdemon''s Soul','Evil Nova',1206,754,1,2428,971,1,554,369,1,56430,570,133650,1350,5000,5),
-(1552,'Heaven-Shaking Archdemon, Lucifer',7,'Dark','Fire','Devil','Balanced',NULL,4000000,99,40,1552,'Decleration of Deicide','Evil Nova',1406,754,1,2678,971,1,554,369,1,72765,735,174488,1763,5000,5),
-(2507,'Awoken Archdemon Lucifer',7,'Dark','Light','Devil','God',NULL,4000000,99,40,2507,'Morning Star Apocalypse','Oblivion Nova',1606,754,1,3028,971,1,584,369,1,72765,735,174488,1763,5000,5),
-(1646,'King of Hell, Satan',8,'Dark','Fire','Devil',NULL,NULL,5000000,99,70,1646,'Dark Lord''s Evil Eye','World''s End',1222,710,1,6666,1336,1,-9999,-9999,1,118800,1200,289575,2925,20,5),
-(917,'Awoken Zeus Olympios',8,'Light','Light','God',NULL,NULL,4000000,99,60,917,'The Soul of Zeus','Wrath of God',1472,805,0.7,3687,1580,1.5,360,195,0.7,103950,1050,252450,2550,15,5);
+(638,'Fallen Angel Lucifer',5,25,506,419,195,1214,838,410,5000,480,24000,50,56250,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Devil''s Soul',638,1,1,1,1125,707107),
+(639,'Dark Archdemon Lucifer',6,30,971,754,369,2428,1206,554,5000,570,56430,99,133650,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Archdemon''s Soul',639,1,1,1,1350,4000000),
+(1552,'Heaven-Shaking Archdemon, Lucifer',7,40,971,754,369,2678,1406,554,5000,735,72765,99,174488,5,'Dark','Fire','Devil','Balanced',NULL,'Evil Nova','Decleration of Deicide',1552,1,1,1,1763,4000000),
+(2507,'Awoken Archdemon Lucifer',7,40,971,754,369,3028,1606,584,5000,735,72765,99,174488,5,'Dark','Light','Devil','God',NULL,'Oblivion Nova','Morning Star Apocalypse',2507,1,1,1,1763,4000000),
+(1646,'King of Hell, Satan',8,70,1336,710,-9999,6666,1222,-9999,20,1200,118800,99,289575,5,'Dark','Fire','Devil',NULL,NULL,'World''s End','Dark Lord''s Evil Eye',1646,1,1,1,2925,5000000),
+(917,'Awoken Zeus Olympios',8,60,1580,805,195,3687,1472,360,15,1050,103950,99,252450,5,'Light','Light','God',NULL,NULL,'Wrath of God','The Soul of Zeus',917,1.5,0.7,0.7,2550,4000000);
+
 
 
  --Zach Inserts
@@ -219,15 +220,12 @@ INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 (1324, 'Extreme King Metal Dragon', 7, 'Dark', NULL, 'Enhance Material', 'God', NULL, 0, 1, 1, NULL, NULL, 'Orb Transformation', 2000, 600, 100, 0.7, 0.7, 0.7, 2000, 600, 100, 100, 100, 250000, 250000, 1)
 
 
-INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
- "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", ASListID, LeaderSkillName,
-  ActiveSkillName, "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
-    "GrowthRateRCV", "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") VALUES
+insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
-(2263,'	Cruel Frozen Hell Demon, Indigo',6,'Water','Dark','Devil',NULL,NULL,5000000,99,40,2263,'Hailstone of Refusal','Freeze Lock',1454,808,1.0,3140,1256,1.0,315,175,1.0,71280,720,170775,1725,25),
-(2639,'Gods'' Threat Venomous Snake, Jörmungandr',7,'Wood','Water','Dragon','Devil',NULL,5000000,99,50,2639,'End of the World''s Calling','Poisonous Fang of Transformation',1508,603,1.0,4195,1678,1.0,103,41,1.0,87615,885,211613,2138,20)
-(632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',632,5,1.0,1.0,1.0,1125,56250),
+(632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',NULL,5,1.0,1.0,1.0,1125,56250),
 (633,'Blizzard Archdemon Amon',6,'Water','Dark','Devil',NULL,NULL,30,1038,842,282,2595,1363,423,4000000,99,570,56430,5000,'Curse of the Ice','Demon''s Soul',633,5,1.0,1.0,1.0,1350,56430),
 (1258,'Chivalrous Demon Lord, Amon',7,'Water','Light','Devil','Physical',NULL,40,1038,842,282,3295,1363,423,4000000,99,735,72765,5000,'Curse of the Ice','Demonic Ally',1258,5,1.0,1.0,1.0,1763,174488),
 (2504,'Resolved Demon Lord, Amon',8,'Water','Light','Devil','Physical','Healer',50,1038,842,282,3895,1363,513,4000000,99,900,89100,5000,'Curse of the Ice','Devil''s Constable',2504,5,1.0,1.0,1.0,2175,215325),
-(3532,'Awoken Amon',7,'Water','Wood','Devil','Dragon',NULL,40,1038,842,282,3595,1563,423,4000000,99,735,72765,5000,'Amon Cross','Path of Solitude',3532,5,1.0,1.0,1.0,1763,174488);
+(3532,'Awoken Amon',7,'Water','Wood','Devil','Dragon',NULL,40,1038,842,282,3595,1563,423,4000000,99,735,72765,5000,'Amon Cross','Path of Solitude',3532,5,1.0,1.0,1.0,1763,174488),
+(2639,'Gods'' Threat Venomous Snake, Jörmungandr',7,'Wood','Water','Dragon','Devil',NULL,50,1678,603,41,4195,1508,103,5000000,99,885,87615,20,'Poisonous Fang of Transformation','End of the World''s Calling',2239,5,1.0,1.0,1.0,2138,211613),
+(2263,'Cruel Frozen Hell Demon, Indigo',6,'Water','Dark','Devil',NULL,NULL,40,1256,808,175,3140,1454,315,5000000,99,720,71280,25,'Freeze Lock','Hailstone of Refusal',2263,5,1.0,1.0,1.0,1725,170775);
