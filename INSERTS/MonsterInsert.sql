@@ -2,6 +2,8 @@
 -- Developes: WILLIAM GALE, ZACHARY BLUE --
 -- Date of Creation April, 19 2017 --
 
+--Update April 21 2017 - Elie - Added new monsters to monsterClass
+
 --truncate table SWTS1103.dbo.MonsterClass
 
 INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
@@ -150,8 +152,15 @@ MaxExperienceValue) VALUES
 (920, 'Elemental of Kind Waters, Undine', 6, 26, 437, 497, 259, 2405, 1343, 469, 3000, 510, 50490, 99, 3000000, 5,'Water', 'Water', 'Balanced', NULL, NULL, 'Water Rapids Field', 'Grace of Water', 920, 1,1,1,1200,118800),
 (1557, 'Dancing Flame, Amaterasu Ohkami', 7, 30, 1170, 709, 255, 2721, 1511, 502, 5000, 585, 57915, 99, 4000000, 5,'Light', 'Fire', 'God', 'Attacker', NULL, 'Shower of Healing', 'Dispelling Circle', 1557,1.5,1.5,1.5,1388,137363),
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, 1,1,1,1763,174488),
-(1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553,1,1,1,1763,174488);
- 
+(1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553,1,1,1,1763,174488),
+--Added from April 21 2017
+(638,'Fallen Angel Lucifer',5,'Dark','Dark','Devil',NULL,NULL,707107,50,25,638,'Devil''s Soul','Evil Nova',838,419,1,1214,506,1,410,195,1,24000,480,56250,1125,5000,5),
+(639,'Dark Archdemon Lucifer',6,'Dark','Dark','Devil',NULL,NULL,4000000,99,30,639,'Archdemon''s Soul','Evil Nova',1206,754,1,2428,971,1,554,369,1,56430,570,133650,1350,5000,5),
+(1552,'Heaven-Shaking Archdemon, Lucifer',7,'Dark','Fire','Devil','Balanced',NULL,4000000,99,40,1552,'Decleration of Deicide','Evil Nova',1406,754,1,2678,971,1,554,369,1,72765,735,174488,1763,5000,5),
+(2507,'Awoken Archdemon Lucifer',7,'Dark','Light','Devil','God',NULL,4000000,99,40,2507,'Morning Star Apocalypse','Oblivion Nova',1606,754,1,3028,971,1,584,369,1,72765,735,174488,1763,5000,5),
+(1646,'King of Hell, Satan',8,'Dark','Fire','Devil',NULL,NULL,5000000,99,70,1646,'Dark Lord's Evil Eye','World's End',1222,710,1,6666,1336,1,-9999,-9999,1,118800,1200,289575,2925,20,5),
+(917,'Awoken Zeus Olympios',8,'Light','Light','God',NULL,NULL,4000000,99,60,917,'The Soul of Zeus','Wrath of God',1472,805,0.7,3687,1580,1.5,360,195,0.7,103950,1050,252450,2550,15,5);
+
 
  --Zach Inserts
  insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values

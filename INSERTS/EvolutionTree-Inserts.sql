@@ -4,6 +4,7 @@
 
 --V 1.0 --Billy's EvoTree Added
 --V 1.0 --Kyle's EvoTree Added
+--V 1.1 --Elie's EvolTree Added April 21 2017
 
 --Billy's
 INSERT INTO SWTS1103.dbo.EvolutionTree
@@ -54,3 +55,25 @@ VALUES
 (2150,3580,151,321,916,916,916,1,1,0), 
 (2150,3581,151,321,175,249,251,1,1,0);
 select * from EvolutionTree
+
+--Elie
+INSERT INTO SWTS1103.dbo.EvolutionTree
+(BaseMonsterID, NextMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)
+VALUES
+--Evolution Tree for Spinon
+(18,17,152,152,NULL,NULL,NULL,NULL,5,0,1),
+(19,18,153,153,159,NULL,NULL,NULL,15,0,1),
+(20,19,154,154,153,152,159,151,35,0,1),
+(484,20,251,251,234,321,321,227,1,1,0);
+--Evolution Tree for Fallen Angel Lucifer
+(639,638,151,151,151,175,250,250,50,0,1),
+(1552,639,151,151,321,246,250,916,1,1,0),
+(1553,639,151,151,321,250,916,916,1,1,0),
+(2507,639,1646,1646,917,1329,1329,1328,1,1,0);
+
+
+
+
+
+
+
