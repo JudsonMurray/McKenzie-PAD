@@ -154,12 +154,13 @@ MaxExperienceValue) VALUES
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, 1,1,1,1763,174488),
 (1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553,1,1,1,1763,174488),
 --Added from April 21 2017
-(638,'Fallen Angel Lucifer',5,'Dark','Dark','Devil',NULL,NULL,707107,50,25,638,'Devil''s Soul','Evil Nova',838,419,1,1214,506,1,410,195,1,24000,480,56250,1125,5000,5),
-(639,'Dark Archdemon Lucifer',6,'Dark','Dark','Devil',NULL,NULL,4000000,99,30,639,'Archdemon''s Soul','Evil Nova',1206,754,1,2428,971,1,554,369,1,56430,570,133650,1350,5000,5),
-(1552,'Heaven-Shaking Archdemon, Lucifer',7,'Dark','Fire','Devil','Balanced',NULL,4000000,99,40,1552,'Decleration of Deicide','Evil Nova',1406,754,1,2678,971,1,554,369,1,72765,735,174488,1763,5000,5),
-(2507,'Awoken Archdemon Lucifer',7,'Dark','Light','Devil','God',NULL,4000000,99,40,2507,'Morning Star Apocalypse','Oblivion Nova',1606,754,1,3028,971,1,584,369,1,72765,735,174488,1763,5000,5),
-(1646,'King of Hell, Satan',8,'Dark','Fire','Devil',NULL,NULL,5000000,99,70,1646,'Dark Lord''s Evil Eye','World''s End',1222,710,1,6666,1336,1,-9999,-9999,1,118800,1200,289575,2925,20,5),
-(917,'Awoken Zeus Olympios',8,'Light','Light','God',NULL,NULL,4000000,99,60,917,'The Soul of Zeus','Wrath of God',1472,805,0.7,3687,1580,1.5,360,195,0.7,103950,1050,252450,2550,15,5);
+(638,'Fallen Angel Lucifer',5,25,506,419,195,1214,838,410,5000,480,24000,50,56250,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Devil''s Soul',638,1,1,1,1125,707107),
+(639,'Dark Archdemon Lucifer',6,30,971,754,369,2428,1206,554,5000,570,56430,99,133650,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Archdemon''s Soul',639,1,1,1,1350,4000000),
+(1552,'Heaven-Shaking Archdemon, Lucifer',7,40,971,754,369,2678,1406,554,5000,735,72765,99,174488,5,'Dark','Fire','Devil','Balanced',NULL,'Evil Nova','Decleration of Deicide',1552,1,1,1,1763,4000000),
+(2507,'Awoken Archdemon Lucifer',7,40,971,754,369,3028,1606,584,5000,735,72765,99,174488,5,'Dark','Light','Devil','God',NULL,'Oblivion Nova','Morning Star Apocalypse',2507,1,1,1,1763,4000000),
+(1646,'King of Hell, Satan',8,70,1336,710,-9999,6666,1222,-9999,20,1200,118800,99,289575,5,'Dark','Fire','Devil',NULL,NULL,'World''s End','Dark Lord''s Evil Eye',1646,1,1,1,2925,5000000),
+(917,'Awoken Zeus Olympios',8,60,1580,805,195,3687,1472,360,15,1050,103950,99,252450,5,'Light','Light','God',NULL,NULL,'Wrath of God','The Soul of Zeus',917,1.5,0.7,0.7,2550,4000000);
+
 
 
  --Zach Inserts
