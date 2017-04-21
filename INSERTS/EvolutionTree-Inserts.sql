@@ -42,7 +42,7 @@ insert into SWTS1103.dbo.EvolutionTree(BaseMonsterID, NextMonsterID, EvoMaterial
 
 --Zach
 INSERT INTO SWTS1103.dbo.EvolutionTree
-(BaseMonsterID, NextMonsterID, EvoMaterialOneID, EvoMaterialTwoID, EvoMaterialThreeID, EvoMaterialFourID, EvoMaterialFiveID, MinLevel, Devolveable, LevelReset)
+(BaseMonsterID, NextMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)
 VALUES
 --Evolution Tree for Amon
 (632,633,148,151,172,247,250,50,0,1), 
