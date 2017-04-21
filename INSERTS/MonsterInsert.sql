@@ -154,7 +154,7 @@ MaxExperienceValue) VALUES
 (2752, 'Celestial Guardian Dragon, Avalon Drake', 7, 40, 1630, 783, 50, 4075, 1509, 250, 5000, 735, 72765, 99, 4000000, 5,'Wood', 'Light', 'God', 'Dragon', 'Machine', 'Aubade Gaia', 'Nirvana Blade', 2752, 1,1,1,1763,174488),
 (1553, 'Hell-Creating Archdemon, Lucifer', 7, 40, 971, 754, 369, 2078, 1706, 554, 5000, 735, 72765, 99, 4000000, 5, 'Dark', 'Dark', 'Devil', 'Attacker',NULL, 'Evil Nova', 'Dawn of a Dark Age', 1553,1,1,1,1763,174488),
 --Added from April 21 2017
-(638,'Fallen Angel Lucifer',5,25,506,419,195,1214,838,410,5000,480,24000,50,56250,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Devil''s Soul',638,1,1,1,1125,707107),
+(638,'Fallen Angel Lucifer',5,25,506,419,195,1214,838,410,5000,480,24000,50,56250,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Devil''s Soul',NULL,1,1,1,1125,707107),
 (639,'Dark Archdemon Lucifer',6,30,971,754,369,2428,1206,554,5000,570,56430,99,133650,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Archdemon''s Soul',639,1,1,1,1350,4000000),
 (1552,'Heaven-Shaking Archdemon, Lucifer',7,40,971,754,369,2678,1406,554,5000,735,72765,99,174488,5,'Dark','Fire','Devil','Balanced',NULL,'Evil Nova','Decleration of Deicide',1552,1,1,1,1763,4000000),
 (2507,'Awoken Archdemon Lucifer',7,40,971,754,369,3028,1606,584,5000,735,72765,99,174488,5,'Dark','Light','Devil','God',NULL,'Oblivion Nova','Morning Star Apocalypse',2507,1,1,1,1763,4000000),

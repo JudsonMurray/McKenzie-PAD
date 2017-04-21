@@ -80,4 +80,4 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Devil''s Constable','2.5x ATK, 1.5x HP & RCV for Physical & Devil Types'),
 ('Path of Solitude','1.5x to all stats for Devil & Dragon Types; 4x ATK when Water & Wood attack at once'),
 ('Hailstone of Refusal','3x ATK for Devil Type; reduces non-Fire Att. damage'),
-('End of World''s Calling','Wood Att. stats increase slightly; ATK increases up to 3.5x erasing 4+ linked Jammers')
+('End of the World''s Calling','Wood Att. stats increase slightly; ATK increases up to 3.5x erasing 4+ linked Jammers')
