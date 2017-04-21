@@ -53,7 +53,7 @@ insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 11, 20),
 ('Evil Nova', 'Inflicts 150000 Dark Att. damage on Light Att. enemies; Dark Orbs enhanced.',
 16, 19),
-('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12);
+('Oblivion Nova', 'Inflicts 150,000 damage on 1 enemy; creates 3 Dark Orbs at random', 5, 12),
 
 --Zach's ActiveSkills
 insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxLevel, ActiveSkillMaxCoolDown) Values
@@ -100,7 +100,9 @@ Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc,ActiveSki
 ('Star Wake - Land','Changes Light, Heal, Poison & Jammers to Wood; Wood Orbs more likely to appear for 4 turns', 6, 15),
 ('Five Colored Alchemy','Changes Orbs to Fire, Water, Wood, Light, and Dark Orbs', 6, 12),
 ('The Feathered Garment of Yomi','Reduces damage for 3 turns', 8, 13),
-('Dance of the Great Tengu','Switches places with Leader Monster; use again to switch back', 13, 16);
+('Dance of the Great Tengu','Switches places with Leader Monster; use again to switch back', 13, 16),
+('World''s End', '	Inflicts 300x ATK Dark Att. attack on 1 enemy but HP falls to 1; 6 Dark Orbs created at random', 21, 35),
+('Wrath of God', 'Reduces enemies'' HP by 35%', 16, 35);
 
 
 Insert into SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) Values
