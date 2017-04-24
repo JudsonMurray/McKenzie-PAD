@@ -1,7 +1,7 @@
 -- Master ActiveSKill Insert --
 -- Brought to you by Billy --
 
-TRUNCATE TABLE ActiveSkill
+--TRUNCATE TABLE ActiveSkill -- Cannot do this due to Foreign Key Constraints
 
 INSERT INTO SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) VALUES
 ('...You are a fool.', 'Wood attribute ATK x2.5 for 2 turns. Inflict Wood damage equal to ATK x10 to all enemies in exchange for reducing HP to 1. Affected by enemy element and defense.', 13, 6)INSERT INTO SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSkillMaxCoolDown, ActiveSkillMaxLevel) VALUES
@@ -950,5 +950,5 @@ INSERT INTO SWTS1103.dbo.ActiveSkill (ActiveSkillName, ActiveSkillDesc, ActiveSk
 ('Zone of Darkness', 'Change Heart orbs to Dark orbs. Bind recovery for 1 turn.', 11, 6);
 
 
-SELECT * FROM SWTS1103.dbo.ActiveSkill
+--SELECT * FROM SWTS1103.dbo.ActiveSkill
 
