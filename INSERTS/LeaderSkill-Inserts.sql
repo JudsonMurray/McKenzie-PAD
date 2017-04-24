@@ -55,6 +55,13 @@ insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
 ('Nirvana Blade','2x HP & ATK for Wood Att. & God Type; 2x ATK when Wood & Light attack at once'),
 ('Power of Darkness','2x ATK for Dark Att.'),
 ('Perseverance','May survive when HP is reduced to 0');
+--Elie from April 24 2017
+insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
+('Archdemon''s Soul', '2x ATK & RCV for Devil Type'),
+('Declaration of Deicide', '2.5x ATK & 2x RCV for Devil Type'),
+('Morning Star Apocalypse', 'Devil & God Types stats increase a little; 3x ATK when erasing 6+ linked Dark Orbs'),
+('Dark Lord''s Evil Eye', '3.5x ATK for Devil Type and their HP increases a little'),
+('The Soul of Zeus', '3.5x ATK when HP is full');
 
 --Kyle
 insert into SWTS1103.dbo.LeaderSkill(LeaderSkillName, LeaderSkillDesc) values
