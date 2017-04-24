@@ -156,7 +156,7 @@ MaxExperienceValue) VALUES
 --Added from April 21 2017
 (638,'Fallen Angel Lucifer',5,25,506,419,195,1214,838,410,5000,480,24000,50,56250,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Devil''s Soul',NULL,1,1,1,1125,707107),
 (639,'Dark Archdemon Lucifer',6,30,971,754,369,2428,1206,554,5000,570,56430,99,133650,5,'Dark','Dark','Devil',NULL,NULL,'Evil Nova','Archdemon''s Soul',639,1,1,1,1350,4000000),
-(1552,'Heaven-Shaking Archdemon, Lucifer',7,40,971,754,369,2678,1406,554,5000,735,72765,99,174488,5,'Dark','Fire','Devil','Balanced',NULL,'Evil Nova','Decleration of Deicide',1552,1,1,1,1763,4000000),
+(1552,'Heaven-Shaking Archdemon, Lucifer',7,40,971,754,369,2678,1406,554,5000,735,72765,99,174488,5,'Dark','Fire','Devil','Balanced',NULL,'Evil Nova','Declaration of Deicide',1552,1,1,1,1763,4000000),
 (2507,'Awoken Archdemon Lucifer',7,40,971,754,369,3028,1606,584,5000,735,72765,99,174488,5,'Dark','Light','Devil','God',NULL,'Oblivion Nova','Morning Star Apocalypse',2507,1,1,1,1763,4000000),
 (1646,'King of Hell, Satan',8,70,1336,710,-9999,6666,1222,-9999,20,1200,118800,99,289575,5,'Dark','Fire','Devil',NULL,NULL,'World''s End','Dark Lord''s Evil Eye',1646,1,1,1,2925,5000000),
 (917,'Awoken Zeus Olympios',8,60,1580,805,195,3687,1472,360,15,1050,103950,99,252450,5,'Light','Light','God',NULL,NULL,'Wrath of God','The Soul of Zeus',917,1.5,0.7,0.7,2550,4000000);
