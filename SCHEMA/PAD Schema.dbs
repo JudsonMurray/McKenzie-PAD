@@ -131,7 +131,7 @@
 		<table name="Instance" >
 			<column name="InstanceID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="BaseMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MonsterClassID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="CurrentExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="ATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="RCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -184,7 +184,7 @@
 				<fk_column name="AssistMonsterID" pk="MonsterClassID" />
 			</fk>
 			<fk name="FK_Instance_BaseMonsterID" to_schema="dbo" to_table="MonsterClass" >
-				<fk_column name="BaseMonsterID" pk="MonsterClassID" />
+				<fk_column name="MonsterClassID" pk="MonsterClassID" />
 			</fk>
 			<fk name="FK_Instance_PlayerID" to_schema="dbo" to_table="Player" >
 				<fk_column name="PlayerID" pk="PlayerID" />
@@ -363,8 +363,78 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="270" y="90" />
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
 		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="600" y="570" />
-		<entity schema="dbo" name="Instance" color="1f5182" x="795" y="45" />
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="600" y="285" />
+		<entity schema="dbo" name="Instance" color="1f5182" x="795" y="45" />
+		<script name="Instance" id="Query_35c56fe2" language="SQL" >
+			<string><![CDATA[CREATE TABLE dbo.Instance ( 
+	InstanceID           int NOT NULL   ,
+	PlayerID             int NOT NULL   ,
+	BaseMonsterID        int NOT NULL   ,
+	CurrentExperience    int NOT NULL   ,
+	ATK                  int NOT NULL   ,
+	RCV                  int NOT NULL   ,
+	HP                   int NOT NULL   ,
+	PlusATK              int NOT NULL   ,
+	PlusRCV              int NOT NULL   ,
+	PlusHP               int NOT NULL   ,
+	SkillsAwoke          int NOT NULL   ,
+	AssistMonsterID      int    ,
+	AssistATK            int    ,
+	AssistRCV            int    ,
+	AssistHP             int    ,
+	AssistSkill          varchar(100)    ,
+	LatentSkillOne       varchar(50)    ,
+	LatentSkillTwo       varchar(50)    ,
+	LatentSkillThree     varchar(50)    ,
+	LatentSkillFour      varchar(50)    ,
+	LatentSkillFive      varchar(50)    ,
+	LatentSkillSix       varchar(50)    ,
+	SkillLevel           int    ,
+	CurrentSkillCooldown int    ,
+	ASATK                int NOT NULL   ,
+	ASRCV                int NOT NULL   ,
+	ASHP                 int NOT NULL   ,
+	LSATK                int NOT NULL   ,
+	LSRCV                int NOT NULL   ,
+	LSHP                 int NOT NULL   ,
+	CONSTRAINT PK__Instance__5C51996FBA3F55C1 PRIMARY KEY ( InstanceID )
+ );
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillFive FOREIGN KEY ( LatentSkillFive ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillFour FOREIGN KEY ( LatentSkillFour ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillOne FOREIGN KEY ( LatentSkillOne ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillSix FOREIGN KEY ( LatentSkillSix ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillThree FOREIGN KEY ( LatentSkillThree ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_LatentSKillTwo FOREIGN KEY ( LatentSkillTwo ) REFERENCES dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_BaseMonsterID FOREIGN KEY ( BaseMonsterID ) REFERENCES dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE dbo.Instance ADD CONSTRAINT FK_Instance_PlayerID FOREIGN KEY ( PlayerID ) REFERENCES dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+]]></string>
+		</script>
+		<script name="Player" id="Query_22744252" language="SQL" >
+			<string><![CDATA[CREATE TABLE SWTS1103.dbo.Player ( 
+	PlayerID             int NOT NULL   ,
+	PlayerRank           int NOT NULL   ,
+	PlayerName           varchar(50)    ,
+	PlayerAttribute      varchar(50)    ,
+	CONSTRAINT PK__Player__4A4E74A84EEA63C2 PRIMARY KEY ( PlayerID )
+ );
+
+ALTER TABLE SWTS1103.dbo.Player 
+ADD CONSTRAINT fk_PlayerAttribute_Attribute FOREIGN KEY ( PlayerAttribute ) 
+REFERENCES SWTS1103.dbo.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+]]></string>
+		</script>
 	</layout>
 </project>
