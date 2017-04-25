@@ -1,0 +1,22 @@
+insert into SWTS1103.dbo.latentSkill Values
+
+('Auto Heal','Heal HP equal to 3% of RCU every turn a  match is made',1),
+('Extend Move Time','Additional 0.05 seconds for moving orbs',1),
+('Fire Damage Reduction','Take 1% less damage from Fire type enemies',1),
+('Attacker Killer','1.5x ATK to Attacker Type enemies',2),
+('Balanced Killer','1.5x ATK to Balanced Type enemies',2),
+('Devil Killer','1.5x ATK to Devil Type enemies',2),
+('Dragon Killer','1.5x ATK to Dragon Type enemies',2),
+('God Killer','1.5x ATK to God Type enemies',2),
+('Healer Killer','1.5x ATK to Healer Type enemies',2),
+('Machine Killer','1.5x ATK to Machine Type enemies',2),
+('Physical Killer','1.5x ATK to Machine Type enemies',2),
+('Dark Damage Reduction','Slightly reduces damage from Dark Att. enemies',1),
+('Water Damage Reduction','Slightly reduces damage from Water Att. enemies',1),
+('Improve All Stats','Increases HP+1.5%, ATK+1%, RCV+5% ',2),
+('Wood Damage Reduction','Slightly reduces damage from Wood Att. enemies',1),
+('Light Damage Reduction','Slightly reduces damage from Light Att. enemies',1),
+('Improve ATK','Slightly increases ATK',1),
+('Improve HP','Slightly increses HP',1),
+('Improve RCV','Slightly increases RCV',1),
+('Skill Delay Resist','Reduces skill delay by 1 turn for each Awoken Latent Skill added',1);
