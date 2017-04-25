@@ -3094,4 +3094,4 @@ VALUES
 (3504, 'Reincarnated Izanagi', 8, 'Light', 'Wood', 'God', 'Balanced', 'Dragon', 16000000, 99, 45, 3504, 'Spirit of the Creator God', 'Dawn of the Celestial Ocean', 4578, 1888, 493, 1, 1, 1, 1898, 783, 188, 81675, 825, 196763, 1988, 5000),
 (3507, 'Reincarnated Astaroth', 8, 'Wood', 'Dark', 'Devil', 'Healer', 'Attacker', 16000000, 99, 50, 3507, 'Spirit of the Archdemon', 'Lazy Smile', 3610, 1844, 810, 1, 1, 1, 1400, 840, 302, 89100, 900, 215325, 2175, 5000),
 (3532, 'Awoken Amon', 7, 'Water', 'Wood', 'Devil', 'Dragon', NULL, 4000000, 99, 40, 3532, 'Path of Solitude', 'Amon Cross', 3595, 1563, 423, 1, 1, 1, 1038, 842, 282, 72765, 735, 174488, 1763, 5000),
-(3533, 'Awoken Baal', 7, 'Light', 'Fire', 'Devil', 'Machine', NULL, 4000000, 99, 40, 3533, 'Predatory Gaze', 'Proud Impulse', 3093, 1926, 360, 1, 1, 1, 1077, 884, 240, 72765, 735, 174488, 1763, 5000),
+(3533, 'Awoken Baal', 7, 'Light', 'Fire', 'Devil', 'Machine', NULL, 4000000, 99, 40, 3533, 'Predatory Gaze', 'Proud Impulse', 3093, 1926, 360, 1, 1, 1, 1077, 884, 240, 72765, 735, 174488, 1763, 5000);
