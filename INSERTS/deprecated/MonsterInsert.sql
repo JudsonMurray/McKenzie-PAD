@@ -6,7 +6,7 @@
 
 --truncate table SWTS1103.dbo.MonsterClass
 
-INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
+INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterClassID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
  "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", ASListID, LeaderSkillName, ActiveSkillName, "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
     "GrowthRateRCV", "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") VALUES 
 (40, 'Woodsie', 1, 'Wood', NULL, 'Balanced', NULL, NULL, 2556, 10, 1, NULL,NULL, NULL, 90, 36, 0.7, 205, 41, 0.7, 37, 11, 0.7, 500, 50, 500, 50, 1),
@@ -46,7 +46,7 @@ INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "At
 
 -- Kyle Insert Style
 insert into SWTS1103.dbo.MonsterClass 
-(MonsterID,
+(MonsterClassID,
 MonsterName,
 Rarity,
 MonsterCost,
@@ -84,13 +84,13 @@ Values
 (3062, 'Destruction Blade Mechanical Star God, Castor', 7, 35, 4000000, 99, 2583, 2330, 78, 1033, 832, 31, 660, 65340, 5000, 'Dark', 'Light', 'Machine', 'God', NULL, 'Mechanical Dark Star of Gemini', 'Astrocharge - Dark', 3062, 0, 0, 0, 155925, 1575),
 (3206, 'God of Awe and Fear, Vajrabhairava', 6, 30, 4000000, 99, 2805, 1840, 148, 1122, 736, 59, 570, 56430, 5000, 'Dark', 'Light', 'God', 'Attacker', NULL, 'Axiom of Sustainment', 'Divine Blessing', 3206, 0, 0, 0, 133650, 1350),
 (3284, 'Dragon Caller''s Disciple, Sheena', 5, 50, 5000000, 99, 3931, 1728, 40, 1872, 823, 19, 855, 84645, 15000, 'Dark', 'Light', 'Dragon', 'Attacker', NULL, 'Magic Dragon Tribe''s Determination', 'Draco Summon - Light & Dark', 3284, 0, 0, 0, 204188, 2063),
-(3305, 'The Chosen King, Noctis', 7, 22, 5000000, 99, 4038, 1877, 214, 1923, 894, 102, 465, 46035, 6000, 'Dark', 'Light', 'Physical', 'Attacker', NULL, 'The Armiger', 'Trust in me…', 3305, 0, 0, 0, 107663, 1088),
+(3305, 'The Chosen King, Noctis', 7, 22, 5000000, 99, 4038, 1877, 214, 1923, 894, 102, 465, 46035, 6000, 'Dark', 'Light', 'Physical', 'Attacker', NULL, 'The Armiger', 'Trust in meï¿½', 3305, 0, 0, 0, 107663, 1088),
 (3392, 'God of the Battlefield, Odin', 8, 60, 4000000, 99, 4969, 2493, 34, 1845, 1362, 52, 1050, 103950, 50000, 'Fire', NULL, 'God', 'Physical', NULL, 'Sight of Valhalla', 'Destroying Lance, Gungnir', 3392, 0, 0, 0, 252450, 2550),
 (3450, 'Reincarnated Vritra', 8, 50, 16000000, 99, 4647, 2345, 201, 2034, 923, 56, 900, 89100, 5000, 'Dark', 'Light', 'Dragon', 'Devil', 'God', 'Soul of the Darkdragon', 'Abyssal Strike', 3450, 0, 0, 0, 215325, 2175)
 
 
 --Ryan Inserts
-insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, ASListID, MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkillName, LeaderSkillName, "MinCoinValue", "MaxCoinValue", "MinExperienceValue", "MaxExperienceValue", "MonsterPointValue") values
+insert into SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, ASListID, MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,"MaxExperience", MaxLevel, MonsterCost, GrowthRateHP, GrowthRateATK, GrowthRateRCV, ActiveSkillName, LeaderSkillName, "MinCoinValue", "MaxCoinValue", "MinExperienceValue", "MaxExperienceValue", "MonsterPointValue") values
 (2995,'Bursting Great Earl of Hell, Ronove',6,'Wood',NULL,'Devil','Machine',NULL,2995,1811,1202,296,3211,1702,696,5000000,99,40,1,1,1,'Hurricane Shout','Evil Sound''s Reverberation', 720, 71280, 1725, 170775, 15000),
 (693,'Noble Wolf King Hero, Cu Chulainn',7,'Wood','Dark','Balanced',null,NULL,693,1613,1204,255,2987,1386,378,4000000,99,35,1,1,1,'Attack Stance - Wood','Light of Scathach', 660, 65340, 1575, 155925, 15),
 (2944,'Balboa',5,'Wood',NULL,'Dragon','Machine',NULL,NULL,395,219,8,1012,795,135,883883,50,30,1,1,1,'Astray Mist','Hermit Soul', 555, 27750, 1313, 65625, 15000),
@@ -110,7 +110,7 @@ insert into SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, Attribute
 
 --Elie Inserts
 INSERT INTO SWTS1103.dbo.MonsterClass 
-(MonsterID, 
+(MonsterClassID, 
 MonsterName, 
 Rarity, 
 MonsterCost, 
@@ -164,7 +164,7 @@ MaxExperienceValue) VALUES
 
 
  --Zach Inserts
- insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
+ insert into SWTS1103.dbo.MonsterClass (MonsterClassID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
 (2149,'Moon Dragon Caller, Satsuki',5,'Dark','Light','Dragon','Attacker',NULL,30,445,163,15,2003,734,32,883883,50,555,27750,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',NULL,5,1.5,1.5,1.5,1313,65625),
 (2150,'Ominous Moon Dragon Caller, Satsuki',6,'Dark','Light','Dragon','Attacker',NULL,50,1602,661,29,4005,1703,46,5000000,99,870,86130,15000,'Dimension Dance - Purple Sky','Demon''s Sacred Talisman',2150,5,1.5,1.5,1.5,2100,207900),
@@ -178,7 +178,7 @@ MaxExperienceValue) VALUES
 (137,'Susano no Mikoto',6,'Wood','Wood','God',NULL,NULL,20,1200,760,128,2970,1186,298,4000000,99,420,41580,5000,'Iron Wall Stance','Iron Wall Lore',137,5,1.5,1.5,1.5,975,96525);
 
 --Evo Material
-INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
+INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterClassID", "MonsterName", "Rarity", "AttributeOne", "AttributeTwo",
  "MonsterTypeOne", "MonsterTypeTwo", "MonsterTypeThree", "MaxExperience", "MaxLevel", "MonsterCost", ASListID, LeaderSkillName,
   ActiveSkillName, "MaxATK", "MinATK", "GrowthRateATK", "MaxHP", "MinHP", "GrowthRateHP", "MaxRCV", "MinRCV",
     "GrowthRateRCV", "MaxCoinValue", "MinCoinValue", "MaxExperienceValue", "MinExperienceValue", "MonsterPointValue") VALUES 
@@ -215,17 +215,17 @@ INSERT INTO SWTS1103.dbo.MonsterClass ("MonsterID", "MonsterName", "Rarity", "At
 (814, 'Yomi Mistress, Izanami', 7, 'Dark', 'Fire', 'God', 'Physical', null, 5000000, 99, 60, 814, 'Yomi''s Commandment', 'The Feathered Garment of Yomi', 1501, 767, 1, 4511, 1730, 1, 57, 24, 1, 102465, 1035, 248738, 2513, 20),
 (2129, 'Relentless Destroyer, Grand Tengu', 7, 'Wood', 'Dark', 'Physical', 'Devil', null, 4000000, 99, 35, 2129, 'Perseverance', 'Dance of the Great Tengu', 1317, 565, 1, 4026, 976, 1, 0, 0, 1, 65340, 660, 155925, 1575, 15);
 
-INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
  VALUES
 (1324, 'Extreme King Metal Dragon', 7, 'Dark', NULL, 'Enhance Material', 'God', NULL, 0, 1, 1, NULL, NULL, 'Orb Transformation', 2000, 600, 100, 0.7, 0.7, 0.7, 2000, 600, 100, 100, 100, 250000, 250000, 1)
 
 
-insert into SWTS1103.dbo.MonsterClass (MonsterID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
+insert into SWTS1103.dbo.MonsterClass (MonsterClassID,MonsterName,Rarity,AttributeOne,AttributeTwo,MonsterTypeOne,MonsterTypeTwo,MonsterTypeThree,MonsterCost,MinHP,MinATK,MinRCV,MaxHP,MaxATK,MaxRCV,MaxExperience,MaxLevel,MinCoinValue,MaxCoinValue,MonsterPointValue,ActiveSkillName,LeaderSkillName,ASListID,LSSlots ,GrowthRateHP, GrowthRateATK, GrowthRateRCV,MinExperienceValue,MaxExperienceValue) values
 
 (632,'Amon',5,'Water','Dark','Devil',NULL,NULL,25,541,468,149,1298,936,313,707107,50,480,24000,5000,'Curse of the Ice','Devil''s Soul',NULL,5,1.0,1.0,1.0,1125,56250),
 (633,'Blizzard Archdemon Amon',6,'Water','Dark','Devil',NULL,NULL,30,1038,842,282,2595,1363,423,4000000,99,570,56430,5000,'Curse of the Ice','Demon''s Soul',633,5,1.0,1.0,1.0,1350,56430),
 (1258,'Chivalrous Demon Lord, Amon',7,'Water','Light','Devil','Physical',NULL,40,1038,842,282,3295,1363,423,4000000,99,735,72765,5000,'Curse of the Ice','Demonic Ally',1258,5,1.0,1.0,1.0,1763,174488),
 (2504,'Resolved Demon Lord, Amon',8,'Water','Light','Devil','Physical','Healer',50,1038,842,282,3895,1363,513,4000000,99,900,89100,5000,'Curse of the Ice','Devil''s Constable',2504,5,1.0,1.0,1.0,2175,215325),
 (3532,'Awoken Amon',7,'Water','Wood','Devil','Dragon',NULL,40,1038,842,282,3595,1563,423,4000000,99,735,72765,5000,'Amon Cross','Path of Solitude',3532,5,1.0,1.0,1.0,1763,174488),
-(2639,'Gods'' Threat Venomous Snake, Jörmungandr',7,'Wood','Water','Dragon','Devil',NULL,50,1678,603,41,4195,1508,103,5000000,99,885,87615,20,'Poisonous Fang of Transformation','End of the World''s Calling',2239,5,1.0,1.0,1.0,2138,211613),
+(2639,'Gods'' Threat Venomous Snake, Jï¿½rmungandr',7,'Wood','Water','Dragon','Devil',NULL,50,1678,603,41,4195,1508,103,5000000,99,885,87615,20,'Poisonous Fang of Transformation','End of the World''s Calling',2239,5,1.0,1.0,1.0,2138,211613),
 (2263,'Cruel Frozen Hell Demon, Indigo',6,'Water','Dark','Devil',NULL,NULL,40,1256,808,175,3140,1454,315,5000000,99,720,71280,25,'Freeze Lock','Hailstone of Refusal',2263,5,1.0,1.0,1.0,1725,170775);

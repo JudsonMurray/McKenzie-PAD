@@ -2,7 +2,7 @@
 --Drop Table SWTS1103.dbo.MonsterClass
 
 CREATE TABLE SWTS1103.dbo.MonsterClass ( 
-	MonsterID            int NOT NULL   ,
+	MonsterClassID            int NOT NULL   ,
 	MonsterName          varchar(100) NOT NULL   ,
 	Rarity               int NOT NULL   ,
 	AttributeOne         varchar(50) NOT NULL   ,
@@ -31,7 +31,7 @@ CREATE TABLE SWTS1103.dbo.MonsterClass (
 	MinExperienceValue   int NOT NULL   ,
 	MonsterPointValue    int NOT NULL   ,
 	LSSlots              int NOT NULL CONSTRAINT defo_MonsterClass_LSSlots DEFAULT 5  ,
-	CONSTRAINT Pk_MonsterClass PRIMARY KEY ( MonsterID )
+	CONSTRAINT Pk_MonsterClass PRIMARY KEY ( MonsterClassID )
  )
 
 CREATE  INDEX idx_MonsterClass ON SWTS1103.dbo.MonsterClass ( AttributeOne );
