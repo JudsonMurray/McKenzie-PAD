@@ -136,6 +136,57 @@
 				<column name="LatentSkillName" />
 			</index>
 		</table>
+		<table name="LatentSkillList" >
+			<column name="InstanceID" type="int" jt="4" mandatory="y" />
+			<column name="LatentSkillOne" type="varchar" length="50" jt="12" />
+			<column name="LatentSkillTwo" type="varchar" length="50" jt="12" />
+			<column name="LatentSkillThree" type="varchar" length="50" jt="12" />
+			<column name="LatentSkillFour" type="varchar" length="50" jt="12" />
+			<column name="LatentSkillFive" type="varchar" length="50" jt="12" />
+			<column name="LatentSkillSix" type="varchar" length="50" jt="12" />
+			<column name="ExtraSlot" type="bit" jt="-7" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<index name="Pk_LatentSkillList" unique="PRIMARY_KEY" >
+				<column name="InstanceID" />
+			</index>
+			<index name="idx_LatentSkillList" unique="NORMAL" >
+				<column name="LatentSkillOne" />
+			</index>
+			<index name="idx_LatentSkillList_0" unique="NORMAL" >
+				<column name="LatentSkillTwo" />
+			</index>
+			<index name="idx_LatentSkillList_1" unique="NORMAL" >
+				<column name="LatentSkillThree" />
+			</index>
+			<index name="idx_LatentSkillList_2" unique="NORMAL" >
+				<column name="LatentSkillFour" />
+			</index>
+			<index name="idx_LatentSkillList_3" unique="NORMAL" >
+				<column name="LatentSkillFive" />
+			</index>
+			<index name="idx_LatentSkillList_4" unique="NORMAL" >
+				<column name="LatentSkillSix" />
+			</index>
+			<fk name="fk_LatentSkillList" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillOne" pk="LatentSkillName" />
+			</fk>
+			<fk name="fk_LatentSkillList_0" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillTwo" pk="LatentSkillName" />
+			</fk>
+			<fk name="fk_LatentSkillList_1" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillThree" pk="LatentSkillName" />
+			</fk>
+			<fk name="fk_LatentSkillList_2" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillFour" pk="LatentSkillName" />
+			</fk>
+			<fk name="fk_LatentSkillList_3" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillFive" pk="LatentSkillName" />
+			</fk>
+			<fk name="fk_LatentSkillList_4" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillSix" pk="LatentSkillName" />
+			</fk>
+		</table>
 		<table name="LeaderSkill" >
 			<column name="LeaderSkillName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
 			<column name="LeaderSKillDesc" type="varchar(max)" decimal="0" jt="12" mandatory="y" />
@@ -232,61 +283,30 @@
 			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="MonsterClassID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="CurrentExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="ATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="RCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="HP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="SkillsAwoke" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
-			<column name="AssistATK" type="int" length="10" decimal="0" jt="4" />
-			<column name="AssistRCV" type="int" length="10" decimal="0" jt="4" />
-			<column name="AssistHP" type="int" length="10" decimal="0" jt="4" />
-			<column name="AssistSkill" type="varchar" length="100" decimal="0" jt="12" />
-			<column name="LatentSkillOne" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="LatentSkillTwo" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="LatentSkillThree" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="LatentSkillFour" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="LatentSkillFive" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="LatentSkillSix" type="varchar" length="50" decimal="0" jt="12" />
 			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
-			<column name="CurrentSkillCooldown" type="int" length="10" decimal="0" jt="4" />
-			<column name="ASATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="ASRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="ASHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="LSATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="LSRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="LSHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LSListID" type="int" jt="4" />
 			<index name="PK__Instance__5C51996FBA3F55C1" unique="PRIMARY_KEY" >
 				<column name="InstanceID" />
 			</index>
-			<fk name="FK_Instance_LatentSKillFive" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillFive" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_LatentSKillFour" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillFour" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_LatentSKillOne" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillOne" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_LatentSKillSix" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillSix" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_LatentSKillThree" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillThree" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_LatentSKillTwo" to_schema="dbo" to_table="LatentSkill" >
-				<fk_column name="LatentSkillTwo" pk="LatentSkillName" />
-			</fk>
-			<fk name="FK_Instance_AssistMonsterID" to_schema="dbo" to_table="MonsterClass" >
-				<fk_column name="AssistMonsterID" pk="MonsterClassID" />
-			</fk>
+			<index name="idx_MonsterInstance" unique="NORMAL" >
+				<column name="LSListID" />
+			</index>
 			<fk name="FK_Instance_BaseMonsterID" to_schema="dbo" to_table="MonsterClass" >
 				<fk_column name="MonsterClassID" pk="MonsterClassID" />
 			</fk>
 			<fk name="FK_Instance_PlayerID" to_schema="dbo" to_table="Player" >
 				<fk_column name="PlayerID" pk="PlayerID" />
+			</fk>
+			<fk name="FK_Instance_AssistMonsterID" to_schema="dbo" to_table="MonsterInstance" >
+				<fk_column name="AssistMonsterID" pk="InstanceID" />
+			</fk>
+			<fk name="fk_MonsterInstance" to_schema="dbo" to_table="LatentSkillList" >
+				<fk_column name="LSListID" pk="InstanceID" />
 			</fk>
 		</table>
 		<table name="MonsterType" >
@@ -362,10 +382,11 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="270" y="165" />
 		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="270" y="90" />
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
-		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="600" y="570" />
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="600" y="285" />
-		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="795" y="45" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="645" y="510" />
+		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="930" y="465" />
+		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="795" y="75" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,
