@@ -1,7 +1,7 @@
 ﻿-- Master Monster Insert --
 -- By Billy --
 
-INSERT INTO SWTS1103.dbo.MonsterClass (MonsterID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
 VALUES
 (1, 'Tyrra', 2, 'Fire', NULL, 'Dragon', NULL, NULL, 505, 5, 2, NULL, 'Fire Power', 'Heat Breath', 144, 71, 13, 1, 1, 1, 52, 57, 8, 350, 70, 500, 100, 1),
 (2, 'Tyran', 3, 'Fire', NULL, 'Dragon', NULL, NULL, 11570, 15, 4, NULL, 'Fire Power', 'Heat Breath', 490, 231, 50, 1, 1, 1, 115, 64, 12, 1500, 100, 2625, 175, 1),
