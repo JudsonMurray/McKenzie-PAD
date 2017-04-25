@@ -279,13 +279,13 @@
 			</fk>
 		</table>
 		<table name="MonsterInstance" >
-			<column name="InstanceID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="InstanceID" type="int" jt="4" mandatory="y" autoincrement="y" />
 			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="MonsterClassID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="CurrentExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="SkillsAwoke" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
 			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
@@ -384,8 +384,8 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="600" y="285" />
-		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="645" y="510" />
 		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="930" y="465" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="645" y="510" />
 		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="795" y="75" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
