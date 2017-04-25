@@ -25,8 +25,18 @@ if OBJECT_ID('SWTS1103.dbo.AwokenSkillList', 'U') is not null
  drop table AwokenSkillList;
 if OBJECT_ID('SWTS1103.dbo.AwokenSkill', 'U') is not null
  drop table AwokenSkill;
+if OBJECT_ID('SWTS1103.dbo.LatentSkill', 'U') is not null
+ drop table LatentSkill;
 
+ --LatentSkill Type
+CREATE TABLE SWTS1103.dbo.LatentSkill ( 
+	LatentSkillName      varchar(50) NOT NULL   ,
+	LatentSkillDesc      varchar(max) NOT NULL   ,
+	LSSlotsReq           int NOT NULL   ,
+	CONSTRAINT PK__LatentSk__FFA5BAADD751457A PRIMARY KEY ( LatentSkillName )
+ );
 
+--Monster Type
 CREATE TABLE SWTS1103.dbo.MonsterType ( 
 	MonsterTypeName      varchar(50) NOT NULL   ,
 	CONSTRAINT Pk_MonsterType PRIMARY KEY ( MonsterTypeName )
