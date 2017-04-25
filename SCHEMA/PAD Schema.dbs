@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project name="MonsterClass" id="Project_ddad4fc" template="Default" database="SqlServer" >
-	<comment><![CDATA[Relationship chart for PAD mosnter class]]></comment>
-	<schema name="monsterclass" schemaname="monsterclass" >
+<project name="SqlServer2000_2005" id="Project_13338df2" template="Default" database="SqlServer2000_2005" >
+	<schema name="dbo" catalogname="SWTS1103" schemaname="dbo" >
 		<table name="ActiveSkill" >
 			<column name="ActiveSkillName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
-			<column name="ActiveSkillDesc" type="varchar(max)" jt="12" mandatory="y" />
-			<column name="ActiveSkillMaxLevel" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="ActiveSkillMaxCoolDown" type="int" length="0" decimal="0" jt="4" mandatory="y" />
+			<column name="ActiveSkillDesc" type="varchar(max)" decimal="0" jt="12" mandatory="y" />
+			<column name="ActiveSkillMaxLevel" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="ActiveSkillMaxCoolDown" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<index name="Pk_ActiveSkill" unique="PRIMARY_KEY" >
 				<column name="ActiveSkillName" />
 			</index>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="Attribute" >
 			<column name="AttributeName" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
 			<index name="Pk_Attribute" unique="PRIMARY_KEY" >
 				<column name="AttributeName" />
 			</index>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="AwokenSkill" >
 			<column name="AwokenSkillName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
-			<column name="AwokenSkillDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="AwokenSkillDesc" type="varchar(max)" decimal="0" jt="12" mandatory="y" />
 			<index name="Pk_AwokenSkill" unique="PRIMARY_KEY" >
 				<column name="AwokenSkillName" />
 			</index>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="AwokenSkillList" >
-			<column name="ASListID" type="varchar" length="100" jt="12" mandatory="y" />
-			<column name="AwokenSkillOne" type="varchar" length="100" jt="12" mandatory="y" />
-			<column name="AwokenSkillTwo" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillThree" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillFour" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillFive" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillSix" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillSeven" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillEight" type="varchar" length="100" jt="12" />
-			<column name="AwokenSkillNine" type="varchar" length="100" jt="12" />
+			<column name="ASListID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="AwokenSkillOne" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
+			<column name="AwokenSkillTwo" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillThree" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillFour" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillFive" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillSix" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillSeven" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillEight" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="AwokenSkillNine" type="varchar" length="100" decimal="0" jt="12" />
 			<index name="Pk_AwokenSkillList" unique="PRIMARY_KEY" >
 				<column name="ASListID" />
 			</index>
@@ -68,128 +64,181 @@
 			<index name="idx_AwokenSkillList_7" unique="NORMAL" >
 				<column name="AwokenSkillNine" />
 			</index>
-			<fk name="fk_awokenskilllist_awokenskill1" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill1" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillOne" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill2" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill2" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillTwo" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill3" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill3" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillThree" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill4" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill4" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillFour" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill5" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill5" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillFive" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill6" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill6" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillSix" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill7" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill7" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillSeven" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill8" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill8" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillEight" pk="AwokenSkillName" />
 			</fk>
-			<fk name="fk_awokenskilllist_awokenskill9" to_schema="monsterclass" to_table="AwokenSkill" >
+			<fk name="fk_awokenskilllist_awokenskill9" to_schema="dbo" to_table="AwokenSkill" >
 				<fk_column name="AwokenSkillNine" pk="AwokenSkillName" />
 			</fk>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="EvolutionTree" >
-			<column name="NextMonsterID" type="int" jt="4" mandatory="y" />
-			<column name="BaseMonsterID" type="int" jt="4" mandatory="y" />
-			<column name="EvoMaterialIDOne" type="int" jt="4" mandatory="y" />
-			<column name="EvoMaterialIDTwo" type="int" jt="4" />
-			<column name="EvoMaterialIDThree" type="int" jt="4" />
-			<column name="EvoMaterialIDFour" type="int" jt="4" />
-			<column name="EvoMaterialIDFive" type="int" jt="4" />
-			<column name="MinLevel" type="int" jt="4" mandatory="y" />
-			<column name="Devolveable" type="bit" jt="-7" mandatory="y" />
-			<column name="LevelReset" type="bit" jt="-7" mandatory="y" />
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="EvoMaterialIDOne" />
-			</index>
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="EvoMaterialIDTwo" />
-			</index>
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="EvoMaterialIDThree" />
-			</index>
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="EvoMaterialIDFour" />
-			</index>
-			<index name="idx_EvolutionTree" unique="NORMAL" >
-				<column name="EvoMaterialIDFive" />
-			</index>
+			<column name="NextMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="BaseMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="EvoMaterialIDOne" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="EvoMaterialIDTwo" type="int" length="10" decimal="0" jt="4" />
+			<column name="EvoMaterialIDThree" type="int" length="10" decimal="0" jt="4" />
+			<column name="EvoMaterialIDFour" type="int" length="10" decimal="0" jt="4" />
+			<column name="EvoMaterialIDFive" type="int" length="10" decimal="0" jt="4" />
+			<column name="MinLevel" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="Devolveable" type="bit" length="1" decimal="0" jt="-7" mandatory="y" />
+			<column name="LevelReset" type="bit" length="1" decimal="0" jt="-7" mandatory="y" />
 			<index name="Pk_EvolutionTree" unique="PRIMARY_KEY" >
 				<column name="NextMonsterID" />
 			</index>
-			<index name="idx_EvolutionTree_0" unique="NORMAL" >
-				<column name="BaseMonsterID" />
+			<index name="idx_EvolutionTree" unique="NORMAL" >
+				<column name="EvoMaterialIDOne" />
 			</index>
-			<fk name="fk_evolutiontree_evomaterialid1" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="EvoMaterialIDOne" pk="MonsterID" />
+			<fk name="fk_evolutiontree_MonsterClass" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="BaseMonsterID" pk="MonsterClassID" />
 			</fk>
-			<fk name="fk_evolutiontree_evomaterialid2" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="EvoMaterialIDTwo" pk="MonsterID" />
+			<fk name="fk_evolutiontree_evomaterialid1" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDOne" pk="MonsterClassID" />
 			</fk>
-			<fk name="fk_evolutiontree_evomaterialid3" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="EvoMaterialIDThree" pk="MonsterID" />
+			<fk name="fk_evolutiontree_evomaterialid2" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDTwo" pk="MonsterClassID" />
 			</fk>
-			<fk name="fk_evolutiontree_evomaterialid4" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="EvoMaterialIDFour" pk="MonsterID" />
+			<fk name="fk_evolutiontree_evomaterialid3" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDThree" pk="MonsterClassID" />
 			</fk>
-			<fk name="fk_evolutiontree_evomaterialid5" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="EvoMaterialIDFive" pk="MonsterID" />
+			<fk name="fk_evolutiontree_evomaterialid4" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDFour" pk="MonsterClassID" />
 			</fk>
-			<fk name="fk_evolutiontree_monsterclass" to_schema="monsterclass" to_table="MonsterClass" >
-				<fk_column name="BaseMonsterID" pk="MonsterID" />
+			<fk name="fk_evolutiontree_evomaterialid5" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="EvoMaterialIDFive" pk="MonsterClassID" />
 			</fk>
+		</table>
+		<table name="Instance" >
+			<column name="InstanceID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="BaseMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="CurrentExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="ATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="RCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="HP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlusATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlusRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="SkillsAwoke" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
+			<column name="AssistATK" type="int" length="10" decimal="0" jt="4" />
+			<column name="AssistRCV" type="int" length="10" decimal="0" jt="4" />
+			<column name="AssistHP" type="int" length="10" decimal="0" jt="4" />
+			<column name="AssistSkill" type="varchar" length="100" decimal="0" jt="12" />
+			<column name="LatentSkillOne" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="LatentSkillTwo" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="LatentSkillThree" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="LatentSkillFour" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="LatentSkillFive" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="LatentSkillSix" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
+			<column name="CurrentSkillCooldown" type="int" length="10" decimal="0" jt="4" />
+			<column name="ASATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="ASRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="ASHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LSATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LSRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LSHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<index name="PK__Instance__5C51996FBA3F55C1" unique="PRIMARY_KEY" >
+				<column name="InstanceID" />
+			</index>
+			<fk name="FK_Instance_LatentSKillFive" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillFive" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_LatentSKillFour" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillFour" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_LatentSKillOne" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillOne" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_LatentSKillSix" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillSix" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_LatentSKillThree" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillThree" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_LatentSKillTwo" to_schema="dbo" to_table="LatentSkill" >
+				<fk_column name="LatentSkillTwo" pk="LatentSkillName" />
+			</fk>
+			<fk name="FK_Instance_AssistMonsterID" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="AssistMonsterID" pk="MonsterClassID" />
+			</fk>
+			<fk name="FK_Instance_BaseMonsterID" to_schema="dbo" to_table="MonsterClass" >
+				<fk_column name="BaseMonsterID" pk="MonsterClassID" />
+			</fk>
+			<fk name="FK_Instance_PlayerID" to_schema="dbo" to_table="Player" >
+				<fk_column name="PlayerID" pk="PlayerID" />
+			</fk>
+		</table>
+		<table name="LatentSkill" >
+			<column name="LatentSkillName" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
+			<column name="LatentSkillDesc" type="varchar(max)" decimal="0" jt="12" mandatory="y" />
+			<column name="LSSlotsReq" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<index name="PK__LatentSk__FFA5BAADD751457A" unique="PRIMARY_KEY" >
+				<column name="LatentSkillName" />
+			</index>
 		</table>
 		<table name="LeaderSkill" >
 			<column name="LeaderSkillName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
-			<column name="LeaderSKillDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="LeaderSKillDesc" type="varchar(max)" decimal="0" jt="12" mandatory="y" />
 			<index name="Pk_LeaderSkill" unique="PRIMARY_KEY" >
 				<column name="LeaderSkillName" />
 			</index>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
 		<table name="MonsterClass" >
-			<column name="MonsterID" type="int" length="0" decimal="0" jt="4" mandatory="y" />
+			<column name="MonsterClassID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="MonsterName" type="varchar" length="100" decimal="0" jt="12" mandatory="y" />
-			<column name="Rarity" type="int" length="0" decimal="0" jt="4" mandatory="y" />
+			<column name="Rarity" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="AttributeOne" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
 			<column name="AttributeTwo" type="varchar" length="50" decimal="0" jt="12" />
 			<column name="MonsterTypeOne" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
 			<column name="MonsterTypeTwo" type="varchar" length="50" decimal="0" jt="12" />
 			<column name="MonsterTypeThree" type="varchar" length="50" decimal="0" jt="12" />
-			<column name="MaxExperience" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MaxLevel" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MonsterCost" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="ASListID" type="int" length="0" decimal="0" jt="4" />
+			<column name="MaxExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MaxLevel" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MonsterCost" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="ASListID" type="int" length="10" decimal="0" jt="4" />
 			<column name="LeaderSkillName" type="varchar" length="100" decimal="0" jt="12" />
 			<column name="ActiveSkillName" type="varchar" length="100" decimal="0" jt="12" />
-			<column name="MaxATK" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MinATK" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="GrowthRateATK" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MaxHP" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MinHP" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="GrowthRateHP" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MaxRCV" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MinRCV" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="GrowthRateRCV" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MaxCoinValue" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MinCoinValue" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MaxExperienceValue" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MinExperienceValue" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="MonsterPointValue" type="int" length="0" decimal="0" jt="4" mandatory="y" />
-			<column name="LSSlots" type="int" jt="4" mandatory="y" >
+			<column name="MaxATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MinATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="GrowthRateATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MaxHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MinHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="GrowthRateHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MaxRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MinRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="GrowthRateRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MaxCoinValue" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MinCoinValue" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MaxExperienceValue" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MinExperienceValue" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="MonsterPointValue" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="LSSlots" type="int" length="10" decimal="0" jt="4" mandatory="y" >
 				<defo>5</defo>
 			</column>
 			<index name="Pk_MonsterClass" unique="PRIMARY_KEY" >
-				<column name="MonsterID" />
+				<column name="MonsterClassID" />
 			</index>
 			<index name="idx_MonsterClass" unique="NORMAL" >
 				<column name="AttributeOne" />
@@ -215,49 +264,107 @@
 			<index name="idx_MonsterClass_6" unique="NORMAL" >
 				<column name="ASListID" />
 			</index>
-			<fk name="fk_monsterclass_attribute1" to_schema="monsterclass" to_table="Attribute" >
-				<fk_column name="AttributeOne" pk="AttributeName" />
-			</fk>
-			<fk name="fk_monsterclass_attribute2" to_schema="monsterclass" to_table="Attribute" >
-				<fk_column name="AttributeTwo" pk="AttributeName" />
-			</fk>
-			<fk name="fk_monsterclass_monstertype1" to_schema="monsterclass" to_table="MonsterType" >
-				<fk_column name="MonsterTypeOne" pk="MonsterTypeName" />
-			</fk>
-			<fk name="fk_monsterclass_monstertype2" to_schema="monsterclass" to_table="MonsterType" >
-				<fk_column name="MonsterTypeTwo" pk="MonsterTypeName" />
-			</fk>
-			<fk name="fk_monsterclass_monstertype3" to_schema="monsterclass" to_table="MonsterType" >
-				<fk_column name="MonsterTypeThree" pk="MonsterTypeName" />
-			</fk>
-			<fk name="fk_monsterclass_activeskill" to_schema="monsterclass" to_table="ActiveSkill" >
+			<fk name="fk_monsterclass_activeskill" to_schema="dbo" to_table="ActiveSkill" >
 				<fk_column name="ActiveSkillName" pk="ActiveSkillName" />
 			</fk>
-			<fk name="fk_monsterclass_leaderskill" to_schema="monsterclass" to_table="LeaderSkill" >
-				<fk_column name="LeaderSkillName" pk="LeaderSkillName" />
+			<fk name="fk_monsterclass_attribute1" to_schema="dbo" to_table="Attribute" >
+				<fk_column name="AttributeOne" pk="AttributeName" />
 			</fk>
-			<fk name="fk_monsterclass" to_schema="monsterclass" to_table="AwokenSkillList" >
+			<fk name="fk_monsterclass_attribute2" to_schema="dbo" to_table="Attribute" >
+				<fk_column name="AttributeTwo" pk="AttributeName" />
+			</fk>
+			<fk name="fk_monsterclass" to_schema="dbo" to_table="AwokenSkillList" >
 				<fk_column name="ASListID" pk="ASListID" />
 			</fk>
-			<storage><![CDATA[engine=InnoDB]]></storage>
+			<fk name="fk_monsterclass_leaderskill" to_schema="dbo" to_table="LeaderSkill" >
+				<fk_column name="LeaderSkillName" pk="LeaderSkillName" />
+			</fk>
+			<fk name="fk_monsterclass_monstertype1" to_schema="dbo" to_table="MonsterType" >
+				<fk_column name="MonsterTypeOne" pk="MonsterTypeName" />
+			</fk>
+			<fk name="fk_monsterclass_monstertype2" to_schema="dbo" to_table="MonsterType" >
+				<fk_column name="MonsterTypeTwo" pk="MonsterTypeName" />
+			</fk>
+			<fk name="fk_monsterclass_monstertype3" to_schema="dbo" to_table="MonsterType" >
+				<fk_column name="MonsterTypeThree" pk="MonsterTypeName" />
+			</fk>
 		</table>
 		<table name="MonsterType" >
-			<column name="MonsterTypeName" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="MonsterTypeName" type="varchar" length="50" decimal="0" jt="12" mandatory="y" />
 			<index name="Pk_MonsterType" unique="PRIMARY_KEY" >
 				<column name="MonsterTypeName" />
 			</index>
-			<storage><![CDATA[engine=InnoDB]]></storage>
 		</table>
-		<table name="table_" />
+		<table name="Player" >
+			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlayerRank" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlayerName" type="varchar" length="50" decimal="0" jt="12" />
+			<column name="PlayerAttribute" type="varchar" length="50" decimal="0" jt="12" />
+			<index name="PK__Player__4A4E74A84EEA63C2" unique="PRIMARY_KEY" >
+				<column name="PlayerID" />
+			</index>
+			<fk name="fk_PlayerAttribute_Attribute" to_schema="dbo" to_table="Attribute" >
+				<fk_column name="PlayerAttribute" pk="AttributeName" />
+			</fk>
+		</table>
 	</schema>
-	<layout name="Default Layout" id="Layout_238c23f1" show_column_type="y" show_relation="columns" >
-		<entity schema="monsterclass" name="Attribute" color="c1d8ee" x="345" y="45" />
-		<entity schema="monsterclass" name="MonsterType" color="c1d8ee" x="330" y="135" />
-		<entity schema="monsterclass" name="MonsterClass" color="c1d8ee" x="45" y="45" />
-		<entity schema="monsterclass" name="ActiveSkill" color="c1d8ee" x="315" y="225" />
-		<entity schema="monsterclass" name="LeaderSkill" color="c1d8ee" x="345" y="360" />
-		<entity schema="monsterclass" name="AwokenSkillList" color="c1d8ee" x="345" y="450" />
-		<entity schema="monsterclass" name="AwokenSkill" color="c1d8ee" x="660" y="510" />
-		<entity schema="monsterclass" name="EvolutionTree" color="1f5182" x="345" y="675" />
+	<connector name="SqlServer2000_2005" database="SqlServer2000_2005" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.2.7.jar" driver_desc="SqlServer Authentication" host="localhost" port="1433" instance="SWTS1103" user="Necrono" />
+	<layout name="Default Layout" id="Layout_1834fd55" show_relation="columns" >
+		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="450" y="45" />
+		<entity schema="dbo" name="Attribute" color="f5ddbf" x="240" y="45" />
+		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="825" y="825" />
+		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="645" y="825" />
+		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="825" y="1080" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="660" y="45" />
+		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="45" y="585" />
+		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
+		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="450" y="1080" />
+		<entity schema="dbo" name="Player" color="f5ddbf" x="240" y="585" />
+	</layout>
+	<layout name="Sample Layout with Groups" id="Layout_3418b490" show_relation="columns" >
+		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="450" y="195" />
+		<entity schema="dbo" name="Attribute" color="f5ddbf" x="240" y="195" />
+		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="825" y="975" />
+		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="645" y="975" />
+		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="825" y="1230" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="660" y="195" />
+		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="45" y="735" />
+		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="195" />
+		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="450" y="1230" />
+		<entity schema="dbo" name="Player" color="f5ddbf" x="240" y="735" />
+		<callout x="45" y="75" pointer="NO" >
+			<comment><![CDATA[You may create multiple layouts with the same or different tables.
+Layouts will be saved to project file. 
+Double-click any column, foreign key or table headers to edit.]]></comment>
+		</callout>
+		<group name="MonsterClass" color="f7f3ec" >
+			<entity schema="dbo" name="MonsterClass" />
+			<entity schema="dbo" name="Attribute" />
+			<entity schema="dbo" name="Player" />
+			<entity schema="dbo" name="LeaderSkill" />
+		</group>
+		<group name="ActiveSkill" color="ecf0f7" >
+			<entity schema="dbo" name="ActiveSkill" />
+			<entity schema="dbo" name="LatentSkill" />
+		</group>
+		<group name="AwokenSkillList" color="eef7ec" >
+			<entity schema="dbo" name="AwokenSkillList" />
+			<entity schema="dbo" name="AwokenSkill" />
+			<entity schema="dbo" name="EvolutionTree" />
+			<entity schema="dbo" name="MonsterType" />
+		</group>
+	</layout>
+	<layout name="Sample Layout with Relational Data Browse" id="Layout_25186e96" show_relation="columns" >
+		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="255" y="360" />
+		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="255" y="570" />
+		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="420" y="570" />
+		<entity schema="dbo" name="Attribute" color="f5ddbf" x="255" y="285" />
+		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="270" y="165" />
+		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="270" y="90" />
+		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="600" y="570" />
+		<entity schema="dbo" name="Instance" color="1f5182" x="795" y="45" />
+		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
+		<entity schema="dbo" name="Player" color="f5ddbf" x="600" y="285" />
 	</layout>
 </project>

@@ -167,3 +167,33 @@ ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomateri
 ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_evomaterialid5 FOREIGN KEY ( EvoMaterialIDFive ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.EvolutionTree ADD CONSTRAINT fk_evolutiontree_monsterclass FOREIGN KEY ( BaseMonsterID ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
+
+--Player Table
+CREATE TABLE SWTS1103.dbo.Player ( 
+	PlayerID             int NOT NULL   ,
+	PlayerRank           int NOT NULL   ,
+	PlayerName           varchar(50)    ,
+	PlayerAttribute      varchar(50)    ,
+	CONSTRAINT PK__Player__4A4E74A84EEA63C2 PRIMARY KEY ( PlayerID )
+ );
+
+ALTER TABLE SWTS1103.dbo.Player 
+ADD CONSTRAINT fk_PlayerAttribute_Attribute FOREIGN KEY ( PlayerAttribute ) 
+REFERENCES SWTS1103.dbo.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+--Instance Table
+CREATE TABLE SWTS1103.dbo.Instance ( 
+	InstanceID           int NOT NULL IDENTITY(100000,1),
+	PlayerID             int NOT NULL   ,
+	BaseMonsterID        int NOT NULL   ,
+	PRIMARY KEY ( InstanceID )
+ );
+
+ALTER TABLE SWTS1103.dbo.Instance 
+ADD CONSTRAINT FK_Instance_BaseMonsterID FOREIGN KEY ( BaseMonsterID ) 
+REFERENCES SWTS1103.dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE SWTS1103.dbo.Instance 
+ADD CONSTRAINT FK_Instance_PlayerID FOREIGN KEY ( PlayerID ) 
+REFERENCES SWTS1103.dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
