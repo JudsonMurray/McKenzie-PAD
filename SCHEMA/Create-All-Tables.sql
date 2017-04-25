@@ -2,8 +2,11 @@
 -- Created By Elie and billy.--
 
 --MonsterType Table
+
 if OBJECT_ID('SWTS1103.dbo.MonsterInstance', 'U') is not null
  drop table MonsterInstance;
+if OBJECT_ID('SWTS1103.dbo.LatentSkillList', 'U') is not null
+ drop table LatentSkillList;
 if OBJECT_ID('SWTS1103.dbo.Player', 'U') is not null
  drop table Player;
 if OBJECT_ID('SWTS1103.dbo.EvolutionTree', 'U') is not null
@@ -186,29 +189,6 @@ ADD CONSTRAINT fk_PlayerAttribute_Attribute FOREIGN KEY ( PlayerAttribute )
 REFERENCES SWTS1103.dbo.Attribute( AttributeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
---Instance Table
-CREATE TABLE SWTS1103.dbo.MonsterInstance ( 
-	InstanceID           int NOT NULL   IDENTITY(100000,1),
-	PlayerID             int NOT NULL   ,
-	MonsterClassID       int NOT NULL   ,
-	CurrentExperience    int NOT NULL   ,
-	PlusATK              int NOT NULL   ,
-	PlusRCV              int NOT NULL   ,
-	PlusHP               int NOT NULL   ,
-	SkillsAwoke          int NOT NULL   ,
-	AssistMonsterID      int    ,
-	SkillLevel           int NOT NULL   DEFAULT 1,
-	LSListID             int    ,
-	CONSTRAINT PK__Instance__5C51996FBA3F55C1 PRIMARY KEY ( InstanceID )
- );
-
-CREATE  INDEX idx_MonsterInstance ON SWTS1103.dbo.MonsterInstance ( LSListID );
-ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_BaseMonsterID FOREIGN KEY ( MonsterClassID ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_PlayerID FOREIGN KEY ( PlayerID ) REFERENCES SWTS1103.dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREIGN KEY ( LSListID ) REFERENCES SWTS1103.dbo.LatentSkillList( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
-
 -- LatentList Table
 
 CREATE TABLE SWTS1103.dbo.LatentSkillList ( 
@@ -235,4 +215,28 @@ ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_1 FOR
 ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_2 FOREIGN KEY ( LatentSkillFour ) REFERENCES SWTS1103.dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_3 FOREIGN KEY ( LatentSkillFive ) REFERENCES SWTS1103.dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_4 FOREIGN KEY ( LatentSkillSix ) REFERENCES SWTS1103.dbo.LatentSkill( LatentSkillName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--Instance Table
+CREATE TABLE SWTS1103.dbo.MonsterInstance ( 
+	InstanceID           int NOT NULL   IDENTITY(100000,1),
+	PlayerID             int NOT NULL   ,
+	MonsterClassID       int NOT NULL   ,
+	CurrentExperience    int NOT NULL   ,
+	PlusATK              int NOT NULL   ,
+	PlusRCV              int NOT NULL   ,
+	PlusHP               int NOT NULL   ,
+	SkillsAwoke          int NOT NULL   ,
+	AssistMonsterID      int    ,
+	SkillLevel           int NOT NULL   DEFAULT 1,
+	LSListID             int    ,
+	CONSTRAINT PK__Instance__5C51996FBA3F55C1 PRIMARY KEY ( InstanceID )
+ );
+
+CREATE  INDEX idx_MonsterInstance ON SWTS1103.dbo.MonsterInstance ( LSListID );
+ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_BaseMonsterID FOREIGN KEY ( MonsterClassID ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_PlayerID FOREIGN KEY ( PlayerID ) REFERENCES SWTS1103.dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREIGN KEY ( LSListID ) REFERENCES SWTS1103.dbo.LatentSkillList( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+
 
