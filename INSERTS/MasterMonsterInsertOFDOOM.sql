@@ -3092,3 +3092,4 @@ VALUES
 (3507, 'Reincarnated Astaroth', 8, 'Wood', 'Dark', 'Devil', 'Healer', 'Attacker', 16000000, 99, 50, 3507, 'Spirit of the Archdemon', 'Lazy Smile', 1844, 840, 1, 3610, 1400, 1, 810, 302, 1, 89100, 900, 215325, 2175, 5000, 5),
 (3532, 'Awoken Amon', 7, 'Water', 'Wood', 'Devil', 'Dragon', NULL, 4000000, 99, 40, 3532, 'Path of Solitude', 'Amon Cross', 1563, 842, 1, 3595, 1038, 1, 423, 282, 1, 72765, 735, 174488, 1763, 5000, 5),
 (3533, 'Awoken Baal', 7, 'Light', 'Fire', 'Devil', 'Machine', NULL, 4000000, 99, 40, 3533, 'Predatory Gaze', 'Proud Impulse', 1926, 884, 1, 3093, 1077, 1, 360, 240, 1, 72765, 735, 174488, 1763, 5000, 5)
+(3581, 'Morning Moon Dragon Caller, Satsuki', 7, 'Dark', 'Light', 'Dragon', 'Physical', NULL, 5000000, 99, 60, 3581, 'Demon''s Sacred Talisman', 'Dimension Dance - Purple Sky', 1603, 661, 1, 4805, 1602, 1, 6, 29, 1, 102465, 1035, 248738, 2513, 15000, 5);
