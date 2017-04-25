@@ -997,7 +997,9 @@ INSERT INTO SWTS1103.dbo.LeaderSkill (LeaderSkillName, LeaderSkillDesc) VALUES
 ('Let''s go, child', 'Dragon type cards ATK x3.5, RCV x0.5.'),
 ('Let''s go, Tora!', 'Physical & Devil type cards ATK x1.5, RCV x1.5. ATK x2 at 5 combos. ATK x1 for each additional combo, up to ATK x5 at 8 combos.'),
 ('Let''s go.', 'ATK x3 for clearing each Fire or Light orbs in a cross formation.'),
-('Let''s Have Some Fun!', 'God & Devil type cards ATK x2.5.'),
+('Let''s Have Some Fun!', 'God & Devil type cards ATK x2.5.')
+
+INSERT INTO SWTS1103.dbo.LeaderSkill (LeaderSkillName, LeaderSkillDesc) VALUES
 ('Let''s make this fist your farewell gift', 'Water attribute & Balanced type cards HP x1.5, ATK x2.5.'),
 ('Let''s party together ?', 'Dragon & Devil type cards HP x2, ATK x2.5. All attribute cards ATK x1.5 when reaching 6 combos or above.'),
 ('Let''s Party!!', '50% Dark damage reduction.'),
