@@ -2,6 +2,10 @@
 -- Created By Elie and billy.--
 
 --MonsterType Table
+if OBJECT_ID('SWTS1103.dbo.Instance', 'U') is not null
+ drop table Instance;
+if OBJECT_ID('SWTS1103.dbo.Player', 'U') is not null
+ drop table Player;
 if OBJECT_ID('SWTS1103.dbo.EvolutionTree', 'U') is not null
  drop table EvolutionTree;
 if OBJECT_ID('SWTS1103.dbo.MonsterClass', 'U') is not null
