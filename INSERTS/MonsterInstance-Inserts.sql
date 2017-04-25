@@ -1,5 +1,5 @@
 insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID) Values
-(350520414, 8),
+(350520414, 8),		--Ryan's
 (350520414, 157),
 (350520414, 157),
 (350520414, 162),
@@ -261,7 +261,7 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID) Values
 (350520414, 2615),
 (350520414, 261),
 (350520414, 261),
-(386522413, 1919),
+(386522413, 1919),	--Elie's
 (386522413, 2670),
 (386522413, 920),
 (386522413, 1238),
@@ -375,7 +375,7 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID) Values
 (386522413, 2606),
 (386522413, 321),
 (386522413, 172),
-(352322418, 633),
+(352322418, 633),	--Zach's
 (352322418, 2752),
 (352322418, 163),
 (352322418, 2786),
@@ -533,7 +533,7 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID) Values
 (352322418, 257),
 (352322418, 181),
 (352322418, 253),
-(355320414, 1920),
+(355320414, 1920),	--Kyle's
 (355320414, 40),
 (355320414, 3062),
 (355320414, 1549),
@@ -923,7 +923,7 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID) Values
 (355320414, 1944),
 (355320414, 796),
 (355320414, 2401),
-(308681384, 2663),
+(308681384, 2663),	--Billy's
 (308681384, 2786),
 (308681384, 2723),
 (308681384, 1325),
