@@ -956,7 +956,10 @@ VALUES
 (996, 'Blue Moon Sea Deity,  Isis', 7, 'Water', 'Water', 'God', 'Healer', NULL, 4000000, 99, 35, 996, 'The Beckoning of the Nile', 'Quick Heal', 3038, 1197, 703, 1, 1, 1, 1215, 731, 402, 65340, 660, 155925, 1575, 5000),
 (997, 'Shining Sea Deity,  Isis', 7, 'Water', 'Light', 'God', 'Physical', NULL, 4000000, 99, 35, 997, 'The Glittering of the Nile', 'Quick Heal', 3538, 1197, 503, 1, 1, 1, 1215, 731, 402, 65340, 660, 155925, 1575, 5000),
 (998, 'Dark Sun Deity,  Ra', 7, 'Light', 'Dark', 'God', 'Physical', NULL, 4000000, 99, 35, 998, 'Darkening Sun', 'Solar Lazer', 3455, 1080, 596, 1, 1, 1, 1182, 720, 397, 65340, 660, 155925, 1575, 5000),
-(999, 'Pure Light Sun Deity,  Ra', 7, 'Light', 'Light', 'God', 'Healer', NULL, 4000000, 99, 35, 999, 'Realm of the Sun', 'Solar Lazer', 3055, 1180, 596, 1, 1, 1, 1182, 720, 397, 65340, 660, 155925, 1575, 5000),
+(999, 'Pure Light Sun Deity,  Ra', 7, 'Light', 'Light', 'God', 'Healer', NULL, 4000000, 99, 35, 999, 'Realm of the Sun', 'Solar Lazer', 3055, 1180, 596, 1, 1, 1, 1182, 720, 397, 65340, 660, 155925, 1575, 5000)
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+VALUES
 (1000, 'Abyssal Hell Deity Jackal,  Anubis', 7, 'Dark', 'Dark', 'God', 'Devil', NULL, 4000000, 99, 35, 1000, 'Jackal''s Revelation', 'Curse of the Darkness', 3348, 1350, 488, 1, 1, 1, 1179, 733, 392, 65340, 660, 155925, 1575, 5000),
 (1001, 'Deathly Hell Deity Jackal,  Anubis', 7, 'Dark', 'Light', 'God', 'Attacker', NULL, 4000000, 99, 35, 1001, 'Jackal''s Roar', 'Curse of the Darkness', 2948, 1350, 588, 1, 1, 1, 1179, 733, 392, 65340, 660, 155925, 1575, 5000),
 (1002, 'Baby TAMADRA', 4, 'Light', NULL, 'Awaken Material', NULL, NULL, 0, 1, 1, NULL, 'An Ability Awakens?', NULL, 50, 50, 50, 1, 1, 1, 50, 50, 50, 50, 50, 2500, 2500, 1),
@@ -1732,7 +1735,10 @@ VALUES
 (1996, 'Shinra Sorcerer God Moebius Card', 4, 'Dark', 'Light', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - A. Lord Shin', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
 (1997, 'Shinra Sacred Demon God Ark Card', 4, 'Dark', 'Wood', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Sacred Dragon Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
 (1998, 'Shinra Light Dragon God Ryuga Card', 4, 'Light', 'Light', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Light Dragon God Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
-(1999, 'Shinra Golden God Maxius Card', 4, 'Light', 'Water', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Oni Howl Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
+(1999, 'Shinra Golden God Maxius Card', 4, 'Light', 'Water', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Oni Howl Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1)
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+VALUES
 (2000, 'Shinra Ultimate God Kai Card', 4, 'Dark', 'Light', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Ultimate God Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
 (2001, 'Shinra Soul Beast Sai Card', 4, 'Fire', 'Dark', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Gathering Cloud Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
 (2002, 'Shinra Sun God Apollo Card', 4, 'Fire', 'Water', 'Enhance Material', NULL, NULL, 0, 1, 1, NULL, NULL, 'Super Shinra - Blazing God Devastation', 108, 108, 108, 1, 1, 1, 108, 108, 108, 105, 105, 10000, 10000, 1),
@@ -2665,7 +2671,10 @@ VALUES
 (2996, 'Sacred King of Hell,  Paimon', 6, 'Light', NULL, 'Devil', NULL, NULL, 883883, 50, 40, NULL, 'Evil Voice''s Jail', 'Sparkling Lips', 4015, 984, 211, 1, 1, 1, 1956, 201, 34, 36000, 720, 86250, 1725, 50000),
 (2997, 'Crowned Sacred King of Hell,  Paimon', 7, 'Light', NULL, 'Devil', 'Physical', NULL, 5000000, 99, 60, 2997, 'Evil Voice''s Jail', 'Sparkling Lips', 5502, 1745, 302, 1, 1, 1, 3856, 847, 194, 102465, 1035, 248738, 2513, 50000),
 (2998, 'Evil Duchess,  Gremory', 6, 'Dark', NULL, 'Devil', NULL, NULL, 883883, 50, 40, NULL, 'Treasure Hunting Demonic Curse', 'Mysterious Words', 2610, 1405, 303, 1, 1, 1, 903, 425, 69, 36000, 720, 86250, 1725, 50000),
-(2999, 'Hell Eye''s Evil Duchess,  Gremory', 7, 'Dark', NULL, 'Devil', 'Balanced', 'God', 5000000, 99, 60, 2999, 'Treasure Hunting Demonic Curse', 'Mysterious Words', 5002, 1701, 600, 1, 1, 1, 2006, 1201, 283, 102465, 1035, 248738, 2513, 50000),
+(2999, 'Hell Eye''s Evil Duchess,  Gremory', 7, 'Dark', NULL, 'Devil', 'Balanced', 'God', 5000000, 99, 60, 2999, 'Treasure Hunting Demonic Curse', 'Mysterious Words', 5002, 1701, 600, 1, 1, 1, 2006, 1201, 283, 102465, 1035, 248738, 2513, 50000)
+
+INSERT INTO SWTS1103.dbo.MonsterClass (MonsterClassID, MonsterName, Rarity, AttributeOne, AttributeTwo, MonsterTypeOne, MonsterTypeTwo, MonsterTypeThree, MaxExperience, MaxLevel, MonsterCost, ASListID, LeaderSkillName, ActiveSkillName, MaxHP, MaxATK, MaxRCV, GrowthRateHP, GrowthRateATK, GrowthRateRCV, MinHP, MinATK, MinRCV, MaxCoinValue, MinCoinValue, MaxExperienceValue, MinExperienceValue, MonsterPointValue)
+VALUES
 (3000, 'Scarlet Sky Ruler,  Yamato Takeru Dragon', 6, 'Fire', NULL, 'Dragon', NULL, NULL, 4000000, 99, 20, 3000, 'Yamato Dragon Power', 'Dimension Formation - Scarlet Sun', 1997, 1497, 25, 0.7, 0.7, 0.7, 951, 713, 12, 41580, 420, 96525, 975, 10),
 (3001, 'Indigo Ocean Ruler,  Wadatsumi Dragon', 6, 'Water', NULL, 'Dragon', NULL, NULL, 4000000, 99, 20, 3001, 'Sea God Dragon Power', 'Dimension Formation - Blue Life', 2125, 1075, 235, 0.7, 0.7, 0.7, 1012, 512, 112, 41580, 420, 96525, 975, 10),
 (3002, 'Green Earth Ruler,  Yamatsumi Dragon', 6, 'Wood', NULL, 'Dragon', NULL, NULL, 4000000, 99, 20, 3002, 'Mountain God Dragon Power', 'Dimension Formation - Green Life', 2638, 1048, 97, 0.7, 0.7, 0.7, 1256, 499, 46, 41580, 420, 96525, 975, 10),
