@@ -60,7 +60,7 @@ insert into SWTS1103.dbo.MonsterInstance(InstanceID, PlayerID, MonsterClassID, C
 (30024, 350520414, 372, 620096, 0, 0, 0, 0, null, 1, null);
 
 --Blue's Monsters
-insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
+insert into SWTS1103.dbo.MonsterInstance(InstanceID, PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
 (50000,352322418,2592,5000000,51,68,52,9,Null,1,Null),
 (50001,352322418,3284,4537584,99,35,84,1,Null,1,Null),
 (50002,352322418,3581,5000000,3,53,3,8,Null,1,Null),
