@@ -253,6 +253,13 @@ ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_PlayerID FOR
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREIGN KEY ( LSListID ) REFERENCES SWTS1103.dbo.LatentSkillList( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
+--Badge table create
+CREATE TABLE SWTS1103.dbo.Badge ( 
+	BadgeName            varchar(50) NOT NULL   ,
+	BadgeDesc            varchar(max) NOT NULL   ,
+	PRIMARY KEY ( BadgeName )
+ );
+
 --Team table create
 CREATE TABLE SWTS1103.dbo.Team ( 
 	TeamInstanceID       int NOT NULL   identity(100000000, 1),
@@ -265,7 +272,6 @@ CREATE TABLE SWTS1103.dbo.Team (
 	SubMonsterFour       int    ,
 	BadgeName            varchar(50)    ,
 	CONSTRAINT Pk_Team PRIMARY KEY ( TeamInstanceID ),
-	CONSTRAINT Pk_Team_0 UNIQUE ( BadgeName ) 
  );
 
 CREATE  INDEX idx_Team ON SWTS1103.dbo.Team ( PlayerID );
@@ -278,13 +284,5 @@ ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub1 FOREIGN
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub2 FOREIGN KEY ( SubMonsterTwo ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub3 FOREIGN KEY ( SubMonsterThree ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub4 FOREIGN KEY ( SubMonsterFour ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---Badge table create
-CREATE TABLE SWTS1103.dbo.Badge ( 
-	BadgeName            varchar(50) NOT NULL   ,
-	BadgeDesc            varchar(max) NOT NULL   ,
-	CONSTRAINT Pk_Badge PRIMARY KEY ( BadgeName )
- );
-
-ALTER TABLE SWTS1103.dbo.Badge ADD CONSTRAINT fk_badge_team FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Team( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_Badge FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Badge( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
