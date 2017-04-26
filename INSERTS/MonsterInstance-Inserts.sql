@@ -2,7 +2,7 @@
 --TRUNCATE TABLE MonsterInstance
 USE SWTS1103
 
-insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, 
+insert into SWTS1103.dbo.MonsterInstance(InstanceID, PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, 
 SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
 (20000, 386522413, 1919, 1500000, 2, 0, 0, 5, NULL, 2, NULL),
 (20001, 386522413, 1758, 2940630, 12, 12, 12, 4, NULL, 2, NULL),
