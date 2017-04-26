@@ -98,9 +98,6 @@
 			<index name="Pk_Badge" unique="PRIMARY_KEY" >
 				<column name="BadgeName" />
 			</index>
-			<fk name="fk_badge_team" to_schema="dbo" to_table="Team" >
-				<fk_column name="BadgeName" pk="BadgeName" />
-			</fk>
 		</table>
 		<table name="EvolutionTree" >
 			<column name="NextMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -379,6 +376,9 @@
 			<fk name="fk_team_monsterinstanceSub4" to_schema="dbo" to_table="MonsterInstance" >
 				<fk_column name="SubMonsterFour" pk="InstanceID" />
 			</fk>
+			<fk name="fk_team_badge" to_schema="dbo" to_table="Badge" >
+				<fk_column name="BadgeName" pk="BadgeName" />
+			</fk>
 		</table>
 	</schema>
 	<connector name="SqlServer2000_2005" database="SqlServer2000_2005" host="localhost" port="1433" instance="SWTS1103" user="Necrono" />
@@ -438,10 +438,10 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="465" y="285" />
 		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="600" y="75" />
-		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="795" y="75" />
-		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="945" y="75" />
+		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="840" y="75" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="1050" y="75" />
+		<entity schema="dbo" name="Badge" color="c1d8ee" x="825" y="315" />
 		<entity schema="dbo" name="Team" color="c1d8ee" x="615" y="315" />
-		<entity schema="dbo" name="Badge" color="c1d8ee" x="780" y="315" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,
