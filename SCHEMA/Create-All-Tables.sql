@@ -233,7 +233,7 @@ ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_4 FOR
 
 --Instance Table
 CREATE TABLE SWTS1103.dbo.MonsterInstance ( 
-	InstanceID           int NOT NULL   IDENTITY(100000,1),
+	InstanceID           int NOT NULL   ,--IDENTITY(100000,1),
 	PlayerID             int NOT NULL   ,
 	MonsterClassID       int NOT NULL   ,
 	CurrentExperience    int NOT NULL   ,
