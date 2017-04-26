@@ -1,5 +1,5 @@
 --Elie's monsters
-TRUNCATE TABLE MonsterInstance
+--TRUNCATE TABLE MonsterInstance
 insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, 
 SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
 (386522413, 1919, 1500000, 2, 0, 0, 5, NULL, 2, NULL),
@@ -116,9 +116,9 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperi
 --Kyle's Monster
 insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
 (355320414, 2968, 2166960, 6, 13, 6, 2, NULL, 1, NULL),
-(355320414, 2495, 4000000, 99, 99, 99, 7, 3277, 2, NULL), --2495
+(355320414, 2495, 4000000, 99, 99, 99, 7, NULL, 2, NULL), --3277 assistID --2495
 (355320414, 393, 4000000, 99, 71, 64, 6, NULL, 11, NULL), --393
-(355320414, 1730, 4000000, 99, 99, 99, 9, 3284, 7, NULL), --1730
+(355320414, 1730, 4000000, 99, 99, 99, 9, NULL, 7, NULL), --3284 Assist ID --1730
 (355320414, 3305, 5000000, 99, 99, 99, 9, NULL, 6, NULL), --3305
 (355320414, 3062, 4000000, 99, 99, 99, 9, NULL, 9, NULL), --3062
 (355320414, 3450, 16000000, 91, 83, 79, 9, NULL, 5, NULL),
@@ -139,7 +139,7 @@ insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperi
 (355320414, 1920, 15000000, 2, 0, 0, 1, NULL, 2, NULL),
 (355320414, 1254, 4000000, 3, 0, 0, 0, NULL, 1, NULL),
 (355320414, 3277, 5000000, 4, 1, 0, 6, NULL, 7, NULL),
-(355320414, 2377, 2346643, 59, 10, 13, 6, NULL, 2, NULL)
+(355320414, 3277, 2346643, 59, 10, 13, 6, NULL, 2, NULL)
 
 
 
