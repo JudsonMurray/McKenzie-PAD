@@ -2149,4 +2149,4 @@ INSERT INTO SWTS1103.dbo.AwokenSkillList (ASListID, "AwokenSkillOne", "AwokenSki
 (100512, 'Two-Pronged Attack', 'Enhanced Fire Orbs', 'Enhanced Attack', NULL, NULL, NULL, NULL, NULL, NULL),
 (102890, 'Two-Pronged Attack', 'Skill Boost', 'Resistance-Skill Bind', 'Extend Time', NULL, NULL, NULL, NULL, NULL)
 
-Select * From SWTS1103.dbo.AwokenSkillList
+--Select * From SWTS1103.dbo.AwokenSkillList	--JBM: Removed due to annoyance @ Import Scripts
