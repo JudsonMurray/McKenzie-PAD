@@ -4,6 +4,10 @@
 --MonsterType Table
 USE SWTS1103
 
+if OBJECT_ID('SWTS1103.dbo.Badge', 'U') is not null
+ drop table Badge;
+if OBJECT_ID('SWTS1103.dbo.Team', 'U') is not null
+ drop table Team;
 if OBJECT_ID('SWTS1103.dbo.MonsterInstance', 'U') is not null
  drop table MonsterInstance;
 if OBJECT_ID('SWTS1103.dbo.LatentSkillList', 'U') is not null
@@ -249,5 +253,38 @@ ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_PlayerID FOR
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREIGN KEY ( LSListID ) REFERENCES SWTS1103.dbo.LatentSkillList( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
+--Team table create
+CREATE TABLE SWTS1103.dbo.Team ( 
+	TeamInstanceID       int NOT NULL   ,
+	PlayerID             int NOT NULL   ,
+	TeamName             varchar(50)    ,
+	LeaderMonster        int NOT NULL   ,
+	SubMonsterOne        int    ,
+	SubMonsterTwo        int    ,
+	SubMonsterThree      int    ,
+	SubMonsterFour       int    ,
+	BadgeName            varchar(50)    ,
+	CONSTRAINT Pk_Team PRIMARY KEY ( TeamInstanceID ),
+	CONSTRAINT Pk_Team_0 UNIQUE ( BadgeName ) 
+ );
 
+CREATE  INDEX idx_Team ON SWTS1103.dbo.Team ( PlayerID );
+CREATE  INDEX idx_Team_0 ON SWTS1103.dbo.Team ( SubMonsterTwo );
+CREATE  INDEX idx_Team_1 ON SWTS1103.dbo.Team ( SubMonsterThree );
+CREATE  INDEX idx_Team_2 ON SWTS1103.dbo.Team ( SubMonsterFour );
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_player FOREIGN KEY ( PlayerID ) REFERENCES SWTS1103.dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceLeader FOREIGN KEY ( LeaderMonster ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub1 FOREIGN KEY ( SubMonsterOne ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub2 FOREIGN KEY ( SubMonsterTwo ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub3 FOREIGN KEY ( SubMonsterThree ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub4 FOREIGN KEY ( SubMonsterFour ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--Badge table create
+CREATE TABLE SWTS1103.dbo.Badge ( 
+	BadgeName            varchar(50) NOT NULL   ,
+	BadgeDesc            varchar(max) NOT NULL   ,
+	CONSTRAINT Pk_Badge PRIMARY KEY ( BadgeName )
+ );
+
+ALTER TABLE SWTS1103.dbo.Badge ADD CONSTRAINT fk_badge_team FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Team( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 

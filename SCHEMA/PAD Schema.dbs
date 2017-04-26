@@ -92,6 +92,16 @@
 				<fk_column name="AwokenSkillNine" pk="AwokenSkillName" />
 			</fk>
 		</table>
+		<table name="Badge" >
+			<column name="BadgeName" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="BadgeDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<index name="Pk_Badge" unique="PRIMARY_KEY" >
+				<column name="BadgeName" />
+			</index>
+			<fk name="fk_badge_team" to_schema="dbo" to_table="Team" >
+				<fk_column name="BadgeName" pk="BadgeName" />
+			</fk>
+		</table>
 		<table name="EvolutionTree" >
 			<column name="NextMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="BaseMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -279,13 +289,13 @@
 			</fk>
 		</table>
 		<table name="MonsterInstance" >
-			<column name="InstanceID" type="int" jt="4" mandatory="y" autoincrement="y" />
+			<column name="InstanceID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlayerID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="MonsterClassID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="CurrentExperience" type="int" length="10" decimal="0" jt="4" mandatory="y" />
-			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusATK" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="PlusRCV" type="int" length="10" decimal="0" jt="4" mandatory="y" />
+			<column name="PlusHP" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="SkillsAwoke" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
 			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
@@ -327,8 +337,51 @@
 				<fk_column name="PlayerAttribute" pk="AttributeName" />
 			</fk>
 		</table>
+		<table name="Team" >
+			<column name="TeamInstanceID" type="int" jt="4" mandatory="y" />
+			<column name="PlayerID" type="int" jt="4" mandatory="y" />
+			<column name="TeamName" type="varchar" length="50" jt="12" />
+			<column name="LeaderMonster" type="int" jt="4" mandatory="y" />
+			<column name="SubMonsterOne" type="int" jt="4" />
+			<column name="SubMonsterTwo" type="int" jt="4" />
+			<column name="SubMonsterThree" type="int" jt="4" />
+			<column name="SubMonsterFour" type="int" jt="4" />
+			<column name="BadgeName" type="varchar" length="50" jt="12" />
+			<index name="Pk_Team" unique="PRIMARY_KEY" >
+				<column name="TeamInstanceID" />
+			</index>
+			<index name="idx_Team" unique="NORMAL" >
+				<column name="PlayerID" />
+			</index>
+			<index name="idx_Team_0" unique="NORMAL" >
+				<column name="SubMonsterTwo" />
+			</index>
+			<index name="idx_Team_1" unique="NORMAL" >
+				<column name="SubMonsterThree" />
+			</index>
+			<index name="idx_Team_2" unique="NORMAL" >
+				<column name="SubMonsterFour" />
+			</index>
+			<index name="Pk_Team_0" unique="UNIQUE" >
+				<column name="BadgeName" />
+			</index>
+			<fk name="fk_team_player" to_schema="dbo" to_table="Player" >
+				<fk_column name="PlayerID" pk="PlayerID" />
+			</fk>
+			<fk name="fk_team_monsterinstanceLeader" to_schema="dbo" to_table="MonsterInstance" />
+			<fk name="fk_team_monsterinstanceSub1" to_schema="dbo" to_table="MonsterInstance" />
+			<fk name="fk_team_monsterinstanceSub2" to_schema="dbo" to_table="MonsterInstance" >
+				<fk_column name="SubMonsterTwo" pk="InstanceID" />
+			</fk>
+			<fk name="fk_team_monsterinstanceSub3" to_schema="dbo" to_table="MonsterInstance" >
+				<fk_column name="SubMonsterThree" pk="InstanceID" />
+			</fk>
+			<fk name="fk_team_monsterinstanceSub4" to_schema="dbo" to_table="MonsterInstance" >
+				<fk_column name="SubMonsterFour" pk="InstanceID" />
+			</fk>
+		</table>
 	</schema>
-	<connector name="SqlServer2000_2005" database="SqlServer2000_2005" driver_class="net.sourceforge.jtds.jdbc.Driver" driver_jar="jtds-1.2.7.jar" driver_desc="SqlServer Authentication" host="localhost" port="1433" instance="SWTS1103" user="Necrono" />
+	<connector name="SqlServer2000_2005" database="SqlServer2000_2005" host="localhost" port="1433" instance="SWTS1103" user="Necrono" />
 	<layout name="Default Layout" id="Layout_1834fd55" show_relation="columns" >
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="450" y="45" />
 		<entity schema="dbo" name="Attribute" color="f5ddbf" x="240" y="45" />
@@ -383,10 +436,12 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="270" y="90" />
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
-		<entity schema="dbo" name="Player" color="f5ddbf" x="600" y="285" />
-		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="930" y="465" />
-		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="645" y="510" />
-		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="795" y="75" />
+		<entity schema="dbo" name="Player" color="f5ddbf" x="465" y="285" />
+		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="600" y="75" />
+		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="795" y="75" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="945" y="75" />
+		<entity schema="dbo" name="Team" color="c1d8ee" x="615" y="315" />
+		<entity schema="dbo" name="Badge" color="c1d8ee" x="780" y="315" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,
