@@ -2,7 +2,7 @@
 
 use SWTS1103;
 
-insert into SWTS1103.dbo.Badges (BadgeName, BadgeDesc)
+insert into SWTS1103.dbo.Badge (BadgeName, BadgeDesc)
 Values
 ('Team Cost +100', 'Increases Max Team Cost by 100'),
 ('Move Time +1 second', 'Extends Orb move time by 1 second'),
