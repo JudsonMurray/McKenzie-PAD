@@ -6,6 +6,8 @@
 --V 1.0 --Kyle's EvoTree Added
 --V 1.1 --Elie's EvolTree Added April 21 2017
 
+USE SWTS1103
+
 --Billy's
 INSERT INTO SWTS1103.dbo.EvolutionTree
 (NextMonsterID, BaseMonsterID, EvoMaterialIDOne, EvoMaterialIDTwo, EvoMaterialIDThree, EvoMaterialIDFour, EvoMaterialIDFive, MinLevel, Devolveable, LevelReset)

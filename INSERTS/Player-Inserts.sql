@@ -1,3 +1,5 @@
+USE SWTS1103
+
 insert into SWTS1103.dbo.Player(PlayerID, PlayerRank, PlayerName, PlayerAttribute) values
 (350520414, 186, 'Barbarous', 'Water'),
 (386522413, 145, 'Elie', 'Fire'),

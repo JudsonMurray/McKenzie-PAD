@@ -1,4 +1,5 @@
 -- Attribute and type inserts --
+USE SWTS1103
 
 INSERT INTO SWTS1103.dbo.Attribute ("AttributeName") VALUES 
 ('Fire'),

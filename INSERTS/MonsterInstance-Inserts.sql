@@ -1,5 +1,7 @@
 --Elie's monsters
 --TRUNCATE TABLE MonsterInstance
+USE SWTS1103
+
 insert into SWTS1103.dbo.MonsterInstance(PlayerID, MonsterClassID, CurrentExperience, PlusHP, PlusATK, PlusRCV, 
 SkillsAwoke, AssistMonsterID, SkillLevel, LSListID) Values
 (386522413, 1919, 1500000, 2, 0, 0, 5, NULL, 2, NULL),

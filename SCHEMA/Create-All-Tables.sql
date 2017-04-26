@@ -2,6 +2,7 @@
 -- Created By Elie and billy.--
 
 --MonsterType Table
+USE SWTS1103
 
 if OBJECT_ID('SWTS1103.dbo.MonsterInstance', 'U') is not null
  drop table MonsterInstance;

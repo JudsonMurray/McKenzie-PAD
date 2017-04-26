@@ -5,7 +5,7 @@ Purpose	:Inserts for Awoken Skills
 */
 
 -- Version 1.0
-
+USE SWTS1103
 
 insert into SWTS1103.dbo.AwokenSkill (AwokenSkillName, AwokenSkillDesc)
 Values ('Attacker Killer', 'Increases ATK against Attacker Type Enemy'),
