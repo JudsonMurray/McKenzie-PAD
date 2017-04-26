@@ -1,3 +1,5 @@
+USE SWTS1103
+
 insert into SWTS1103.dbo.latentSkill Values
 
 ('Auto-Heal','Heals some HP when matching Orbs (Invalid when RCV is 0 or lower)',1),

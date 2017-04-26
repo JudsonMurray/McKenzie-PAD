@@ -1,4 +1,5 @@
 --LatentSkillList Inserts
+USE SWTS1103
 
 --NO InstanceID's !!!
 --Kyle's
