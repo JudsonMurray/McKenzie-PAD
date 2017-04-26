@@ -255,7 +255,7 @@ ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREI
 
 --Team table create
 CREATE TABLE SWTS1103.dbo.Team ( 
-	TeamInstanceID       int NOT NULL   ,
+	TeamInstanceID       int NOT NULL   identity(100000000, 1),
 	PlayerID             int NOT NULL   ,
 	TeamName             varchar(50)    ,
 	LeaderMonster        int NOT NULL   ,
