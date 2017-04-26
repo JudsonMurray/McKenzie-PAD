@@ -4,10 +4,10 @@
 --MonsterType Table
 USE SWTS1103
 
-if OBJECT_ID('SWTS1103.dbo.Badge', 'U') is not null
- drop table Badge;
 if OBJECT_ID('SWTS1103.dbo.Team', 'U') is not null
  drop table Team;
+if OBJECT_ID('SWTS1103.dbo.Badge', 'U') is not null
+ drop table Badge;
 if OBJECT_ID('SWTS1103.dbo.MonsterInstance', 'U') is not null
  drop table MonsterInstance;
 if OBJECT_ID('SWTS1103.dbo.LatentSkillList', 'U') is not null
