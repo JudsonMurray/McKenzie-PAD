@@ -100,14 +100,22 @@
 			</index>
 		</table>
 		<table name="Curve" >
-			<column name="CurveInstance" type="varchar" length="50" jt="12" mandatory="y" />
-			<column name="NormalExperienceCurve" type="float" jt="8" mandatory="y" />
-			<column name="NormalExperienceCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="CurveInstance" type="varchar" length="50" jt="12" mandatory="y" >
+				<defo>1</defo>
+			</column>
+			<column name="ExperienceCurve" type="float" jt="8" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="ExperienceCurveDesc" type="varchar(max)" jt="12" />
 			<column name="NormalStatCurve" type="float" jt="8" mandatory="y" />
 			<column name="NormalStatCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
-			<column name="EarlyCurve" type="float" jt="8" mandatory="y" />
+			<column name="EarlyCurve" type="float" jt="8" mandatory="y" >
+				<defo>1.5</defo>
+			</column>
 			<column name="EarlyCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
-			<column name="LateCurve" type="float" jt="8" mandatory="y" />
+			<column name="LateCurve" type="float" jt="8" mandatory="y" >
+				<defo>0.7</defo>
+			</column>
 			<column name="LateCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
 			<index name="Pk_Curves" unique="PRIMARY_KEY" >
 				<column name="CurveInstance" />
@@ -329,11 +337,30 @@
 			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
 			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
 			<column name="LSListID" type="int" jt="4" />
-			<column name="ActiveSkillCoolDown" type="int" jt="4" mandatory="y" />
-			<column name="CurrentHP" type="int" jt="4" mandatory="y" />
-			<column name="CurrentATK" type="int" jt="4" mandatory="y" />
-			<column name="CurrentRCV" type="int" jt="4" mandatory="y" />
-			<column name="CurrentLevel" type="int" jt="4" mandatory="y" />
+			<column name="ActiveSkillCoolDown" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="CurrentHP" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="CurrentATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="CurrentRCV" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="PlusHPAmount" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="PlusATKAmount" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="PlusRCVAmount" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="CurrentLevel" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
 			<index name="PK__Instance__5C51996FBA3F55C1" unique="PRIMARY_KEY" >
 				<column name="InstanceID" />
 			</index>
@@ -372,7 +399,9 @@
 			</fk>
 		</table>
 		<table name="Team" >
-			<column name="TeamInstanceID" type="int" jt="4" mandatory="y" />
+			<column name="TeamInstanceID" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
 			<column name="PlayerID" type="int" jt="4" mandatory="y" />
 			<column name="TeamName" type="varchar" length="50" jt="12" />
 			<column name="LeaderMonster" type="int" jt="4" mandatory="y" />
@@ -382,14 +411,26 @@
 			<column name="SubMonsterFour" type="int" jt="4" />
 			<column name="BadgeName" type="varchar" length="50" jt="12" />
 			<column name="TeamHP" type="int" jt="4" mandatory="y" />
-			<column name="FireATK" type="int" jt="4" mandatory="y" />
+			<column name="FireATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
 			<column name="WaterATK" type="int" jt="4" mandatory="y" />
-			<column name="WoodATK" type="int" jt="4" mandatory="y" />
-			<column name="LightATK" type="int" jt="4" mandatory="y" />
-			<column name="DarkATK" type="int" jt="4" mandatory="y" />
-			<column name="TeamRCV" type="int" jt="4" mandatory="y" />
-			<column name="TeamCost" type="int" jt="4" mandatory="y" />
-			<column name="TeamLeaderSkill" type="varchar" length="100" jt="12" mandatory="y" />
+			<column name="WoodATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="LightATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="DarkATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="TeamRCV" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="TeamCost" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
+			<column name="TeamLeaderSkill" type="varchar" length="100" jt="12" />
 			<index name="Pk_Team" unique="PRIMARY_KEY" >
 				<column name="TeamInstanceID" />
 			</index>
@@ -482,13 +523,13 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="480" y="90" />
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="630" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="675" y="285" />
-		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
-		<entity schema="dbo" name="Badge" color="c1d8ee" x="975" y="600" />
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="255" y="45" />
-		<entity schema="dbo" name="Curve" color="c1d8ee" x="45" y="45" />
 		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="975" y="75" />
 		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="975" y="270" />
-		<entity schema="dbo" name="Team" color="c1d8ee" x="825" y="360" />
+		<entity schema="dbo" name="Team" color="c1d8ee" x="810" y="390" />
+		<entity schema="dbo" name="Badge" color="c1d8ee" x="960" y="600" />
+		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
+		<entity schema="dbo" name="Curve" color="c1d8ee" x="45" y="45" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,

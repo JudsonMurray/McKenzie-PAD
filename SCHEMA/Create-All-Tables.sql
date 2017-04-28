@@ -250,11 +250,14 @@ CREATE TABLE SWTS1103.dbo.MonsterInstance (
 	AssistMonsterID      int    ,
 	SkillLevel           int    ,
 	LSListID             int    ,
-	ActiveSkillCoolDown  int NOT NULL   ,
-	CurrentHP            int NOT NULL   ,
-	CurrentATK           int NOT NULL   ,
-	CurrentRCV           int NOT NULL   ,
-	CurrentLevel         int NOT NULL   ,
+	ActiveSkillCoolDown  int NOT NULL CONSTRAINT defo_ActiveSkillCoolDown DEFAULT 0  ,
+	CurrentHP            int NOT NULL CONSTRAINT defo_CurrentHP DEFAULT 0  ,
+	CurrentATK           int NOT NULL CONSTRAINT defo_CurrentATK DEFAULT 0  ,
+	CurrentRCV           int NOT NULL CONSTRAINT defo_CurrentRCV DEFAULT 0  ,
+	PlusHPAmount         int NOT NULL CONSTRAINT defo_PlusHPAmount DEFAULT 0  ,
+	PlusATKAmount        int NOT NULL CONSTRAINT defo_PlusATKAmount DEFAULT 0  ,
+	PlusRCVAmount        int NOT NULL CONSTRAINT defo_PlusRCVAmount DEFAULT 0  ,
+	CurrentLevel         int NOT NULL CONSTRAINT defo_CurrentLevel DEFAULT 0  ,
 	CONSTRAINT PK__Instance__5C51996FBA3F55C1 PRIMARY KEY ( InstanceID )
  );
 
@@ -274,7 +277,7 @@ CREATE TABLE SWTS1103.dbo.Badge (
 
 --Team table create
 CREATE TABLE SWTS1103.dbo.Team ( 
-	TeamInstanceID       int NOT NULL   ,
+	TeamInstanceID       int NOT NULL CONSTRAINT defo_TeamInstanceID DEFAULT 0  ,
 	PlayerID             int NOT NULL   ,
 	TeamName             varchar(50)    ,
 	LeaderMonster        int NOT NULL   ,
@@ -284,19 +287,19 @@ CREATE TABLE SWTS1103.dbo.Team (
 	SubMonsterFour       int    ,
 	BadgeName            varchar(50)    ,
 	TeamHP               int NOT NULL   ,
-	FireATK              int NOT NULL   ,
+	FireATK              int NOT NULL CONSTRAINT defo_FireATK DEFAULT 0  ,
 	WaterATK             int NOT NULL   ,
-	WoodATK              int NOT NULL   ,
-	LightATK             int NOT NULL   ,
-	DarkATK              int NOT NULL   ,
-	TeamRCV              int NOT NULL   ,
-	TeamCost             int NOT NULL   ,
-	TeamLeaderSkill      varchar(100) NOT NULL   ,
+	WoodATK              int NOT NULL CONSTRAINT defo_WoodATK DEFAULT 0  ,
+	LightATK             int NOT NULL CONSTRAINT defo_LightATK DEFAULT 0  ,
+	DarkATK              int NOT NULL CONSTRAINT defo_DarkATK DEFAULT 0  ,
+	TeamRCV              int NOT NULL CONSTRAINT defo_TeamRCV DEFAULT 0  ,
+	TeamCost             int NOT NULL CONSTRAINT defo_TeamCost DEFAULT 0  ,
+	TeamLeaderSkill      varchar(100)    ,
 	CONSTRAINT Pk_Team PRIMARY KEY ( TeamInstanceID ),
 	CONSTRAINT Pk_Team_0 UNIQUE ( BadgeName ) 
  );
 
-CREATE  INDEX idx_Team ON dbo.Team ( PlayerID );
+CREATE  INDEX idx_Team ON SWTS1103.dbo.Team ( PlayerID );
 CREATE  INDEX idx_Team_0 ON SWTS1103.dbo.Team ( SubMonsterTwo );
 CREATE  INDEX idx_Team_1 ON SWTS1103.dbo.Team ( SubMonsterThree );
 CREATE  INDEX idx_Team_2 ON SWTS1103.dbo.Team ( SubMonsterFour );
@@ -308,17 +311,19 @@ ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub3 FOREIGN
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub4 FOREIGN KEY ( SubMonsterFour ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_badge FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Badge( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
+
 --Monster growth curve table create
 CREATE TABLE SWTS1103.dbo.Curve ( 
-	CurveInstance        varchar(50) NOT NULL   ,
-	NormalExperienceCurve float NOT NULL   ,
-	NormalExperienceCurveDesc varchar(max) NOT NULL   ,
+	CurveInstance        varchar(50) NOT NULL CONSTRAINT defo_CurveInstance DEFAULT 1  ,
+	ExperienceCurve      float NOT NULL CONSTRAINT defo_ExperienceCurve DEFAULT 0  ,
+	ExperienceCurveDesc  varchar(max)    ,
 	NormalStatCurve      float NOT NULL   ,
 	NormalStatCurveDesc  varchar(max) NOT NULL   ,
-	EarlyCurve           float NOT NULL   ,
+	EarlyCurve           float NOT NULL CONSTRAINT defo_EarlyCurve DEFAULT 1.5  ,
 	EarlyCurveDesc       varchar(max) NOT NULL   ,
-	LateCurve            float NOT NULL   ,
+	LateCurve            float NOT NULL CONSTRAINT defo_LateCurve DEFAULT 0.7  ,
 	LateCurveDesc        varchar(max) NOT NULL   ,
 	CONSTRAINT Pk_Curves PRIMARY KEY ( CurveInstance )
  );
+
 
