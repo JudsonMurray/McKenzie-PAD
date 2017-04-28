@@ -315,10 +315,10 @@ ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_badge FOREIGN KEY ( BadgeNa
 
 --Monster growth curve table create
 CREATE TABLE SWTS1103.dbo.Curve ( 
-	CurveInstance        varchar(50) NOT NULL CONSTRAINT defo_CurveInstance DEFAULT 1  ,
+	CurveInstance        varchar(50) NOT NULL  ,
 	ExperienceCurve      float NOT NULL CONSTRAINT defo_ExperienceCurve DEFAULT 0  ,
 	ExperienceCurveDesc  varchar(max)    ,
-	NormalStatCurve      float NOT NULL   ,
+	NormalStatCurve      float NOT NULL   CONSTRAINT defo_EarlyCurve DEFAULT 1  ,
 	NormalStatCurveDesc  varchar(max) NOT NULL   ,
 	EarlyCurve           float NOT NULL CONSTRAINT defo_EarlyCurve DEFAULT 1.5  ,
 	EarlyCurveDesc       varchar(max) NOT NULL   ,
