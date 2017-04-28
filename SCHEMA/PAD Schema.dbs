@@ -410,11 +410,15 @@
 			<column name="SubMonsterThree" type="int" jt="4" />
 			<column name="SubMonsterFour" type="int" jt="4" />
 			<column name="BadgeName" type="varchar" length="50" jt="12" />
-			<column name="TeamHP" type="int" jt="4" mandatory="y" />
+			<column name="TeamHP" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
 			<column name="FireATK" type="int" jt="4" mandatory="y" >
 				<defo>0</defo>
 			</column>
-			<column name="WaterATK" type="int" jt="4" mandatory="y" />
+			<column name="WaterATK" type="int" jt="4" mandatory="y" >
+				<defo>0</defo>
+			</column>
 			<column name="WoodATK" type="int" jt="4" mandatory="y" >
 				<defo>0</defo>
 			</column>
@@ -526,10 +530,10 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="255" y="45" />
 		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="975" y="75" />
 		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="975" y="270" />
-		<entity schema="dbo" name="Team" color="c1d8ee" x="810" y="390" />
 		<entity schema="dbo" name="Badge" color="c1d8ee" x="960" y="600" />
-		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
 		<entity schema="dbo" name="Curve" color="c1d8ee" x="45" y="45" />
+		<entity schema="dbo" name="Team" color="c1d8ee" x="810" y="390" />
+		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,
