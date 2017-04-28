@@ -399,9 +399,7 @@
 			</fk>
 		</table>
 		<table name="Team" >
-			<column name="TeamInstanceID" type="int" jt="4" mandatory="y" >
-				<defo>0</defo>
-			</column>
+			<column name="TeamInstanceID" type="int" jt="4" mandatory="y" />
 			<column name="PlayerID" type="int" jt="4" mandatory="y" />
 			<column name="TeamName" type="varchar" length="50" jt="12" />
 			<column name="LeaderMonster" type="int" jt="4" mandatory="y" />
@@ -520,20 +518,20 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 	</layout>
 	<layout name="Sample Layout with Relational Data Browse" id="Layout_25186e96" show_relation="columns" >
 		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="465" y="360" />
-		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="465" y="570" />
 		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="630" y="570" />
 		<entity schema="dbo" name="Attribute" color="f5ddbf" x="465" y="285" />
 		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="480" y="165" />
 		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="480" y="90" />
 		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="630" y="45" />
 		<entity schema="dbo" name="Player" color="f5ddbf" x="675" y="285" />
-		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="255" y="45" />
 		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="975" y="75" />
 		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="975" y="270" />
-		<entity schema="dbo" name="Badge" color="c1d8ee" x="960" y="600" />
 		<entity schema="dbo" name="Curve" color="c1d8ee" x="45" y="45" />
-		<entity schema="dbo" name="Team" color="c1d8ee" x="810" y="390" />
 		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
+		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="465" y="570" />
+		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="255" y="45" />
+		<entity schema="dbo" name="Badge" color="c1d8ee" x="960" y="600" />
+		<entity schema="dbo" name="Team" color="c1d8ee" x="810" y="390" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,

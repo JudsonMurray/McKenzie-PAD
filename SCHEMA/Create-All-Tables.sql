@@ -277,7 +277,7 @@ CREATE TABLE SWTS1103.dbo.Badge (
 
 --Team table create
 CREATE TABLE SWTS1103.dbo.Team ( 
-	TeamInstanceID       int NOT NULL CONSTRAINT defo_TeamInstanceID DEFAULT 0  ,
+	TeamInstanceID       int NOT NULL   ,
 	PlayerID             int NOT NULL   ,
 	TeamName             varchar(50)    ,
 	LeaderMonster        int NOT NULL   ,
@@ -296,7 +296,7 @@ CREATE TABLE SWTS1103.dbo.Team (
 	TeamCost             int NOT NULL CONSTRAINT defo_TeamCost DEFAULT 0  ,
 	TeamLeaderSkill      varchar(100)    ,
 	CONSTRAINT Pk_Team PRIMARY KEY ( TeamInstanceID ),
-	CONSTRAINT Pk_Team_0 UNIQUE ( BadgeName ) 
+	
  );
 
 CREATE  INDEX idx_Team ON SWTS1103.dbo.Team ( PlayerID );
@@ -310,6 +310,7 @@ ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub2 FOREIGN
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub3 FOREIGN KEY ( SubMonsterThree ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub4 FOREIGN KEY ( SubMonsterFour ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_badge FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Badge( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
 
 
 --Monster growth curve table create
