@@ -1,5 +1,8 @@
 -- MASTER TABLE CREATION SCRIPT --
 -- Created By Elie and billy.--
+--April 28 2017 - ELie - Updated the MonsterInstance Table with calculated fields
+--April 28 2017 - ELie - Updated the Team table with calculated fields
+--April 28 2017 - ELie - Added the Curve Table to Create-All tabels
 
 --MonsterType Table
 USE SWTS1103
@@ -18,6 +21,9 @@ if OBJECT_ID('SWTS1103.dbo.EvolutionTree', 'U') is not null
  drop table EvolutionTree;
 if OBJECT_ID('SWTS1103.dbo.MonsterClass', 'U') is not null
  drop table MonsterClass;
+ --Curve table delete
+if OBJECT_ID('SWTS1103.dbo.Curve', 'U') is not null
+ drop table Curve;
 if OBJECT_ID('SWTS1103.dbo.MonsterType', 'U') is not null
  drop table MonsterType;
 if OBJECT_ID('SWTS1103.dbo.Attribute', 'U') is not null
@@ -233,25 +239,31 @@ ALTER TABLE SWTS1103.dbo.LatentSkillList ADD CONSTRAINT fk_LatentSkillList_4 FOR
 
 --Instance Table
 CREATE TABLE SWTS1103.dbo.MonsterInstance ( 
-	InstanceID           int NOT NULL   ,--IDENTITY(100000,1),
+	InstanceID           int NOT NULL   ,
 	PlayerID             int NOT NULL   ,
 	MonsterClassID       int NOT NULL   ,
 	CurrentExperience    int NOT NULL   ,
-	PlusHP               int NOT NULL   ,
 	PlusATK              int NOT NULL   ,
 	PlusRCV              int NOT NULL   ,
+	PlusHP               int NOT NULL   ,
 	SkillsAwoke          int NOT NULL   ,
 	AssistMonsterID      int    ,
-	SkillLevel           int NOT NULL   DEFAULT 1,
+	SkillLevel           int    ,
 	LSListID             int    ,
+	ActiveSkillCoolDown  int NOT NULL   ,
+	CurrentHP            int NOT NULL   ,
+	CurrentATK           int NOT NULL   ,
+	CurrentRCV           int NOT NULL   ,
+	CurrentLevel         int NOT NULL   ,
 	CONSTRAINT PK__Instance__5C51996FBA3F55C1 PRIMARY KEY ( InstanceID )
  );
 
-CREATE  INDEX idx_MonsterInstance ON SWTS1103.dbo.MonsterInstance ( LSListID );
+CREATE  INDEX idx_MonsterInstance ON dbo.MonsterInstance ( LSListID );
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_BaseMonsterID FOREIGN KEY ( MonsterClassID ) REFERENCES SWTS1103.dbo.MonsterClass( MonsterClassID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_PlayerID FOREIGN KEY ( PlayerID ) REFERENCES SWTS1103.dbo.Player( PlayerID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT FK_Instance_AssistMonsterID FOREIGN KEY ( AssistMonsterID ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.MonsterInstance ADD CONSTRAINT fk_MonsterInstance FOREIGN KEY ( LSListID ) REFERENCES SWTS1103.dbo.LatentSkillList( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
 
 --Badge table create
 CREATE TABLE SWTS1103.dbo.Badge ( 
@@ -262,7 +274,7 @@ CREATE TABLE SWTS1103.dbo.Badge (
 
 --Team table create
 CREATE TABLE SWTS1103.dbo.Team ( 
-	TeamInstanceID       int NOT NULL   identity(100000000, 1),
+	TeamInstanceID       int NOT NULL   ,
 	PlayerID             int NOT NULL   ,
 	TeamName             varchar(50)    ,
 	LeaderMonster        int NOT NULL   ,
@@ -271,10 +283,20 @@ CREATE TABLE SWTS1103.dbo.Team (
 	SubMonsterThree      int    ,
 	SubMonsterFour       int    ,
 	BadgeName            varchar(50)    ,
+	TeamHP               int NOT NULL   ,
+	FireATK              int NOT NULL   ,
+	WaterATK             int NOT NULL   ,
+	WoodATK              int NOT NULL   ,
+	LightATK             int NOT NULL   ,
+	DarkATK              int NOT NULL   ,
+	TeamRCV              int NOT NULL   ,
+	TeamCost             int NOT NULL   ,
+	TeamLeaderSkill      varchar(100) NOT NULL   ,
 	CONSTRAINT Pk_Team PRIMARY KEY ( TeamInstanceID ),
+	CONSTRAINT Pk_Team_0 UNIQUE ( BadgeName ) 
  );
 
-CREATE  INDEX idx_Team ON SWTS1103.dbo.Team ( PlayerID );
+CREATE  INDEX idx_Team ON dbo.Team ( PlayerID );
 CREATE  INDEX idx_Team_0 ON SWTS1103.dbo.Team ( SubMonsterTwo );
 CREATE  INDEX idx_Team_1 ON SWTS1103.dbo.Team ( SubMonsterThree );
 CREATE  INDEX idx_Team_2 ON SWTS1103.dbo.Team ( SubMonsterFour );
@@ -284,5 +306,19 @@ ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub1 FOREIGN
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub2 FOREIGN KEY ( SubMonsterTwo ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub3 FOREIGN KEY ( SubMonsterThree ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_monsterinstanceSub4 FOREIGN KEY ( SubMonsterFour ) REFERENCES SWTS1103.dbo.MonsterInstance( InstanceID ) ON DELETE NO ACTION ON UPDATE NO ACTION;
-ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_Badge FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Badge( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE SWTS1103.dbo.Team ADD CONSTRAINT fk_team_badge FOREIGN KEY ( BadgeName ) REFERENCES SWTS1103.dbo.Badge( BadgeName ) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--Monster growth curve table create
+CREATE TABLE SWTS1103.dbo.Curve ( 
+	CurveInstance        varchar(50) NOT NULL   ,
+	NormalExperienceCurve float NOT NULL   ,
+	NormalExperienceCurveDesc varchar(max) NOT NULL   ,
+	NormalStatCurve      float NOT NULL   ,
+	NormalStatCurveDesc  varchar(max) NOT NULL   ,
+	EarlyCurve           float NOT NULL   ,
+	EarlyCurveDesc       varchar(max) NOT NULL   ,
+	LateCurve            float NOT NULL   ,
+	LateCurveDesc        varchar(max) NOT NULL   ,
+	CONSTRAINT Pk_Curves PRIMARY KEY ( CurveInstance )
+ );
 

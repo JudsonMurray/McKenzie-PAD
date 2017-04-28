@@ -99,6 +99,20 @@
 				<column name="BadgeName" />
 			</index>
 		</table>
+		<table name="Curve" >
+			<column name="CurveInstance" type="varchar" length="50" jt="12" mandatory="y" />
+			<column name="NormalExperienceCurve" type="float" jt="8" mandatory="y" />
+			<column name="NormalExperienceCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="NormalStatCurve" type="float" jt="8" mandatory="y" />
+			<column name="NormalStatCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="EarlyCurve" type="float" jt="8" mandatory="y" />
+			<column name="EarlyCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<column name="LateCurve" type="float" jt="8" mandatory="y" />
+			<column name="LateCurveDesc" type="varchar(max)" jt="12" mandatory="y" />
+			<index name="Pk_Curves" unique="PRIMARY_KEY" >
+				<column name="CurveInstance" />
+			</index>
+		</table>
 		<table name="EvolutionTree" >
 			<column name="NextMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
 			<column name="BaseMonsterID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -260,6 +274,15 @@
 			<index name="idx_MonsterClass_6" unique="NORMAL" >
 				<column name="ASListID" />
 			</index>
+			<index name="idx_MonsterClass_7" unique="NORMAL" >
+				<column name="GrowthRateATK" />
+			</index>
+			<index name="idx_MonsterClass_8" unique="NORMAL" >
+				<column name="GrowthRateHP" />
+			</index>
+			<index name="idx_MonsterClass_9" unique="NORMAL" >
+				<column name="GrowthRateRCV" />
+			</index>
 			<fk name="fk_monsterclass_activeskill" to_schema="dbo" to_table="ActiveSkill" >
 				<fk_column name="ActiveSkillName" pk="ActiveSkillName" />
 			</fk>
@@ -284,6 +307,15 @@
 			<fk name="fk_monsterclass_monstertype3" to_schema="dbo" to_table="MonsterType" >
 				<fk_column name="MonsterTypeThree" pk="MonsterTypeName" />
 			</fk>
+			<fk name="fk_monsterclass_curveATK" to_schema="dbo" to_table="Curve" >
+				<fk_column name="GrowthRateATK" pk="CurveInstance" />
+			</fk>
+			<fk name="fk_monsterclass_curveHP" to_schema="dbo" to_table="Curve" >
+				<fk_column name="GrowthRateHP" pk="CurveInstance" />
+			</fk>
+			<fk name="fk_monsterclass_curveRCV" to_schema="dbo" to_table="Curve" >
+				<fk_column name="GrowthRateRCV" pk="CurveInstance" />
+			</fk>
 		</table>
 		<table name="MonsterInstance" >
 			<column name="InstanceID" type="int" length="10" decimal="0" jt="4" mandatory="y" />
@@ -297,6 +329,11 @@
 			<column name="AssistMonsterID" type="int" length="10" decimal="0" jt="4" />
 			<column name="SkillLevel" type="int" length="10" decimal="0" jt="4" />
 			<column name="LSListID" type="int" jt="4" />
+			<column name="ActiveSkillCoolDown" type="int" jt="4" mandatory="y" />
+			<column name="CurrentHP" type="int" jt="4" mandatory="y" />
+			<column name="CurrentATK" type="int" jt="4" mandatory="y" />
+			<column name="CurrentRCV" type="int" jt="4" mandatory="y" />
+			<column name="CurrentLevel" type="int" jt="4" mandatory="y" />
 			<index name="PK__Instance__5C51996FBA3F55C1" unique="PRIMARY_KEY" >
 				<column name="InstanceID" />
 			</index>
@@ -344,6 +381,15 @@
 			<column name="SubMonsterThree" type="int" jt="4" />
 			<column name="SubMonsterFour" type="int" jt="4" />
 			<column name="BadgeName" type="varchar" length="50" jt="12" />
+			<column name="TeamHP" type="int" jt="4" mandatory="y" />
+			<column name="FireATK" type="int" jt="4" mandatory="y" />
+			<column name="WaterATK" type="int" jt="4" mandatory="y" />
+			<column name="WoodATK" type="int" jt="4" mandatory="y" />
+			<column name="LightATK" type="int" jt="4" mandatory="y" />
+			<column name="DarkATK" type="int" jt="4" mandatory="y" />
+			<column name="TeamRCV" type="int" jt="4" mandatory="y" />
+			<column name="TeamCost" type="int" jt="4" mandatory="y" />
+			<column name="TeamLeaderSkill" type="varchar" length="100" jt="12" mandatory="y" />
 			<index name="Pk_Team" unique="PRIMARY_KEY" >
 				<column name="TeamInstanceID" />
 			</index>
@@ -428,20 +474,21 @@ Double-click any column, foreign key or table headers to edit.]]></comment>
 		</group>
 	</layout>
 	<layout name="Sample Layout with Relational Data Browse" id="Layout_25186e96" show_relation="columns" >
-		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="255" y="360" />
-		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="255" y="570" />
-		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="420" y="570" />
-		<entity schema="dbo" name="Attribute" color="f5ddbf" x="255" y="285" />
-		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="270" y="165" />
-		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="270" y="90" />
-		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="420" y="45" />
-		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="45" y="45" />
-		<entity schema="dbo" name="Player" color="f5ddbf" x="465" y="285" />
-		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="600" y="75" />
-		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="840" y="75" />
-		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="1050" y="75" />
-		<entity schema="dbo" name="Badge" color="c1d8ee" x="825" y="315" />
-		<entity schema="dbo" name="Team" color="c1d8ee" x="615" y="315" />
+		<entity schema="dbo" name="AwokenSkillList" color="c8f5bf" x="465" y="360" />
+		<entity schema="dbo" name="EvolutionTree" color="c8f5bf" x="465" y="570" />
+		<entity schema="dbo" name="AwokenSkill" color="c8f5bf" x="630" y="570" />
+		<entity schema="dbo" name="Attribute" color="f5ddbf" x="465" y="285" />
+		<entity schema="dbo" name="MonsterType" color="c8f5bf" x="480" y="165" />
+		<entity schema="dbo" name="LeaderSkill" color="f5ddbf" x="480" y="90" />
+		<entity schema="dbo" name="ActiveSkill" color="bfd4f5" x="630" y="45" />
+		<entity schema="dbo" name="Player" color="f5ddbf" x="675" y="285" />
+		<entity schema="dbo" name="MonsterInstance" color="1f5182" x="810" y="45" />
+		<entity schema="dbo" name="Badge" color="c1d8ee" x="975" y="600" />
+		<entity schema="dbo" name="MonsterClass" color="f5ddbf" x="255" y="45" />
+		<entity schema="dbo" name="Curve" color="c1d8ee" x="45" y="45" />
+		<entity schema="dbo" name="LatentSkillList" color="1f5182" x="975" y="75" />
+		<entity schema="dbo" name="LatentSkill" color="bfd4f5" x="975" y="270" />
+		<entity schema="dbo" name="Team" color="c1d8ee" x="825" y="360" />
 		<script name="Instance" id="Query_35c56fe2" language="SQL" >
 			<string><![CDATA[CREATE TABLE dbo.Instance ( 
 	InstanceID           int NOT NULL   ,
