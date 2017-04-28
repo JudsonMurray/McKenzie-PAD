@@ -320,9 +320,9 @@ CREATE TABLE SWTS1103.dbo.Curve (
 	ExperienceCurveDesc  varchar(max)    ,
 	NormalStatCurve      float NOT NULL   CONSTRAINT defo_EarlyCurve DEFAULT 1  ,
 	NormalStatCurveDesc  varchar(max) NOT NULL   ,
-	EarlyCurve           float NOT NULL CONSTRAINT defo_EarlyCurve DEFAULT 1.5  ,
+	EarlyCurve           float NOT NULL CONSTRAINT defo_EarlyCurve DEFAULT 0.7  ,
 	EarlyCurveDesc       varchar(max) NOT NULL   ,
-	LateCurve            float NOT NULL CONSTRAINT defo_LateCurve DEFAULT 0.7  ,
+	LateCurve            float NOT NULL CONSTRAINT defo_LateCurve DEFAULT 1.5  ,
 	LateCurveDesc        varchar(max) NOT NULL   ,
 	CONSTRAINT Pk_Curves PRIMARY KEY ( CurveInstance )
  );
